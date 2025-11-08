@@ -1,5 +1,5 @@
 // JavaScript module - not JSON
-const exAnswer = {
+const rfpData = {
     "confidence": "medium",
     "flags": [
       "The Bid Due Date is listed as Nov 19, 2025 on amended pages (Page 1, 4) but as Nov 12, 2025 in the terms (Page 10). The amended date of Nov 19 is most likely correct.",
@@ -222,4 +222,4 @@ const exAnswer = {
     ]
   };
 
-export default exAnswer;
+export default rfpData;
