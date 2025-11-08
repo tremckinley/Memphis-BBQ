@@ -1,6 +1,7 @@
 // @ts-nocheck
 import React, { useState } from 'react';
 import { CheckCircle, Circle, Upload, AlertCircle, Clock, DollarSign, MapPin, FileText, ChevronDown, ChevronUp, Info, X } from 'lucide-react';
+import exAnswer from '../example_answer.js';
 
 const RFPDashboard = () => {
   const [selectedInfo, setSelectedInfo] = useState(null);
