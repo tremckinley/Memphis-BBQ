@@ -128,7 +128,7 @@ const RFPDashboard = () => {
                         </div>
                         </div>
                         <img
-                            src='../public/icon.png'
+                            src='/icon.png'
                             height={"80px"}
                             width={"80px"}
                             className='mr-4'
@@ -329,9 +329,14 @@ const RFPDashboard = () => {
                                         <MapPin className="w-4 h-4" />
                                         Locations
                                     </div>
-                                    <div className="text-slate-800 space-y-1">
-
-                                    </div>
+                                    {rfpData.keyAddresses && (
+                                        <ul>
+                                            {rfpData.keyAddresses.map((add, idx) => {
+                                                return <li className="text-slate-800 space-y-1 ml-4" key={idx}>{`- ${add.address}`}</li>
+                                            })}
+                                        </ul>
+                                    )}
+                                    
                                 </div>
                                 <div>
                                     <div className="font-semibold text-slate-700 mb-1">Duration</div>
@@ -527,7 +532,7 @@ const RFPDashboard = () => {
                 <div className="max-w-7xl mx-auto px-6 py-4">
                     <div className="flex items-center justify-center">
                         <img
-                            src='../public/icon.png'
+                            src='/icon.png'
                             height={"80px"}
                             width={"80px"}
                             className='p-1'
