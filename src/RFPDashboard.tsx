@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React, { useState } from 'react';
-import { CheckCircle, Circle, Upload, AlertCircle, Clock, DollarSign, MapPin, FileText, ChevronDown, ChevronUp, Info, X, Inbox, Loader2, InfoIcon } from 'lucide-react';
+import { CheckCircle, Circle, Upload, AlertCircle, Clock, DollarSign, MapPin, FileText, ChevronDown, ChevronUp, Info, X, Inbox, Loader2, InfoIcon, File } from 'lucide-react';
 import rfpData from '../rfp_data' // <-- 1. IMPORT THE DATA
 import { refresh } from 'less';
 
@@ -319,7 +319,7 @@ const RFPDashboard = () => {
                                     Project Summary
                                 </h2>
                             </div>
-                            <div className="p-5 space-y-4 text-sm">
+                            <div className="p-5 space-y-4 text-lg">
                                 <div>
                                     <div className="font-semibold text-slate-700 mb-1">Scope</div>
                                     <div className="text-slate-800">{rfpData?.summary?.scope || 'No scope information available'}</div>
@@ -490,7 +490,7 @@ const RFPDashboard = () => {
                                                 </button>
                                                 <div className="flex-grow">
                                                     <div className="flex items-center gap-2">
-                                                        <div className={`text-sm font-medium ${doc?.uploaded ? 'text-slate-800' : 'text-slate-900'}`}>
+                                                        <div className={`text-lg font-medium ${doc?.uploaded ? 'text-slate-800' : 'text-slate-900'}`}>
                                                             {doc?.name || 'Untitled Document'}
                                                         </div>
                                                         <button
@@ -498,14 +498,14 @@ const RFPDashboard = () => {
                                                             className="p-1 hover:bg-slate-200 rounded transition-colors"
                                                             title="View instructions and source"
                                                         >
-                                                            <Info className="w-4 h-4 text-blue-600" />
+                                                            <FileText className="w-4 h-4 text-blue-600" />
                                                         </button>
                                                     </div>
                                                     {doc?.required && !doc?.uploaded && (
-                                                        <div className="text-xs text-red-600 mt-0.5">Required</div>
+                                                        <div className="text-sm text-red-600 mt-0.5">Required</div>
                                                     )}
                                                     {doc?.instructions && (
-                                                        <div className="text-xs text-slate-800 mt-1 line-clamp-1">
+                                                        <div className="text-sm text-slate-800 mt-1 line-clamp-2">
                                                             {doc.instructions}
                                                         </div>
                                                     )}
