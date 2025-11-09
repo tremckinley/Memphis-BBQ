@@ -1,11 +1,14 @@
 // @ts-nocheck
 import React, { useState } from 'react';
-import { CheckCircle, Circle, Upload, AlertCircle, Clock, DollarSign, MapPin, FileText, ChevronDown, ChevronUp, Info, X, Inbox } from 'lucide-react';
+import { CheckCircle, Circle, Upload, AlertCircle, Clock, DollarSign, MapPin, FileText, ChevronDown, ChevronUp, Info, X, Inbox, Loader2, InfoIcon } from 'lucide-react';
 import rfpData from '../rfp_data' // <-- 1. IMPORT THE DATA
+import { refresh } from 'less';
 
 const RFPDashboard = () => {
+    const [submitted, setSubmitted] = useState(false);
     const [selectedInfo, setSelectedInfo] = useState(null);
     const [expanded, setExpanded] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     // 2. INITIALIZE STATE FROM THE IMPORTED JSON
     const [tasks, setTasks] = useState(rfpData?.tasks || []);
     const [documents, setDocuments] = useState(rfpData?.requiredDocuments || []);
@@ -18,6 +21,14 @@ const RFPDashboard = () => {
             task?.id === taskId ? { ...task, completed: !(task?.completed) } : task
         ));
     };
+
+    const fakeSubmit = async () => {
+        setIsLoading(true);
+        // Simulate file upload/processing delay
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        setSubmitted(true);
+        setIsLoading(false);
+    }
 
     const toggleSubtask = (taskId, subtaskId) => {
         setTasks(tasks.map(task => {
@@ -94,7 +105,7 @@ const RFPDashboard = () => {
         );
     };
 
-    return (
+    return submitted ? (
         <div className="min-h-screen bg-[#00698B90]">
             {selectedInfo && (
                 <InfoModal
@@ -106,14 +117,26 @@ const RFPDashboard = () => {
 
             {/* 3. HEADER: NOW DYNAMIC */}
             <div className="bg-yellow-400 border-b border-slate-200 shadow-sm">
-                <div className="max-w-7xl mx-auto px-6 py-4">
+                
+                <div className="max-w-7xl mx-auto">
                     <div className="flex items-center justify-between">
+                        <div className='flex items-center'>
+
                         <div>
                             <h1 className="text-2xl font-bold text-slate-900">RFQ #{rfpData?.projectInfo?.rfpNumber || 'N/A'}</h1>
                             <p className="text-slate-800">{rfpData?.projectInfo?.title || 'No title available'}</p>
                         </div>
-                        <div className="text-right p-2 bg-yellow-200 rounded-sm">
-                            <div className="text-3xl font-bold text-red-600">{daysLeft} DAYS</div>
+                        </div>
+                        <img
+                            src='../public/icon.png'
+                            height={"80px"}
+                            width={"80px"}
+                            className='mr-4'
+                            onClick={() => window.location.reload(true)}
+                        >
+                        </img>
+                        <div className="text-right p-2 bg-yellow-200">
+                            <div className="text-2xl font-bold text-red-600">{daysLeft} DAYS</div>
                             <div className="text-sm text-slate-800">Until Submission</div>
                             <div className="text-xs text-slate-800 mt-1">Due: {bidDueDateInfo?.date || 'N/A'} @ {bidDueDateInfo?.time || 'N/A'}</div>
                         </div>
@@ -292,7 +315,7 @@ const RFPDashboard = () => {
                         <div className="bg-white rounded-lg shadow-sm border border-slate-200">
                             <div className="p-5 border-b border-slate-200">
                                 <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-                                    <AlertCircle className="w-5 h-5" />
+                                    <InfoIcon className="w-5 h-5" />
                                     Project Summary
                                 </h2>
                             </div>
@@ -497,7 +520,63 @@ const RFPDashboard = () => {
                 </div>
             </div>
         </div>
-    );
+    ) : (
+        <div className="min-h-screen bg-[#00698B90] pt-12">
+        <div className="bg-yellow-400 border-b border-slate-200 shadow-sm  fixed z-100 top-0 w-full">
+
+                <div className="max-w-7xl mx-auto px-6 py-4">
+                    <div className="flex items-center justify-center">
+                        <img
+                            src='../public/icon.png'
+                            height={"80px"}
+                            width={"80px"}
+                            className='p-1'
+                        >
+                        </img>
+                        
+                    </div>
+                </div>
+            </div>
+        <div className="min-h-screen bg-[#00698B90] flex items-center justify-center p-6">
+            <div className="bg-yellow-200 rounded-lg shadow-xl border border-slate-200 p-12 max-w-2xl w-full">
+                {isLoading ? (
+                    <div className="flex flex-col items-center justify-center gap-6 py-12">
+                        <div className="p-6 bg-blue-50 rounded-full">
+                            <Loader2 className="w-16 h-16 text-blue-600 animate-spin" />
+                        </div>
+                        <div className="text-center">
+                            <h2 className="text-2xl font-bold text-slate-900 mb-2">Submitting Your Proposal...</h2>
+                            <p className="text-slate-600">Please wait while we process your submission</p>
+                        </div>
+                    </div>
+                ) : (
+                    <div className="flex flex-col items-center justify-center gap-6">
+                        <div className="p-6 bg-blue-50 rounded-full">
+                            <Upload className="w-16 h-16 text-blue-600" />
+                        </div>
+                        <div className="text-center">
+                            <h2 className="text-2xl font-bold text-slate-900 mb-2">Submit Your Proposal</h2>
+                            <p className="text-slate-600 mb-6">Upload your completed RFP submission file</p>
+                        </div>
+
+                        
+                            <input 
+                                type="file" 
+                                className="w-full border border-blue-600 rounded-lg text-blue-600 p-4 h-12 text-center bg-slate-200"
+                                accept=".pdf,.doc,.docx"
+                            />
+                        <button
+                            onClick={fakeSubmit}
+                            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
+                        >
+                            Submit Proposal
+                        </button>
+                    </div>
+                )}
+            </div>
+        </div>
+        </div>
+    )
 };
 
 export default RFPDashboard;

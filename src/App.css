@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+input#file-upload-button {
+  font-size: small;
+}
