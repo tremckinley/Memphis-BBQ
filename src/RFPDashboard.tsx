@@ -116,7 +116,7 @@ const RFPDashboard = () => {
             )}
 
             {/* 3. HEADER: NOW DYNAMIC */}
-            <div className="bg-yellow-400 shadow-lg shadow-gray-600">
+            <div className="bg-[azure] shadow-lg shadow-gray-600">
                 
                 <div className="max-w-7xl mx-auto">
                     <div className="md:flex-row flex flex-col items-center md:justify-between">
@@ -564,7 +564,7 @@ const RFPDashboard = () => {
         </div>
     ) : (
         <div className="min-h-screen bg-[#00698B90] pt-24">
-        <div className="bg-yellow-400 shadow-lg shadow-gray-600  fixed z-100 top-0 w-full">
+        <div className="bg-[azure] shadow-lg shadow-gray-600  fixed z-100 top-0 w-full">
 
                 <div className="max-w-7xl mx-auto px-6 py-4">
                     <div className="flex items-center justify-center">
