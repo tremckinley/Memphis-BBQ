@@ -119,11 +119,11 @@ const RFPDashboard = () => {
             <div className="bg-yellow-400 border-b border-slate-200 shadow-sm">
                 
                 <div className="max-w-7xl mx-auto">
-                    <div className="flex items-center justify-between">
+                    <div className="md:flex-row flex flex-col items-center md:justify-between">
                         <div className='flex items-center'>
 
                         <div>
-                            <h1 className="text-2xl font-bold text-slate-900">RFQ #{rfpData?.projectInfo?.rfpNumber || 'N/A'}</h1>
+                            <h1 className=" text-center md:text-left text-2xl font-bold text-slate-900">RFQ #{rfpData?.projectInfo?.rfpNumber || 'N/A'}</h1>
                             <p className="text-slate-800">{rfpData?.projectInfo?.title || 'No title available'}</p>
                         </div>
                         </div>
@@ -135,7 +135,7 @@ const RFPDashboard = () => {
                             onClick={() => window.location.reload(true)}
                         >
                         </img>
-                        <div className="text-right p-2 bg-yellow-200">
+                        <div className="md:text-right text-center p-2 bg-yellow-200">
                             <div className="text-2xl font-bold text-red-600">{daysLeft} DAYS</div>
                             <div className="text-sm text-slate-800">Until Submission</div>
                             <div className="text-xs text-slate-800 mt-1">Due: {bidDueDateInfo?.date || 'N/A'} @ {bidDueDateInfo?.time || 'N/A'}</div>
@@ -147,7 +147,7 @@ const RFPDashboard = () => {
             <div className="max-w-7xl mx-auto px-6 py-6">
 
                 {/* 4. SUMMARY CARDS: NOW DYNAMIC */}
-                <div className="flex justify-around mb-6">
+                <div className="flex justify-around md:flex-nowrap flex-wrap mb-6">
                 <div className="bg-white rounded-lg shadow-sm p-5 border border-slate-200 w-1/3 m-2">
                         <div className="flex items-center justify-between mb-3">
                             <h3 className="text-sm font-semibold text-slate-700">Upload Document</h3>
@@ -194,7 +194,7 @@ const RFPDashboard = () => {
                             <h3 className="text-sm font-semibold text-slate-700">Contract Value</h3>
                             <DollarSign className="w-5 h-5 text-green-500" />
                         </div>
-                        <div className="text-3xl font-bold text-slate-900 mb-2">{rfpData?.summary?.contractValue || 'N/A'}</div>
+                        <div className="text-xl font-bold text-slate-900 mb-2">{rfpData?.summary?.contractValue || 'N/A'}</div>
                         <div className="text-xs text-slate-800">{rfpData?.summary?.contractDuration || 'Not specified'}</div>
                     </div>
 
