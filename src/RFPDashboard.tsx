@@ -25,7 +25,7 @@ const RFPDashboard = () => {
     const fakeSubmit = async () => {
         setIsLoading(true);
         // Simulate file upload/processing delay
-        await new Promise(resolve => setTimeout(resolve, 4000));
+        await new Promise(resolve => setTimeout(resolve, 5000));
         setSubmitted(true);
         setIsLoading(false);
     }
@@ -575,12 +575,13 @@ const RFPDashboard = () => {
                             className='p-1'
                         >
                         </img>
-                        
+                        <div className='text-3xl font-bold ml-2'>Memphis B.B.Q. AI</div>
                     </div>
                 </div>
             </div>
         <div className="min-h-screen bg-[#00698B90] flex items-center justify-center p-6">
             <div className="bg-yellow-200 rounded-lg shadow-xl border border-slate-200 p-8 max-w-2xl w-full">
+                
                 {isLoading ? (
                     <div className="flex flex-col items-center justify-center gap-6 py-12">
                         <div className="p-6 bg-blue-50 rounded-full">
