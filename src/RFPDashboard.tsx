@@ -201,7 +201,7 @@ const RFPDashboard = () => {
                 </div>
 
                 {/* 5. QUALIFICATIONS: NOW DYNAMIC */}
-                <div className="bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-200 rounded-lg shadow-sm mb-6">
+                <div className="bg-linear-to-r from-amber-50 to-orange-50 border-2 border-amber-200 rounded-lg shadow-sm mb-6">
                     <div className="p-5">
                         <div className={"flex flex-col justify-between items-center gap-4"}>
                             <div className="flex w-full justify-between items-center gap-4">
@@ -226,7 +226,7 @@ const RFPDashboard = () => {
 
                             {expanded && (
 
-                                <div className="flex-grow">
+                                <div className="grow">
                                     <div className="flex flex-col justify-around flex-wrap gap-6">
                                         {/* Business Qualifications */}
                                         <div>
@@ -237,7 +237,7 @@ const RFPDashboard = () => {
                                             <div className="space-y-2 text-sm">
                                                 {(rfpData?.qualifications?.eligibilityRequirements || []).map((item, idx) => (
                                                     <div key={item?.requirement || idx} className="flex items-start gap-2">
-                                                        <div className="w-1.5 h-1.5 bg-amber-600 rounded-full mt-1.5 flex-shrink-0" />
+                                                        <div className="w-1.5 h-1.5 bg-amber-600 rounded-full mt-1.5 shrink-0" />
                                                         <div>
                                                             <span className="font-medium text-amber-900">{item?.requirement || 'N/A'}</span>
                                                             <p className="text-amber-700 text-xs">{item?.details || ''}</p>
@@ -256,7 +256,7 @@ const RFPDashboard = () => {
                                             <div className="space-y-2 text-sm">
                                                 {(rfpData?.qualifications?.insuranceRequirements || []).map((item, idx) => (
                                                     <div key={item?.type || idx} className="flex items-start gap-2">
-                                                        <div className="w-1.5 h-1.5 bg-amber-600 rounded-full mt-1.5 flex-shrink-0" />
+                                                        <div className="w-1.5 h-1.5 bg-amber-600 rounded-full mt-1.5 shrink-0" />
                                                         <div>
                                                             <span className="font-medium text-amber-900">{item?.type || 'N/A'}: {item?.amount || 'N/A'}</span>
                                                             <p className="text-amber-700 text-xs">{item?.details || ''}</p>
@@ -275,7 +275,7 @@ const RFPDashboard = () => {
                                             <div className="space-y-2 text-sm">
                                                 {(rfpData?.qualifications?.equipmentRequirements || []).map((item, idx) => (
                                                     <div key={item?.item || idx} className="flex items-start gap-2">
-                                                        <div className="w-1.5 h-1.5 bg-amber-600 rounded-full mt-1.5 flex-shrink-0" />
+                                                        <div className="w-1.5 h-1.5 bg-amber-600 rounded-full mt-1.5 shrink-0" />
                                                         <span className="text-amber-900">{item?.item || 'N/A'}</span>
                                                     </div>
                                                 ))}
@@ -294,7 +294,7 @@ const RFPDashboard = () => {
                                             <div className="space-y-2 text-sm">
                                                 {(rfpData?.disqualifiers || []).map((item, idx) => (
                                                     <div key={item?.reason || idx} className="flex items-start gap-2">
-                                                        <X className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
+                                                        <X className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
                                                         <span className="text-red-900">{item?.reason || 'N/A'}</span>
                                                     </div>
                                                 ))}
@@ -374,7 +374,7 @@ const RFPDashboard = () => {
                                             <div className="flex items-start gap-3">
                                                 <button
                                                     onClick={() => toggleTask(task?.id)}
-                                                    className="mt-1 flex-shrink-0"
+                                                    className="mt-1 shrink-0"
                                                 >
                                                     {task?.completed ? (
                                                         <CheckCircle className="w-5 h-5 text-green-600" />
@@ -382,9 +382,9 @@ const RFPDashboard = () => {
                                                         <Circle className="w-5 h-5 text-slate-400" />
                                                     )}
                                                 </button>
-                                                <div className="flex-grow">
+                                                <div className="grow">
                                                     <div className="flex items-start justify-between gap-3">
-                                                        <div className="flex-grow">
+                                                        <div className="grow">
                                                             <div className="flex items-center gap-2">
                                                                 <h3 className={`font-semibold ${task?.completed ? 'text-slate-800 line-through' : 'text-slate-900'}`}>
                                                                     {task?.title || 'Untitled Task'}
@@ -417,7 +417,7 @@ const RFPDashboard = () => {
                                                         {(task?.subtasks?.length || 0) > 0 && (
                                                             <button
                                                                 onClick={() => toggleExpanded(task?.id)}
-                                                                className="flex-shrink-0 p-1 hover:bg-slate-100 rounded"
+                                                                className="shrink-0 p-1 hover:bg-slate-100 rounded"
                                                             >
                                                                 {task?.expanded ? (
                                                                     <ChevronUp className="w-5 h-5 text-slate-800" />
@@ -438,7 +438,7 @@ const RFPDashboard = () => {
                                                         <div key={subtask?.id} className="flex items-center gap-3">
                                                             <button
                                                                 onClick={() => toggleSubtask(task?.id, subtask?.id)}
-                                                                className="flex-shrink-0"
+                                                                className="shrink-0"
                                                             >
                                                                 {subtask?.completed ? (
                                                                     <CheckCircle className="w-4 h-4 text-green-600" />
@@ -478,7 +478,7 @@ const RFPDashboard = () => {
                                             }`}
                                     >
                                         <div className="flex items-center justify-between p-3">
-                                            <div className="flex items-center gap-3 flex-grow">
+                                            <div className="flex items-center gap-3 grow">
                                                 <button
                                                     onClick={() => toggleDocument(doc?.id)}
                                                 >
@@ -488,7 +488,7 @@ const RFPDashboard = () => {
                                                         <Circle className="w-5 h-5 text-slate-400" />
                                                     )}
                                                 </button>
-                                                <div className="flex-grow">
+                                                <div className="grow">
                                                     <div className="flex items-center gap-2">
                                                         <div className={`text-lg font-medium ${doc?.uploaded ? 'text-slate-800' : 'text-slate-900'}`}>
                                                             {doc?.name || 'Untitled Document'}
@@ -512,7 +512,7 @@ const RFPDashboard = () => {
                                                 </div>
                                             </div>
                                             {!doc?.uploaded && (
-                                                <button className="p-2 hover:bg-slate-200 rounded-lg transition-colors flex-shrink-0">
+                                                <button className="p-2 hover:bg-slate-200 rounded-lg transition-colors shrink-0">
                                                     <Upload className="w-4 h-4 text-slate-800" />
                                                 </button>
                                             )}
