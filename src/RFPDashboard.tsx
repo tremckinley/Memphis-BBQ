@@ -74,7 +74,7 @@ const RFPDashboard = () => {
         if (!item) return null;
 
         return (
-            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" onClick={onClose}>
+            <div className="fixed inset-0 bg-[#00000095] flex items-center justify-center z-50 p-4" onClick={onClose}>
                 <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[80vh] overflow-hidden" onClick={e => e.stopPropagation()}>
                     <div className="p-5 border-b border-slate-200 flex items-center justify-between bg-slate-50">
                         <div>
@@ -209,7 +209,10 @@ const RFPDashboard = () => {
                                     <div className="p-3 bg-amber-100 rounded-lg">
                                         <AlertCircle className="w-6 h-6 text-amber-700" />
                                     </div>
+                                    <div>
                                     <h2 className="text-lg font-bold text-amber-900">Required Qualifications & Equipment</h2>
+                                    <p className='text-amber-800 hover:cursor-pointer' onClick={() => setExpanded(!expanded)}>{expanded ?  'Collapse' : 'Expand for details'}</p>
+                                    </div>
 
                                 </div>
                                 <div>
@@ -394,7 +397,7 @@ const RFPDashboard = () => {
                                                                     className="p-1 hover:bg-slate-200 rounded transition-colors"
                                                                     title="View source from RFQ"
                                                                 >
-                                                                    <Info className="w-4 h-4 text-blue-600" />
+                                                                    <FileText className="w-4 h-4 text-blue-600" />
                                                                 </button>
                                                             </div>
                                                             <div className="flex items-center gap-3 mt-1">
@@ -556,23 +559,23 @@ const RFPDashboard = () => {
                     </div>
                 ) : (
                     <div className="flex flex-col items-center justify-center gap-6">
-                        <div className="p-6 bg-blue-50 rounded-full">
-                            <Upload className="w-16 h-16 text-blue-600" />
+                        <div className="p-6 bg-slate-200 rounded-full">
+                            <Upload className="w-16 h-16 text-[#00698B]" />
                         </div>
                         <div className="text-center">
-                            <h2 className="text-2xl font-bold text-slate-900 mb-2">Submit Your Proposal</h2>
-                            <p className="text-slate-600 mb-6">Upload your completed RFP submission file</p>
+                            <h2 className="text-2xl font-bold text-slate-900 mb-2">Upload a Proposal/Quote</h2>
+                            <p className="text-slate-600 mb-6">Upload an RFP or RFQ in its entirety</p>
                         </div>
 
                         
                             <input 
                                 type="file" 
-                                className="w-full border border-blue-600 rounded-lg text-blue-600 p-4 h-12 text-center bg-slate-200"
+                                className="bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-50000"
                                 accept=".pdf,.doc,.docx"
                             />
                         <button
                             onClick={fakeSubmit}
-                            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
+                            className="w-full bg-blue-900 hover:bg-[#606060] text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
                         >
                             Submit Proposal
                         </button>
