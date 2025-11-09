@@ -25,7 +25,7 @@ const RFPDashboard = () => {
     const fakeSubmit = async () => {
         setIsLoading(true);
         // Simulate file upload/processing delay
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        await new Promise(resolve => setTimeout(resolve, 4000));
         setSubmitted(true);
         setIsLoading(false);
     }
@@ -324,13 +324,29 @@ const RFPDashboard = () => {
                             </div>
                             <div className="p-5 space-y-4 text-lg">
                                 <div>
-                                    <div className="font-semibold text-slate-700 mb-1">Scope</div>
+                                    <div className="font-semibold text-slate-700 mb-1 flex items-center gap-2">
+                                        Scope
+                                        <button
+                                            onClick={() => setSelectedInfo({ item: { name: 'Scope', sourceText: rfpData?.summary?.scope || 'No source text available', sourceSection: rfpData?.summary?.sourceSection || '' }, type: 'summary' })}
+                                            className="p-1 hover:bg-slate-200 rounded transition-colors"
+                                            title="View source from RFQ"
+                                        >
+                                            <FileText className="w-4 h-4 text-blue-600" />
+                                        </button>
+                                    </div>
                                     <div className="text-slate-800">{rfpData?.summary?.scope || 'No scope information available'}</div>
                                 </div>
                                 <div>
                                     <div className="font-semibold text-slate-700 mb-1 flex items-center gap-2">
                                         <MapPin className="w-4 h-4" />
                                         Locations
+                                        <button
+                                            onClick={() => setSelectedInfo({ item: { name: 'Locations', sourceText: rfpData?.keyAddresses?.map(a => a.address).join('; ') || 'No source text available', sourceSection: rfpData?.keyAddresses?.[0]?.sourceSection || '' }, type: 'summary' })}
+                                            className="p-1 hover:bg-slate-200 rounded transition-colors"
+                                            title="View source from RFQ"
+                                        >
+                                            <FileText className="w-4 h-4 text-blue-600" />
+                                        </button>
                                     </div>
                                     {rfpData.keyAddresses && (
                                         <ul>
@@ -342,11 +358,29 @@ const RFPDashboard = () => {
                                     
                                 </div>
                                 <div>
-                                    <div className="font-semibold text-slate-700 mb-1">Duration</div>
+                                    <div className="font-semibold text-slate-700 mb-1 flex items-center gap-2">
+                                        Duration
+                                        <button
+                                            onClick={() => setSelectedInfo({ item: { name: 'Duration', sourceText: rfpData?.summary?.contractDuration || 'No source text available', sourceSection: rfpData?.summary?.sourceSection || '' }, type: 'summary' })}
+                                            className="p-1 hover:bg-slate-200 rounded transition-colors"
+                                            title="View source from RFQ"
+                                        >
+                                            <FileText className="w-4 h-4 text-blue-600" />
+                                        </button>
+                                    </div>
                                     <div className="text-slate-800">{rfpData?.summary?.contractDuration || 'Not specified'}</div>
                                 </div>
                                 <div>
-                                    <div className="font-semibold text-slate-700 mb-1">Key Requirements</div>
+                                    <div className="font-semibold text-slate-700 mb-1 flex items-center gap-2">
+                                        Key Requirements
+                                        <button
+                                            onClick={() => setSelectedInfo({ item: { name: 'Key Requirements', sourceText: 'Mandatory site visits; Commercial-grade equipment; Equipment inspection after selection; Minimum 2 years experience', sourceSection: '' }, type: 'summary' })}
+                                            className="p-1 hover:bg-slate-200 rounded transition-colors"
+                                            title="View source from RFQ"
+                                        >
+                                            <FileText className="w-4 h-4 text-blue-600" />
+                                        </button>
+                                    </div>
                                     <div className="text-slate-800 space-y-1">
                                         <div>✓ Mandatory site visits</div>
                                         <div>✓ Commercial-grade equipment</div>

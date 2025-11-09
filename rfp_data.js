@@ -1,225 +1,374 @@
 // JavaScript module - not JSON
 const rfpData = {
-    "confidence": "medium",
-    "flags": [
-      "The Bid Due Date is listed as Nov 19, 2025 on amended pages (Page 1, 4) but as Nov 12, 2025 in the terms (Page 10). The amended date of Nov 19 is most likely correct.",
-      "The mailing address for bids is listed as 'Room 368' (Page 2) but also 'Room 354' (Page 10). Bidders should verify the correct room before mailing.",
-      "Key documents, including the 'Bid & Price Sheet' and 'Insurance Requirements,' are attachments and were not included in this text. These attachments are required for submission."
-    ],
-    "projectInfo": {
-      "rfpNumber": "325762,1",
-      "title": "Fire Sprinkler System Maintenance",
-      "issuingOrganization": "City of Memphis"
+  "confidence": "high",
+  "flags": [],
+  "projectInfo": {
+    "rfpNumber": "324765",
+    "title": "GROUND MAINTENANCE SERVICES - CENTRAL ZONE 2",
+    "issuingOrganization": "CITY OF MEMPHIS"
+  },
+  "summary": {
+    "scope": "The City of Memphis is looking for qualified contractors to provide ground maintenance for 6 parks in 'Central Zone 2', totaling 19 acres. This includes services like mowing, trimming, mulching, and cleaning hardscape areas.",
+    "contractDuration": "2 years + 2 optional 1-year renewals",
+    "contractValue": "TBD / Bidder sets price"
+  },
+  "keyDates": [
+    {
+      "event": "RFQ Published",
+      "date": "2025-10-17",
+      "time": null,
+      "sourceSection": "Section 4.2"
     },
-    "summary": {
-      "scope": "The City of Memphis is seeking bids from qualified vendors to provide maintenance services for fire sprinkler systems.",
-      "contractDuration": null,
-      "contractValue": "TBD / Bidder sets price"
+    {
+      "event": "Question Deadline",
+      "date": "2025-10-29",
+      "time": "5:00 PM CT",
+      "sourceSection": "Section 4.2 & 4.3"
     },
-    "keyDates": [
-      {
-        "event": "Question Deadline",
-        "date": "2025-11-05",
-        "time": "5:00 PM CT",
-        "sourceSection": "Page 2 "
-      },
-      {
-        "event": "Answers Posted",
-        "date": "2025-11-12",
-        "time": "5:00 PM CT",
-        "sourceSection": "Page 2 "
-      },
-      {
-        "event": "Bid Due Date",
-        "date": "2025-11-19",
-        "time": "12:00 PM CT",
-        "sourceSection": "Page 1 "
-      }
-    ],
-    "keyContacts": [
-      {
-        "name": "Sherrod, Lakisha",
-        "role": "Buyer / Sole Point of Contact",
-        "contactInfo": "lakisha.sherrod@memphistn.gov, 901-636-6195",
-        "sourceSection": "Page 2 , Page 13 "
-      }
-    ],
-    "keyAddresses": [
-      {
-        "type": "Bid Submission - eProcurement (Preferred)",
-        "address": "eProcurement system/online (which is the preferable method for bidding)",
-        "sourceSection": "Page 1 "
-      },
-      {
-        "type": "Bid Submission - By Hand",
-        "address": "City of Memphis, Main Lobby, Bid Drop Box, 125 N. Main St, Memphis, TN 38103",
-        "sourceSection": "Page 10 "
-      },
-      {
-        "type": "Bid Submission - Mail",
-        "address": "City of Memphis, Purchasing Department, Room 354, 125 N. Main St, Memphis, TN 38103",
-        "sourceSection": "Page 10 "
-      }
-    ],
-    "qualifications": {
-      "eligibilityRequirements": [
-        {
-          "requirement": "Registered City of Memphis Supplier",
-          "details": "You must be registered as a supplier with the City of Memphis to participate. You can register on the City's website.",
-          "sourceSection": "Page 1 "
-        },
-        {
-          "requirement": "Memphis and Shelby County Business License",
-          "details": "If your business operates within the city limits of Memphis, you must have a current Memphis and Shelby County business license.",
-          "sourceSection": "Page 12 "
-        },
-        {
-          "requirement": "Comply with laws on hiring",
-          "details": "You must certify that you comply with all federal and state laws prohibiting the employment of individuals not legally authorized to work in the United States.",
-          "sourceSection": "Page 17 "
-        },
-        {
-          "requirement": "Local Business Preference (Optional)",
-          "details": "The bid may be subject to a local preference for businesses in Memphis. To be considered for this, you must include a copy of your local business tax receipt.",
-          "sourceSection": "Page 2 "
-        }
-      ],
-      "insuranceRequirements": [
-        {
-          "type": "Various",
-          "amount": "Not Specified in Text",
-          "details": "Insurance is required. You must review the 'Fire Sprinkler System Maintenance Insurance Requirements' attachment (listed on Page 8) for specific types and amounts. A Certificate of Insurance will be required from the winning bidder.",
-          "sourceSection": "Page 1 , Page 8 , Page 11 "
-        }
-      ],
-      "equipmentRequirements": []
+    {
+      "event": "City Response to Questions",
+      "date": "2025-11-07",
+      "time": null,
+      "sourceSection": "Section 4.2"
     },
-    "disqualifiers": [
+    {
+      "event": "Bid Due Date",
+      "date": "2025-11-19",
+      "time": "12:00 PM CT",
+      "sourceSection": "Page 1 & Section 4.2"
+    }
+  ],
+  "keyContacts": [
+    {
+      "name": "Chequita Crim",
+      "role": "Questions & Submission (Principal Contact)",
+      "contactInfo": "Chequita.crim@memphistn.gov, frances.brooks@memphistn.gov, and procurement@memphistn.gov",
+      "sourceSection": "Section 4.1, Page 20"
+    },
+    {
+      "name": "Frances Brooks",
+      "role": "Questions & Submission (Principal Contact)",
+      "contactInfo": "Chequita.crim@memphistn.gov, frances.brooks@memphistn.gov, and procurement@memphistn.gov",
+      "sourceSection": "Section 4.1, Page 20"
+    },
+    {
+      "name": "Anthony Howard",
+      "role": "Equipment Inspections",
+      "contactInfo": "901.410.7661, Anthony.Howard@memphistn.gov",
+      "sourceSection": "Section 2.3, Page 16"
+    },
+    {
+      "name": "Connie Shepherd",
+      "role": "Equipment Inspections",
+      "contactInfo": "901-574-0519, Connie.Shepherd@memphistn.gov",
+      "sourceSection": "Section 2.3, Page 16"
+    }
+  ],
+  "keyAddresses": [
+    {
+      "type": "Bid Submission - Mail",
+      "address": "City of Memphis, Purchasing Department, Room 368, 125 N. Main Street, Memphis, TN 38103",
+      "sourceSection": "Section 4.4, Page 21"
+    },
+    {
+      "type": "Bid Submission - By Hand",
+      "address": "City of Memphis, Main Lobby - Bid Drop Box, 125 N. Main Street, Memphis, TN 38103",
+      "sourceSection": "Section 4.4, Page 21"
+    }
+  ],
+  "qualifications": {
+    "eligibilityRequirements": [
       {
-        "reason": "Bid is submitted by email.",
-        "sourceSection": "Page 1 "
+        "requirement": "Minimum 2 years relevant experience",
+        "details": "You must have at least two years of experience in this type of work.",
+        "sourceSection": "Section 3.7, Page 19"
       },
       {
-        "reason": "A hardcopy bid is not physically signed.",
-        "sourceSection": "Page 1 "
-      },
-      {
-        "reason": "Failure to submit ALL required attachments and documentation.",
-        "sourceSection": "Page 1 "
-      },
-      {
-        "reason": "Bid is received after the deadline (Late Bid).",
-        "sourceSection": "Page 11 "
-      },
-      {
-        "reason": "Contacting any City personnel other than the designated buyer (Lakisha Sherrod) about the RFQ.",
-        "sourceSection": "Page 11 , Page 13 "
-      },
-      {
-        "reason": "Bid contains modifications to the RFQ's terms and conditions.",
-        "sourceSection": "Page 10 "
+        "requirement": "Memphis and Shelby County business license",
+        "details": "If your business is located in Memphis, you must have a current business license. This is also needed for local preference.",
+        "sourceSection": "Section 6, Page 25 & Section 7, Page 27"
       }
     ],
-    "tasks": [
+    "insuranceRequirements": [
       {
-        "id": 1,
-        "title": "Register as a City of Memphis Supplier",
-        "priority": "high",
-        "sourceText": "Vendors must be registered as a supplier with the City of Memphis to participate in City of Memphis bids.",
-        "sourceSection": "Page 1 ",
-        "subtasks": [
-          {
-            "id": 11,
-            "title": "Visit Memphistn.gov - Business - Supplier Registration and complete the Online Suppliers Registration Form "
-          }
-        ]
+        "type": "Workers' Compensation",
+        "amount": "Statutory Limits (TN)",
+        "sourceSection": "Exhibit B-1, Page 51"
       },
       {
-        "id": 2,
-        "title": "Review All Attachments",
-        "priority": "high",
-        "sourceText": "If attachments are included with this RFQ, Bidders are to fill out and return, in their entirety, all required attachments",
-        "sourceSection": "Page 1 ",
-        "subtasks": [
-          {
-            "id": 21,
-            "title": "Locate and review 'Fire Sprinkler Systems maintenance (Bid & Price Sheet)' "
-          },
-          {
-            "id": 22,
-            "title": "Locate and review 'Fire Sprinkler System Maintenance Specifications' "
-          },
-          {
-            "id": 23,
-            "title": "Locate and review 'Fire Sprinkler System Maintenance Insurance Requirements' "
-          }
-        ]
+        "type": "Employer's Liability",
+        "amount": "$100k Each Accident / $500k Disease-Policy Limit / $100k Disease-Each Employee",
+        "sourceSection": "Exhibit B-1, Page 51"
+      },
+      {
+        "type": "Automobile Liability",
+        "amount": "$1,000,000 Each Occurrence (Combined Single Limits)",
+        "sourceSection": "Exhibit B-1, Page 51"
+      },
+      {
+        "type": "Commercial General Liability",
+        "amount": "$1,000,000 Each Occurrence / $1,000,000 General Aggregate",
+        "sourceSection": "Exhibit B-1, Page 51"
+      },
+      {
+        "type": "Umbrella / Excess Liability",
+        "amount": "$1,000,000 Each Occurrence / $1,000,000 Aggregate",
+        "sourceSection": "Exhibit B-1, Page 52"
       }
     ],
-    "requiredDocuments": [
+    "equipmentRequirements": [
       {
-        "id": 1,
-        "name": "Specifications/Bid Section (Bid & Price Sheet)",
-        "required": true,
-        "instructions": "This is the main form for your bid, listed as an attachment. You must fill it out completely. If submitting online, you must enter the 'Grand Total' from this form into the Oracle system.",
-        "sourceText": "Fill out, in its entirety the attached Specifications/Bid Section and return for evaluation and award purposes. ... Any bid submitted without this attachment may be deemed non-conforming. In Oracle, enter the Grand Total from the attached Bid Section.",
-        "sourceSection": "Page 7 , Page 8 "
+        "item": "Standard commercial-grade lawn equipment",
+        "details": "This includes tractors, zero-turn mowers, mulching mowers, blowers, weed eaters, etc. You must provide all your own supplies and insurance for your equipment.",
+        "sourceSection": "Section 2.2, Item 5, Page 6"
       },
       {
-        "id": 2,
-        "name": "All other required attachments (e.g., Comply/Exception Pages)",
-        "required": true,
-        "instructions": "The RFQ mentions other attachments like 'Exceptions to Specifications Pages' and 'Comply/Exception Pages'. You must find, complete, and return all forms that are part of the RFQ package.",
-        "sourceText": "Bidders are to fill out and return, in their entirety, all required attachments (attachments may include, but are not limited to: Bid Sections, Exceptions to Specifications Pages, Comply/Exception Pages...)",
-        "sourceSection": "Page 1 "
+        "item": "Equipment List",
+        "details": "You must submit a detailed list of all equipment (manufacturer, model, serial number) with your bid.",
+        "sourceSection": "Section 2.2, Item 6, Page 6"
       },
       {
-        "id": 3,
-        "name": "Signature for Contract Specifications (Page XXVI)",
-        "required": true,
-        "instructions": "Page 26 of the RFQ is a signature form that must be completed, signed, and returned with your bid.",
-        "sourceText": "SIGNATURE FOR CONTRACT SPECIFICATIONS",
-        "sourceSection": "Page 26 "
-      },
-      {
-        "id": 4,
-        "name": "Disclosure of Criminal and Civil Proceedings",
-        "required": true,
-        "instructions": "You must provide a written description of all ongoing or past (within 10 years) civil or criminal proceedings against your company. This must be included with your bid.",
-        "sourceText": "PROPOSING FIRM'S DISCLOSURE OF CRIMINAL AND CIVIL PROCEEDINGS. ... This information must be included as part of your bid response.",
-        "sourceSection": "Page 13 "
-      },
-      {
-        "id": 5,
-        "name": "List of Exceptions (if any)",
-        "required": false,
-        "instructions": "If your bid deviates from the specifications in any way, you must list these exceptions on a separate sheet. Do not just send a product brochure instead.",
-        "sourceText": "The bidder is required to list all exceptions, deviations or variations to the specifications in a clear, logical fashion on a sheet designated by the bidder as such.",
-        "sourceSection": "Page 13 "
-      },
-      {
-        "id": 6,
-        "name": "Memphis and Shelby County Business Tax Receipt",
-        "required": false,
-        "instructions": "This is only required if you want to be considered for the Local Business Preference. It will also be required from the winning vendor if their business is in Memphis.",
-        "sourceText": "A COPY OF YOUR MEMPHIS AND SHELBY COUNTY TENNESSEE BUSINESS TAX RECEIPT MUST ACCOMPANY YOUR BID FOR CONSIDERATION OF THIS ORDINANCE.",
-        "sourceSection": "Page 2 , Page 12 "
-      }
-    ],
-    "scoringCriteria": [
-      {
-        "criteria": "Price",
-        "weight": "Primary",
-        "description": "The City will rank bids based on 'Price Only'.",
-        "sourceSection": "Page 6 "
-      },
-      {
-        "criteria": "Lowest and Best Bid",
-        "weight": "Overall",
-        "description": "The final award will be made to the 'lowest and best bid' that meets all requirements set forth in the solicitation.",
-        "sourceSection": "Page 11 "
+        "item": "Equipment Inspection (Mandatory)",
+        "details": "If you are chosen, you must pass a physical inspection where you show all the equipment on your list. This happens *after* you are chosen but *before* the contract is final.",
+        "sourceSection": "Section 2.2, Item 7 & 8, Page 6"
       }
     ]
-  };
+  },
+  "disqualifiers": [
+    {
+      "reason": "Missing mandatory Site Visit Form",
+      "sourceSection": "Section 2.2, Item 9, Page 6"
+    },
+    {
+      "reason": "Late proposal submission",
+      "sourceSection": "Section 4.4, Page 22"
+    },
+    {
+      "reason": "Unsigned proposal",
+      "sourceSection": "Section 1.1, Page 4"
+    },
+    {
+      "reason": "Failing the mandatory equipment inspection (post-award, pre-contract)",
+      "sourceSection": "Section 2.2, Item 8, Page 6"
+    },
+    {
+      "reason": "Not disclosing past or current criminal/civil proceedings",
+      "sourceSection": "Exhibit C, Page 53"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Site Visits (MANDATORY)",
+      "priority": "high",
+      "sourceText": "Site Visits are mandatory and required prior to the bid submission to understand each site's needs... Bids will not be considered unless the site visit form is included.",
+      "sourceSection": "Section 2.2, Item 9, Page 6",
+      "subtasks": [
+        {
+          "id": 11,
+          "title": "Visit Gaisman (4221 Macon, 38112) - 3 Acres"
+        },
+        {
+          "id": 12,
+          "title": "Visit Lester (317 Tillman, 38112) - 4 Acres"
+        },
+        {
+          "id": 13,
+          "title": "Visit Skinner (712 Tanglewood, 38104) - 3 Acres"
+        },
+        {
+          "id": 14,
+          "title": "Visit Glenview (1141 S. Barksdale, 38114) - 5 Acres"
+        },
+        {
+          "id": 15,
+          "title": "Visit Orange Mound (2572 Park, 38114) - 1 Acre"
+        },
+        {
+          "id": 16,
+          "title": "Visit Davis (3371 Spottswood, 38111) - 3 Acres"
+        },
+        {
+          "id": 17,
+          "title": "Complete and sign the Site Visit Form (Page 15) for 'Central Zone 2'."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Prepare Equipment List",
+      "priority": "high",
+      "sourceText": "All bidders must submit a comprehensive and itemized list of all equipment intended for use on this project as an attachment to their bid.",
+      "sourceSection": "Section 2.2, Item 6, Page 6",
+      "subtasks": [
+        {
+          "id": 21,
+          "title": "List all equipment by manufacturer, model, and serial number (if applicable)."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Assemble Bid Package",
+      "priority": "high",
+      "sourceText": "Proposer shall submit, in a sealed packet, one (1) original (clearly marked on the outside of the binder as \"ORIGINAL\"), two (2) complete printed copies, and one (1) thumb drives containing softcopies of its entire Proposal...",
+      "sourceSection": "Section 4.4, Page 21",
+      "subtasks": [
+        {
+          "id": 31,
+          "title": "Gather all required documents (see checklist)."
+        },
+        {
+          "id": 32,
+          "title": "Make one (1) original, two (2) paper copies, and one (1) digital copy on a thumb drive."
+        },
+        {
+          "id": 33,
+          "title": "Seal everything in one packet."
+        },
+        {
+          "id": 34,
+          "title": "Label the outside of the packet with your Company Name and 'RFQ 324765'."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Review Insurance Requirements",
+      "priority": "medium",
+      "sourceText": "Insurance requirements for this project are listed at the end of the sample contract, attached as Exhibit B-1.",
+      "sourceSection": "Section 2.4, Page 17",
+      "subtasks": [
+        {
+          "id": 41,
+          "title": "Contact your insurance agent to confirm you can get the required coverage (General Liability, Auto, Workers' Comp, Umbrella)."
+        },
+        {
+          "id": 42,
+          "title": "Confirm you can name the 'City of Memphis, its officials, agents, employees and representatives' as 'additional insured' on GL, Auto, and Umbrella policies."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Ask Questions (Optional)",
+      "priority": "low",
+      "sourceText": "Proposer may submit an initial set of questions... by 5:00 pm CST on the date listed in Section 4.2",
+      "sourceSection": "Section 4.3, Page 20",
+      "subtasks": [
+        {
+          "id": 51,
+          "title": "Format questions using the template in Exhibit G (Page 59)."
+        },
+        {
+          "id": 52,
+          "title": "Email questions to Chequita.crim@memphistn.gov, frances.brooks@memphistn.gov, and procurement@memphistn.gov before October 29, 2025."
+        }
+      ]
+    }
+  ],
+  "requiredDocuments": [
+    {
+      "id": 1,
+      "name": "Cover Letter (Exhibit E)",
+      "required": true,
+      "instructions": "A letter signed by an authorized person in your company. Use Exhibit E (Page 57) as a guide for what to include (name, address, contact person).",
+      "sourceText": "Proposer's Proposal shall contain a cover letter... signed by an authorized representative... (see Exhibit E)",
+      "sourceSection": "Section 3.1, Page 18"
+    },
+    {
+      "id": 2,
+      "name": "Non-Collusion Affidavit (Exhibit D)",
+      "required": true,
+      "instructions": "Fill out the form on Page 54. You MUST get this notarized.",
+      "sourceText": "Please use the form provided in Exhibit D. (NOTARY SEAL IS REQUIRED.)",
+      "sourceSection": "Section 3.2, Page 18 & Exhibit D, Page 54"
+    },
+    {
+      "id": 3,
+      "name": "Criminal and Civil Proceedings Disclosure (Exhibit C)",
+      "required": true,
+      "instructions": "Fill out the form on Page 53. You must disclose any proceedings in the last 10 years. If you have none, write 'None' or 'N/A' and sign it.",
+      "sourceText": "Please use the form provided in Exhibit C.",
+      "sourceSection": "Section 3.3, Page 18"
+    },
+    {
+      "id": 4,
+      "name": "Pricing Schedule (Exhibit F)",
+      "required": true,
+      "instructions": "Use the Excel version of the form (Page 58) to enter your price per acre for each service. Provide a total annual amount and monthly cost.",
+      "sourceText": "Please REFER to the form in Exhibit F. (Please use the x-cel version for Exhibit F)",
+      "sourceSection": "Section 3.5, Page 19"
+    },
+    {
+      "id": 5,
+      "name": "Relevant Experience and References",
+      "required": true,
+      "instructions": "Describe your company's capabilities and experience (min. 2 years). Provide at least 3 customer references with company name, contact, and phone number. Scoring requires 3 *written* recommendations on client letterhead.",
+      "sourceText": "Please describe agency's relevant experience... Respondents must have a minimum of two (2) years of experience... Provide at least three references...",
+      "sourceSection": "Section 3.7, Page 19 & Exhibit H, Page 60"
+    },
+    {
+      "id": 6,
+      "name": "Staffing Information",
+      "required": true,
+      "instructions": "List the staff who will work on this project and their experience. Include copies of any required licenses or certifications.",
+      "sourceText": "Proposer should identify the staff and provide relevant experience... Proposer must include copies of Licenses and Certifications (if required).",
+      "sourceSection": "Section 3.7, Page 19"
+    },
+    {
+      "id": 7,
+      "name": "Mandatory Site Visit Form",
+      "required": true,
+      "instructions": "This is the form on Page 15. You must visit all 6 sites, then print, sign, and include this form with your bid. You will be disqualified without it.",
+      "sourceText": "Bids will not be considered unless the site visit form is included.",
+      "sourceSection": "Section 2.2, Item 9, Page 6 & Page 15"
+    },
+    {
+      "id": 8,
+      "name": "Equipment List",
+      "required": true,
+      "instructions": "A detailed, itemized list of all equipment you will use, including manufacturer, model, and serial number (if it has one).",
+      "sourceText": "All bidders must submit a comprehensive and itemized list of all equipment... as an attachment to their bid.",
+      "sourceSection": "Section 2.2, Item 6, Page 6"
+    },
+    {
+      "id": 9,
+      "name": "Certificate of Drug Free Workplace (Exhibit A)",
+      "required": true,
+      "instructions": "Sign the form on Page 29 stating you agree to the policy.",
+      "sourceText": "...vendors are expected to adhere to the same drug free workplace policy (see Exhibit A).",
+      "sourceSection": "Section 3.4, Page 19"
+    },
+    {
+      "id": 10,
+      "name": "Memphis/Shelby County Business Tax Receipt",
+      "required": true,
+      "instructions": "If your business is in Memphis, include a copy of your current business license. This is needed to be considered for local preference.",
+      "sourceText": "A copy of the Memphis and Shelby County Tennessee Business Tax Receipt shall accompany the bid for consideration of this ordinance.",
+      "sourceSection": "Section 7, Page 27"
+    }
+  ],
+  "scoringCriteria": [
+    {
+      "criteria": "Scope of Work",
+      "weight": "50",
+      "description": "Your plan must clearly show how you will meet all requirements, including turf, shrubs, mulching, hardscape, and equipment.",
+      "sourceSection": "Exhibit H, Page 60"
+    },
+    {
+      "criteria": "Relevant Experience",
+      "weight": "30",
+      "description": "You must provide 3 written recommendations from similar clients (on their letterhead) and a list of other clients.",
+      "sourceSection": "Exhibit H, Page 60"
+    },
+    {
+      "criteria": "Pricing",
+      "weight": "20",
+      "description": "Your pricing must be itemized, clear, and competitive. It needs to include annual totals and monthly breakdowns.",
+      "sourceSection": "Exhibit H, Page 60"
+    }
+  ]
+}
 
 export default rfpData;
