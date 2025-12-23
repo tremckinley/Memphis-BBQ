@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React, { useState } from 'react';
-import { CheckCircle, Circle, Upload, AlertCircle, Clock, DollarSign, MapPin, FileText, ChevronDown, ChevronUp, Info, X, Inbox, Loader2, InfoIcon, File } from 'lucide-react';
+import { CheckCircle, Circle, Upload, AlertCircle, Clock, DollarSign, MapPin, FileText, ChevronDown, ChevronUp, Info, X, Inbox, Loader2, InfoIcon, File, ArrowLeft } from 'lucide-react';
 import rfpData from '../rfp_data' // <-- 1. IMPORT THE DATA
 import { refresh } from 'less';
 
@@ -74,7 +74,7 @@ const RFPDashboard = () => {
         if (!item) return null;
 
         return (
-            <div className="fixed inset-0 bg-[#00000095] flex items-center justify-center z-50 p-4" onClick={onClose}>
+            <div className="max-h-screen fixed inset-0 bg-[#00000095] flex items-center justify-center z-50 p-4" onClick={onClose}>
                 <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[80vh] overflow-hidden" onClick={e => e.stopPropagation()}>
                     <div className="p-5 border-b border-slate-200 flex items-center justify-between bg-slate-50">
                         <div>
@@ -117,7 +117,7 @@ const RFPDashboard = () => {
 
             {/* 3. HEADER: NOW DYNAMIC */}
             <div className="bg-[azure] shadow-lg shadow-gray-600">
-                
+                <span className="flex items-center pt-2 pl-12 text-blue-900 hover:text-blue-600 cursor-pointer" onClick={() => setSubmitted(false)}><ArrowLeft /> Back to Homepage</span>
                 <div className="max-w-7xl mx-auto">
                     <div className="md:flex-row flex flex-col items-center md:justify-between">
                         <div className='flex items-center'>
@@ -563,7 +563,7 @@ const RFPDashboard = () => {
             </div>
         </div>
     ) : (
-        <div className="min-h-screen bg-[#00698B90] pt-24">
+        <div className="bg-[#00698B90]">
         <div className="bg-[azure] shadow-lg shadow-gray-600  fixed z-100 top-0 w-full">
 
                 <div className="max-w-7xl mx-auto px-6 py-4">
@@ -580,7 +580,7 @@ const RFPDashboard = () => {
                 </div>
             </div>
         <div className="min-h-screen bg-[#00698B90] flex items-center justify-center p-6">
-            <div className="bg-yellow-200 rounded-lg shadow-xl border border-slate-200 p-8 max-w-2xl w-full">
+            <div className="bg-slate-200/40 rounded-lg shadow-2xl shadow-slate-700 border border-slate-700 p-8 max-w-2xl w-full">
                 
                 {isLoading ? (
                     <div className="flex flex-col items-center justify-center gap-6 py-12">
@@ -602,17 +602,25 @@ const RFPDashboard = () => {
                             <p className="text-slate-600 mb-2">Upload an RFP or RFQ in its entirety</p>
                         </div>
 
-                        
-                            <input 
+                            <div className="text-center border-2 border-emerald-600 p-2 rounded-lg text-white bg-emerald-600">
+                                <p>In order to present a Minimal Viable Product (MVP) without server costs, the AI capabilies for this app were outsourced to a Google Gemini "Gem".</p>
+                                <p>Attempting this level of analysis with a free tier LLM or LVM has proven to be too resource-intensive.</p>
+                                <p>As a result, this deployment does not anlayze uploaded documents. </p>
+                                <br></br>
+                                <p>Please click "View Test Analysis" to see the results of the AI analysis completed during HackMemphis 2025.</p>
+                                
+                            </div>
+                            {/* <button className="w-fit bg-slate-100 hover:bg-slate-300 text-black font-semibold py-2 px-4 rounded-lg text-lg border"><a href="./">View Demo Data</a></button> */}
+                            {/* <input 
                                 type="file" 
                                 className="bg-gray-50 border-2 border-dashed border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-60 h-45 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-50000"
                                 accept=".pdf,.doc,.docx"
-                            />
+                            /> */}
                         <button
                             onClick={fakeSubmit}
-                            className="w-full bg-blue-900 hover:bg-[#606060] text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
+                            className="w-full border border-slate-700 bg-slate-100 hover:bg-[#606060] text-black font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
                         >
-                            Analyze Proposal
+                            View Demo Analysis
                         </button>
                     </div>
                 )}
