@@ -1,10 +1,8 @@
 // @ts-nocheck
 import React, { useState } from 'react';
-import { CheckCircle, Circle, Upload, AlertCircle, Clock, DollarSign, MapPin, FileText, ChevronDown, ChevronUp, Info, X, Inbox, Loader2, InfoIcon, File } from 'lucide-react';
-import rfpData from '../rfp_data' // <-- 1. IMPORT THE DATA
-import { refresh } from 'less';
+import { CheckCircle, Circle, Upload, AlertCircle, Clock, DollarSign, MapPin, FileText, ChevronDown, ChevronUp, Info, X, Inbox, Loader2, InfoIcon, File, ArrowLeft } from 'lucide-react';
 
-const RFPDashboard = () => {
+const RFPDashboard = ({ rfpData, onNewAnalysis, isDemo = false }) => {
     const [submitted, setSubmitted] = useState(false);
     const [selectedInfo, setSelectedInfo] = useState(null);
     const [expanded, setExpanded] = useState(false);
@@ -117,15 +115,26 @@ const RFPDashboard = () => {
 
             {/* 3. HEADER: NOW DYNAMIC */}
             <div className="bg-[azure] shadow-lg shadow-gray-600">
-                
+
                 <div className="max-w-7xl mx-auto">
                     <div className="md:flex-row flex flex-col items-center md:justify-between">
                         <div className='flex items-center'>
-
-                        <div className='px-4'>
-                            <h1 className=" text-center md:text-left lg:text-2xl text-lg font-bold text-slate-900">RFQ #{rfpData?.projectInfo?.rfpNumber || 'N/A'}</h1>
-                            <p className="text-slate-800 text-sm lg:text-base">{rfpData?.projectInfo?.title || 'No title available'}</p>
-                        </div>
+                            {/* New Analysis Button */}
+                            <button
+                                onClick={onNewAnalysis}
+                                className="flex items-center gap-2 px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors text-sm text-gray-700 mx-2"
+                                title="Analyze a new RFP"
+                            >
+                                <ArrowLeft className="w-4 h-4" />
+                                <span className="hidden md:inline">New</span>
+                            </button>
+                            <div className='px-4'>
+                                <div className="flex items-center gap-2">
+                                    <h1 className=" text-center md:text-left lg:text-2xl text-lg font-bold text-slate-900">RFQ #{rfpData?.projectInfo?.rfpNumber || 'N/A'}</h1>
+                                    {isDemo && <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">Demo</span>}
+                                </div>
+                                <p className="text-slate-800 text-sm lg:text-base">{rfpData?.projectInfo?.title || 'No title available'}</p>
+                            </div>
                         </div>
                         <img
                             src='/icon.png'
@@ -148,7 +157,7 @@ const RFPDashboard = () => {
 
                 {/* 4. SUMMARY CARDS: NOW DYNAMIC */}
                 <div className="flex justify-around md:flex-nowrap flex-wrap mb-6">
-                <div className="bg-white rounded-lg shadow-sm p-5 border border-slate-200 w-1/3 m-2">
+                    <div className="bg-white rounded-lg shadow-sm p-5 border border-slate-200 w-1/3 m-2">
                         <div className="flex items-center justify-between mb-3">
                             <h3 className="text-sm font-semibold text-slate-700">Upload Document</h3>
                             <FileText className="w-5 h-5 text-black-500" />
@@ -210,8 +219,8 @@ const RFPDashboard = () => {
                                         <AlertCircle className="w-6 h-6 text-amber-700" />
                                     </div>
                                     <div>
-                                    <h2 className="text-lg font-bold text-amber-900">Required Qualifications & Equipment</h2>
-                                    <p className='text-amber-800 hover:cursor-pointer' onClick={() => setExpanded(!expanded)}>{expanded ?  'Collapse' : 'Expand for details'}</p>
+                                        <h2 className="text-lg font-bold text-amber-900">Required Qualifications & Equipment</h2>
+                                        <p className='text-amber-800 hover:cursor-pointer' onClick={() => setExpanded(!expanded)}>{expanded ? 'Collapse' : 'Expand for details'}</p>
                                     </div>
 
                                 </div>
@@ -313,83 +322,83 @@ const RFPDashboard = () => {
                 {/* Main Content Grid */}
                 <div className="flex flex-col justify-around gap-4">
 
-                    
-                        {/* 7. PROJECT SUMMARY: NOW DYNAMIC */}
-                        <div className="bg-white rounded-lg shadow-sm border border-slate-200">
-                            <div className="p-5 border-b border-slate-200">
-                                <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-                                    <InfoIcon className="w-5 h-5" />
-                                    Project Summary
-                                </h2>
+
+                    {/* 7. PROJECT SUMMARY: NOW DYNAMIC */}
+                    <div className="bg-white rounded-lg shadow-sm border border-slate-200">
+                        <div className="p-5 border-b border-slate-200">
+                            <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+                                <InfoIcon className="w-5 h-5" />
+                                Project Summary
+                            </h2>
+                        </div>
+                        <div className="p-5 space-y-4 text-lg">
+                            <div>
+                                <div className="font-semibold text-slate-700 mb-1 flex items-center gap-2">
+                                    Scope
+                                    <button
+                                        onClick={() => setSelectedInfo({ item: { name: 'Scope', sourceText: rfpData?.summary?.scope || 'No source text available', sourceSection: rfpData?.summary?.sourceSection || '' }, type: 'summary' })}
+                                        className="p-1 hover:bg-slate-200 rounded transition-colors"
+                                        title="View source from RFQ"
+                                    >
+                                        <FileText className="w-4 h-4 text-blue-600" />
+                                    </button>
+                                </div>
+                                <div className="text-slate-800">{rfpData?.summary?.scope || 'No scope information available'}</div>
                             </div>
-                            <div className="p-5 space-y-4 text-lg">
-                                <div>
-                                    <div className="font-semibold text-slate-700 mb-1 flex items-center gap-2">
-                                        Scope
-                                        <button
-                                            onClick={() => setSelectedInfo({ item: { name: 'Scope', sourceText: rfpData?.summary?.scope || 'No source text available', sourceSection: rfpData?.summary?.sourceSection || '' }, type: 'summary' })}
-                                            className="p-1 hover:bg-slate-200 rounded transition-colors"
-                                            title="View source from RFQ"
-                                        >
-                                            <FileText className="w-4 h-4 text-blue-600" />
-                                        </button>
-                                    </div>
-                                    <div className="text-slate-800">{rfpData?.summary?.scope || 'No scope information available'}</div>
+                            <div>
+                                <div className="font-semibold text-slate-700 mb-1 flex items-center gap-2">
+                                    <MapPin className="w-4 h-4" />
+                                    Locations
+                                    <button
+                                        onClick={() => setSelectedInfo({ item: { name: 'Locations', sourceText: rfpData?.keyAddresses?.map(a => a.address).join('; ') || 'No source text available', sourceSection: rfpData?.keyAddresses?.[0]?.sourceSection || '' }, type: 'summary' })}
+                                        className="p-1 hover:bg-slate-200 rounded transition-colors"
+                                        title="View source from RFQ"
+                                    >
+                                        <FileText className="w-4 h-4 text-blue-600" />
+                                    </button>
                                 </div>
-                                <div>
-                                    <div className="font-semibold text-slate-700 mb-1 flex items-center gap-2">
-                                        <MapPin className="w-4 h-4" />
-                                        Locations
-                                        <button
-                                            onClick={() => setSelectedInfo({ item: { name: 'Locations', sourceText: rfpData?.keyAddresses?.map(a => a.address).join('; ') || 'No source text available', sourceSection: rfpData?.keyAddresses?.[0]?.sourceSection || '' }, type: 'summary' })}
-                                            className="p-1 hover:bg-slate-200 rounded transition-colors"
-                                            title="View source from RFQ"
-                                        >
-                                            <FileText className="w-4 h-4 text-blue-600" />
-                                        </button>
-                                    </div>
-                                    {rfpData.keyAddresses && (
-                                        <ul>
-                                            {rfpData.keyAddresses.map((add, idx) => {
-                                                return <li className="text-slate-800 space-y-1 ml-4" key={idx}>{`- ${add.address}`}</li>
-                                            })}
-                                        </ul>
-                                    )}
-                                    
+                                {rfpData.keyAddresses && (
+                                    <ul>
+                                        {rfpData.keyAddresses.map((add, idx) => {
+                                            return <li className="text-slate-800 space-y-1 ml-4" key={idx}>{`- ${add.address}`}</li>
+                                        })}
+                                    </ul>
+                                )}
+
+                            </div>
+                            <div>
+                                <div className="font-semibold text-slate-700 mb-1 flex items-center gap-2">
+                                    Duration
+                                    <button
+                                        onClick={() => setSelectedInfo({ item: { name: 'Duration', sourceText: rfpData?.summary?.contractDuration || 'No source text available', sourceSection: rfpData?.summary?.sourceSection || '' }, type: 'summary' })}
+                                        className="p-1 hover:bg-slate-200 rounded transition-colors"
+                                        title="View source from RFQ"
+                                    >
+                                        <FileText className="w-4 h-4 text-blue-600" />
+                                    </button>
                                 </div>
-                                <div>
-                                    <div className="font-semibold text-slate-700 mb-1 flex items-center gap-2">
-                                        Duration
-                                        <button
-                                            onClick={() => setSelectedInfo({ item: { name: 'Duration', sourceText: rfpData?.summary?.contractDuration || 'No source text available', sourceSection: rfpData?.summary?.sourceSection || '' }, type: 'summary' })}
-                                            className="p-1 hover:bg-slate-200 rounded transition-colors"
-                                            title="View source from RFQ"
-                                        >
-                                            <FileText className="w-4 h-4 text-blue-600" />
-                                        </button>
-                                    </div>
-                                    <div className="text-slate-800">{rfpData?.summary?.contractDuration || 'Not specified'}</div>
+                                <div className="text-slate-800">{rfpData?.summary?.contractDuration || 'Not specified'}</div>
+                            </div>
+                            <div>
+                                <div className="font-semibold text-slate-700 mb-1 flex items-center gap-2">
+                                    Key Requirements
+                                    <button
+                                        onClick={() => setSelectedInfo({ item: { name: 'Key Requirements', sourceText: 'Mandatory site visits; Commercial-grade equipment; Equipment inspection after selection; Minimum 2 years experience', sourceSection: '' }, type: 'summary' })}
+                                        className="p-1 hover:bg-slate-200 rounded transition-colors"
+                                        title="View source from RFQ"
+                                    >
+                                        <FileText className="w-4 h-4 text-blue-600" />
+                                    </button>
                                 </div>
-                                <div>
-                                    <div className="font-semibold text-slate-700 mb-1 flex items-center gap-2">
-                                        Key Requirements
-                                        <button
-                                            onClick={() => setSelectedInfo({ item: { name: 'Key Requirements', sourceText: 'Mandatory site visits; Commercial-grade equipment; Equipment inspection after selection; Minimum 2 years experience', sourceSection: '' }, type: 'summary' })}
-                                            className="p-1 hover:bg-slate-200 rounded transition-colors"
-                                            title="View source from RFQ"
-                                        >
-                                            <FileText className="w-4 h-4 text-blue-600" />
-                                        </button>
-                                    </div>
-                                    <div className="text-slate-800 space-y-1">
-                                        <div>✓ Mandatory site visits</div>
-                                        <div>✓ Commercial-grade equipment</div>
-                                        <div>✓ Equipment inspection after selection</div>
-                                        <div>✓ Minimum 2 years experience</div>
-                                    </div>
+                                <div className="text-slate-800 space-y-1">
+                                    <div>✓ Mandatory site visits</div>
+                                    <div>✓ Commercial-grade equipment</div>
+                                    <div>✓ Equipment inspection after selection</div>
+                                    <div>✓ Minimum 2 years experience</div>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
                     {/* 6. TASK LIST: (Already dynamic, no changes needed) */}
                     <div className="lg:col-span-2 bg-white rounded-lg shadow-sm border border-slate-200 h-fit">
@@ -436,8 +445,8 @@ const RFPDashboard = () => {
                                                             </div>
                                                             <div className="flex items-center gap-3 mt-1">
                                                                 <span className={`text-xs px-2 py-1 rounded-full ${isOverdue ? 'bg-red-100 text-red-700' :
-                                                                        isUrgent ? 'bg-orange-100 text-orange-700' :
-                                                                            'bg-blue-100 text-blue-700'
+                                                                    isUrgent ? 'bg-orange-100 text-orange-700' :
+                                                                        'bg-blue-100 text-blue-700'
                                                                     }`}>
                                                                     {isOverdue ? `${Math.abs(daysUntil)} days overdue` :
                                                                         daysUntil === 0 ? 'Due today' :
@@ -497,74 +506,74 @@ const RFPDashboard = () => {
                         </div>
                     </div>
 
-                    
 
-                        {/* 8. DOCUMENT LIST: (Already dynamic, no changes needed) */}
-                        <div className="bg-white rounded-lg shadow-sm border border-slate-200">
-                            <div className="p-5 border-b border-slate-200">
-                                <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-                                    <Upload className="w-5 h-5" />
-                                    Document Checklist
-                                </h2>
-                            </div>
-                            <div className="p-5 space-y-2 max-h-[400px] overflow-y-auto">
-                                {documents.map(doc => (
-                                    <div
-                                        key={doc?.id}
-                                        className={`border rounded-lg overflow-hidden ${doc?.uploaded ? 'bg-green-50 border-green-200' : 'bg-white border-slate-200'
-                                            }`}
-                                    >
-                                        <div className="flex items-center justify-between p-3">
-                                            <div className="flex items-center gap-3 grow">
-                                                <button
-                                                    onClick={() => toggleDocument(doc?.id)}
-                                                >
-                                                    {doc?.uploaded ? (
-                                                        <CheckCircle className="w-5 h-5 text-green-600" />
-                                                    ) : (
-                                                        <Circle className="w-5 h-5 text-slate-400" />
-                                                    )}
-                                                </button>
-                                                <div className="grow">
-                                                    <div className="flex items-center gap-2">
-                                                        <div className={`text-lg font-medium ${doc?.uploaded ? 'text-slate-800' : 'text-slate-900'}`}>
-                                                            {doc?.name || 'Untitled Document'}
-                                                        </div>
-                                                        <button
-                                                            onClick={() => setSelectedInfo({ item: doc, type: 'document' })}
-                                                            className="p-1 hover:bg-slate-200 rounded transition-colors"
-                                                            title="View instructions and source"
-                                                        >
-                                                            <FileText className="w-4 h-4 text-blue-600" />
-                                                        </button>
-                                                    </div>
-                                                    {doc?.required && !doc?.uploaded && (
-                                                        <div className="text-sm text-red-600 mt-0.5">Required</div>
-                                                    )}
-                                                    {doc?.instructions && (
-                                                        <div className="text-sm text-slate-800 mt-1 line-clamp-2">
-                                                            {doc.instructions}
-                                                        </div>
-                                                    )}
-                                                </div>
-                                            </div>
-                                            {!doc?.uploaded && (
-                                                <button className="p-2 hover:bg-slate-200 rounded-lg transition-colors shrink-0">
-                                                    <Upload className="w-4 h-4 text-slate-800" />
-                                                </button>
-                                            )}
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
+
+                    {/* 8. DOCUMENT LIST: (Already dynamic, no changes needed) */}
+                    <div className="bg-white rounded-lg shadow-sm border border-slate-200">
+                        <div className="p-5 border-b border-slate-200">
+                            <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+                                <Upload className="w-5 h-5" />
+                                Document Checklist
+                            </h2>
                         </div>
-                    
+                        <div className="p-5 space-y-2 max-h-[400px] overflow-y-auto">
+                            {documents.map(doc => (
+                                <div
+                                    key={doc?.id}
+                                    className={`border rounded-lg overflow-hidden ${doc?.uploaded ? 'bg-green-50 border-green-200' : 'bg-white border-slate-200'
+                                        }`}
+                                >
+                                    <div className="flex items-center justify-between p-3">
+                                        <div className="flex items-center gap-3 grow">
+                                            <button
+                                                onClick={() => toggleDocument(doc?.id)}
+                                            >
+                                                {doc?.uploaded ? (
+                                                    <CheckCircle className="w-5 h-5 text-green-600" />
+                                                ) : (
+                                                    <Circle className="w-5 h-5 text-slate-400" />
+                                                )}
+                                            </button>
+                                            <div className="grow">
+                                                <div className="flex items-center gap-2">
+                                                    <div className={`text-lg font-medium ${doc?.uploaded ? 'text-slate-800' : 'text-slate-900'}`}>
+                                                        {doc?.name || 'Untitled Document'}
+                                                    </div>
+                                                    <button
+                                                        onClick={() => setSelectedInfo({ item: doc, type: 'document' })}
+                                                        className="p-1 hover:bg-slate-200 rounded transition-colors"
+                                                        title="View instructions and source"
+                                                    >
+                                                        <FileText className="w-4 h-4 text-blue-600" />
+                                                    </button>
+                                                </div>
+                                                {doc?.required && !doc?.uploaded && (
+                                                    <div className="text-sm text-red-600 mt-0.5">Required</div>
+                                                )}
+                                                {doc?.instructions && (
+                                                    <div className="text-sm text-slate-800 mt-1 line-clamp-2">
+                                                        {doc.instructions}
+                                                    </div>
+                                                )}
+                                            </div>
+                                        </div>
+                                        {!doc?.uploaded && (
+                                            <button className="p-2 hover:bg-slate-200 rounded-lg transition-colors shrink-0">
+                                                <Upload className="w-4 h-4 text-slate-800" />
+                                            </button>
+                                        )}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     ) : (
         <div className="min-h-screen bg-[#00698B90] pt-24">
-        <div className="bg-[azure] shadow-lg shadow-gray-600  fixed z-100 top-0 w-full">
+            <div className="bg-[azure] shadow-lg shadow-gray-600  fixed z-100 top-0 w-full">
 
                 <div className="max-w-7xl mx-auto px-6 py-4">
                     <div className="flex items-center justify-center">
@@ -579,45 +588,45 @@ const RFPDashboard = () => {
                     </div>
                 </div>
             </div>
-        <div className="min-h-screen bg-[#00698B90] flex items-center justify-center p-6">
-            <div className="bg-yellow-200 rounded-lg shadow-xl border border-slate-200 p-8 max-w-2xl w-full">
-                
-                {isLoading ? (
-                    <div className="flex flex-col items-center justify-center gap-6 py-12">
-                        <div className="p-6 bg-blue-50 rounded-full">
-                            <Loader2 className="w-16 h-16 text-blue-600 animate-spin" />
-                        </div>
-                        <div className="text-center">
-                            <h2 className="text-2xl font-bold text-slate-900 mb-2">Submitting Your Proposal...</h2>
-                            <p className="text-slate-600">Please wait while we process your submission</p>
-                        </div>
-                    </div>
-                ) : (
-                    <div className="flex flex-col items-center justify-center gap-6">
-                        <div className="p-6 bg-slate-200 rounded-full">
-                            <Upload className="w-16 h-16 text-[#00698B]" />
-                        </div>
-                        <div className="text-center">
-                            <h2 className="text-2xl font-bold text-slate-900 mb-2">Upload a Proposal/Quote</h2>
-                            <p className="text-slate-600 mb-2">Upload an RFP or RFQ in its entirety</p>
-                        </div>
+            <div className="min-h-screen bg-[#00698B90] flex items-center justify-center p-6">
+                <div className="bg-yellow-200 rounded-lg shadow-xl border border-slate-200 p-8 max-w-2xl w-full">
 
-                        
-                            <input 
-                                type="file" 
+                    {isLoading ? (
+                        <div className="flex flex-col items-center justify-center gap-6 py-12">
+                            <div className="p-6 bg-blue-50 rounded-full">
+                                <Loader2 className="w-16 h-16 text-blue-600 animate-spin" />
+                            </div>
+                            <div className="text-center">
+                                <h2 className="text-2xl font-bold text-slate-900 mb-2">Submitting Your Proposal...</h2>
+                                <p className="text-slate-600">Please wait while we process your submission</p>
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="flex flex-col items-center justify-center gap-6">
+                            <div className="p-6 bg-slate-200 rounded-full">
+                                <Upload className="w-16 h-16 text-[#00698B]" />
+                            </div>
+                            <div className="text-center">
+                                <h2 className="text-2xl font-bold text-slate-900 mb-2">Upload a Proposal/Quote</h2>
+                                <p className="text-slate-600 mb-2">Upload an RFP or RFQ in its entirety</p>
+                            </div>
+
+
+                            <input
+                                type="file"
                                 className="bg-gray-50 border-2 border-dashed border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-60 h-45 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-50000"
                                 accept=".pdf,.doc,.docx"
                             />
-                        <button
-                            onClick={fakeSubmit}
-                            className="w-full bg-blue-900 hover:bg-[#606060] text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
-                        >
-                            Analyze Proposal
-                        </button>
-                    </div>
-                )}
+                            <button
+                                onClick={fakeSubmit}
+                                className="w-full bg-blue-900 hover:bg-[#606060] text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
+                            >
+                                Analyze Proposal
+                            </button>
+                        </div>
+                    )}
+                </div>
             </div>
-        </div>
         </div>
     )
 };
