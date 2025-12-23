@@ -603,7 +603,7 @@ const RFPDashboard = () => {
                         </div>
 
                             <div className="text-center border-2 border-emerald-600 p-2 rounded-lg text-white bg-emerald-600">
-                                <p>In order to present a Minimal Viable Product (MVP) without server costs, the AI capabilies for this app were outsourced to a Google Gemini "Gem".</p>
+                                <p>In order to deploy a Minimal Viable Product (MVP) without server costs, the AI capabilies for this app were outsourced to a Google Gemini "Gem".</p>
                                 <p>Attempting this level of analysis with a free tier LLM or LVM has proven to be too resource-intensive.</p>
                                 <p>As a result, this deployment does not anlayze uploaded documents. </p>
                                 <br></br>
