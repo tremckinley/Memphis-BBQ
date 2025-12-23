@@ -1,10 +1,11 @@
 // @ts-nocheck
 import React, { useState } from 'react';
 import { CheckCircle, Circle, Upload, AlertCircle, Clock, DollarSign, MapPin, FileText, ChevronDown, ChevronUp, Info, X, Inbox, Loader2, InfoIcon, File } from 'lucide-react';
-import rfpData from '../rfp_data' // <-- 1. IMPORT THE DATA
+// import rfpData from '../rfp_data' // <-- REMOVED
 import { refresh } from 'less';
 
-const RFPDashboard = () => {
+const RFPDashboard = ({ rfpData }) => {
+    // const [rfpData, setRfpData] = useState(null); // No longer needed
     const [submitted, setSubmitted] = useState(false);
     const [selectedInfo, setSelectedInfo] = useState(null);
     const [expanded, setExpanded] = useState(false);
@@ -14,7 +15,7 @@ const RFPDashboard = () => {
     const [documents, setDocuments] = useState(rfpData?.requiredDocuments || []);
 
     // Find the Bid Due Date from the imported data
-    const bidDueDateInfo = rfpData?.keyDates?.find(d => d.event === 'Bid Due Date') || { date: '2025-11-19', time: '12:00 PM CT' };
+    const bidDueDateInfo = {};
 
     const toggleTask = (taskId) => {
         setTasks(tasks.map(task =>
@@ -105,7 +106,7 @@ const RFPDashboard = () => {
         );
     };
 
-    return submitted ? (
+    return (
         <div className="min-h-screen bg-[#00698B90]">
             {selectedInfo && (
                 <InfoModal
@@ -561,63 +562,6 @@ const RFPDashboard = () => {
                     
                 </div>
             </div>
-        </div>
-    ) : (
-        <div className="min-h-screen bg-[#00698B90] pt-24">
-        <div className="bg-[azure] shadow-lg shadow-gray-600  fixed z-100 top-0 w-full">
-
-                <div className="max-w-7xl mx-auto px-6 py-4">
-                    <div className="flex items-center justify-center">
-                        <img
-                            src='/icon.png'
-                            height={"80px"}
-                            width={"80px"}
-                            className='p-1'
-                        >
-                        </img>
-                        <div className='text-3xl font-bold ml-2'>Memphis B.B.Q. AI</div>
-                    </div>
-                </div>
-            </div>
-        <div className="min-h-screen bg-[#00698B90] flex items-center justify-center p-6">
-            <div className="bg-yellow-200 rounded-lg shadow-xl border border-slate-200 p-8 max-w-2xl w-full">
-                
-                {isLoading ? (
-                    <div className="flex flex-col items-center justify-center gap-6 py-12">
-                        <div className="p-6 bg-blue-50 rounded-full">
-                            <Loader2 className="w-16 h-16 text-blue-600 animate-spin" />
-                        </div>
-                        <div className="text-center">
-                            <h2 className="text-2xl font-bold text-slate-900 mb-2">Submitting Your Proposal...</h2>
-                            <p className="text-slate-600">Please wait while we process your submission</p>
-                        </div>
-                    </div>
-                ) : (
-                    <div className="flex flex-col items-center justify-center gap-6">
-                        <div className="p-6 bg-slate-200 rounded-full">
-                            <Upload className="w-16 h-16 text-[#00698B]" />
-                        </div>
-                        <div className="text-center">
-                            <h2 className="text-2xl font-bold text-slate-900 mb-2">Upload a Proposal/Quote</h2>
-                            <p className="text-slate-600 mb-2">Upload an RFP or RFQ in its entirety</p>
-                        </div>
-
-                        
-                            <input 
-                                type="file" 
-                                className="bg-gray-50 border-2 border-dashed border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-60 h-45 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-50000"
-                                accept=".pdf,.doc,.docx"
-                            />
-                        <button
-                            onClick={fakeSubmit}
-                            className="w-full bg-blue-900 hover:bg-[#606060] text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
-                        >
-                            Analyze Proposal
-                        </button>
-                    </div>
-                )}
-            </div>
-        </div>
         </div>
     )
 };
