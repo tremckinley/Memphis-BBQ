@@ -1,16 +1,141 @@
-# React + Vite
+# Memphis BBQ 🐷
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Memphis BBQ Logo](public/icon_128.png)
 
-Currently, two official plugins are available:
+**Small Business Owners need clarity in common language, as quickly as possible.**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Memphis BBQ helps small business owners decode complex government procurement documents by using a local AI model (via WebLLM) to extract deadlines, requirements, disqualifiers, and submission checklists into a clear, actionable dashboard.
 
-## React Compiler
+Save time. Reduce errors. Increase your chances of winning contracts. Try Memphis B.B.Q. today!
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![React](https://img.shields.io/badge/React-19-61dafb.svg)
+![Vite](https://img.shields.io/badge/Vite-7-646cff.svg)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Background
+
+This app was created as a solo entry for the [Hack Memphis 2025 Hackathon](https://innovatememphis.com/winning-solutions-and-scenes-from-the-2025-city-hackathon/) under the "Tools for local business partners" category. After a successful demo and pitch, I received the runner-up prize of $500 and generated strong interest from local businesses and the city IT department. I was able to showcase my ability to **recognize a problem**, **gather requirements**, and **translate them into a working solution** in a short amount of time using **AI-assisted development**. I plan to continue development and make it available to the public.
+
+## Features
+
+- **PDF Text Extraction** — Upload any RFP/RFQ PDF and Memphis BBQ extracts the text automatically.
+- **Structured Analysis** — Converts bureaucratic jargon into plain-language summaries at a 6th-grade reading level.
+- **Interactive Dashboard** — Track tasks, required documents, key dates, and disqualifiers with a visual checklist.
+- **Percise Citation** — Memphis BBQ cites the source of the text it extracts from the RFP/RFQ document inline with the analysis.
+- **Mobile-friendly** — Memphis BBQ is mobile-friendly and can be used on any device.
+
+---
+
+## Quick Start
+
+### Prerequisites for self-testing
+
+- **Node.js 18+**
+- **Web-based AI model using provided system prompt** (ex. Gemini Gem) 
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/memphis-bbq.git
+cd memphis-bbq
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+Then open [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
+
+## How It Works
+
+1. **Upload** — Drop a PDF of your RFP/RFQ document
+2. **Analyze** — LLM parsed the document and returns a JSON object
+3. **Insert** — The JSON object is inserted into rfp_data.js
+4. **Review** — The structured JSON output populates an interactive dashboard
+
+### What Gets Extracted
+
+| Category | Details |
+|----------|---------|
+| **Project Info** | RFP number, title, issuing organization |
+| **Summary** | Plain-language scope, contract duration & value |
+| **Key Dates** | Deadlines for questions, site visits, submissions |
+| **Contacts & Addresses** | Who to call, where to submit |
+| **Qualifications** | Insurance, equipment, eligibility requirements |
+| **Disqualifiers** | Common mistakes that auto-reject bids |
+| **Tasks** | Step-by-step checklist before submission |
+| **Required Documents** | Forms and attachments you need to include |
+| **Scoring Criteria** | How bids are evaluated |
+| **Caveats** | Important "gotchas" and fine print |
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| **Framework** | React 19 + Vite 7 |
+| **Styling** | Tailwind CSS 4 |
+| **Icons** | Lucide React |
+
+---
+
+## Project Structure
+
+```
+memphis-bbq/
+├── src/
+│   ├── App.jsx              # Main app with routing logic
+│   ├── RFPDashboard.tsx     # Interactive results dashboard
+│   ├── components/
+│   │   └── RFPUploader.jsx  # Upload UI with progress states
+│   └── services/            # Still under development - requires more compute/funding
+│       ├── AIService.js     # WebLLM engine wrapper
+│       └── PDFService.js    # PDF text extraction
+├── system_prompt.md         # AI prompt with JSON schema
+├── rfp_data.js              # Sample demo data
+└── index.html
+```
+
+---
+
+## Configuration
+
+### Full Deployment still under development
+
+This app is currently in development and requires a backend server to run. The full deployment is not yet available.
+
+### Customizing the Analysis Prompt
+
+The extraction schema is defined in `system_prompt.md`. Modify this file to adjust what data gets extracted or change the output format.
+
+---
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+## License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
+---
+
+<p align="center">
+  <strong>Built with by a Memphian, for Memphis small businesses impact.</strong>
+</p>
