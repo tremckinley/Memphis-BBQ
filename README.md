@@ -12,6 +12,8 @@ Save time. Reduce errors. Increase your chances of winning contracts. Try Memphi
 ![React](https://img.shields.io/badge/React-19-61dafb.svg)
 ![Vite](https://img.shields.io/badge/Vite-7-646cff.svg)
 
+![App Screenshot](public/screenshot.png)
+
 ---
 
 ## Background
