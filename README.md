@@ -37,7 +37,7 @@ This app was created as a solo entry for the [Hack Memphis 2025 Hackathon](https
 - **Node.js 18+**
 - **Web-based AI model using provided system prompt** (ex. Gemini Gem) 
 
-### Installation
+### Local Installation
 
 ```bash
 # Clone the repository
@@ -93,16 +93,21 @@ Then open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ```
 memphis-bbq/
+├── public/                      # Static assets
+│   ├── demo_rfp.pdf             # Demo RFP document
+│   ├── icon.png                 # App icon
+│   └── screenshot.png           # App screenshot
 ├── src/
-│   ├── App.jsx              # Main app with routing logic
-│   ├── RFPDashboard.tsx     # Interactive results dashboard
 │   ├── components/
-│   │   └── RFPUploader.jsx  # Upload UI with progress states
-│   └── services/            # Still under development - requires more compute/funding
-│       ├── AIService.js     # WebLLM engine wrapper
-│       └── PDFService.js    # PDF text extraction
-├── system_prompt.md         # AI prompt with JSON schema
-├── rfp_data.js              # Sample demo data
+│   │   ├── Header.tsx           # Dashboard header with navigation
+│   │   └── RFPDashboard.tsx     # Interactive results dashboard
+│   ├── App.jsx                  # Main app with routing logic
+│   ├── App.css                  # Global styles
+│   └── main.jsx                 # React entry point
+├── server.js                    # Express backend for PDF parsing & OpenAI
+├── system_prompt.js             # AI prompt with JSON schema
+├── rfp_data.js                  # Sample demo data
+├── .env                         # Environment variables (API keys)
 └── index.html
 ```
 
