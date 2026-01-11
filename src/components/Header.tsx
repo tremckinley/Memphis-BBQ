@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Printer, FileBraces } from 'lucide-react';
 
 interface HeaderProps {
     /** Display mode: 'landing' for homepage, 'dashboard' for post-submission view */
@@ -18,6 +18,8 @@ interface HeaderProps {
     onBackClick?: () => void;
     /** Callback for logo click (dashboard mode only) */
     onLogoClick?: () => void;
+    /** RFP data object to display as JSON (dashboard mode only) */
+    rfpData?: object | null;
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -28,8 +30,19 @@ const Header: React.FC<HeaderProps> = ({
     dueDate,
     dueTime,
     onBackClick,
-    onLogoClick
+    onLogoClick,
+    rfpData
 }) => {
+    const handleGetJson = () => {
+        if (!rfpData) {
+            alert('No RFP data available');
+            return;
+        }
+        const jsonString = JSON.stringify(rfpData, null, 2);
+        const blob = new Blob([jsonString], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        window.open(url, '_blank');
+    };
     if (mode === 'landing') {
         return (
             <div className="bg-gradient-to-r from-[#E8F4F8] to-[#F0F9FC] shadow-lg shadow-slate-300 fixed z-100 top-0 w-full h-24 border-b border-[#4A6785]/20">
@@ -51,12 +64,28 @@ const Header: React.FC<HeaderProps> = ({
     // Dashboard mode
     return (
         <div className="bg-gradient-to-r from-[#E8F4F8] to-[#F0F9FC] shadow-lg shadow-slate-300 border-b border-[#4A6785]/20">
-            <span
-                className="flex items-center pt-2 pl-12 text-[#4A6785] hover:text-[#1E3A5F] cursor-pointer transition-colors"
-                onClick={onBackClick}
-            >
-                <ArrowLeft /> Back to Homepage
-            </span>
+            <div className="flex items-center w-full justify-between max-w-7xl mx-auto">
+                <span
+                    className="flex items-center pt-2 text-[#4A6785] hover:text-[#1E3A5F] hover:underline cursor-pointer transition-colors"
+                    onClick={onBackClick}
+                >
+                    <ArrowLeft /> Back to Homepage
+                </span>
+                <div className="flex items-center gap-2">
+                <span
+                    className="flex items-center pt-2 text-[#4A6785] hover:text-[#1E3A5F] hover:underline cursor-pointer transition-colors"
+                    onClick={() => window.print()}
+                >
+                    <Printer /> Print page
+                </span>
+                <span
+                    className="flex items-center pt-2 text-[#4A6785] hover:text-[#1E3A5F] hover:underline cursor-pointer transition-colors"
+                    onClick={handleGetJson}
+                >
+                    <FileBraces /> Get JSON
+                </span>
+                </div>
+            </div>
             <div className="max-w-7xl mx-auto">
                 <div className="md:flex-row flex flex-col items-center md:justify-between">
                     <div className='flex items-center'>

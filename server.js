@@ -50,7 +50,7 @@ app.post('/upload', upload.single('file'), async (req, res) => {
     final_prompt += `=========END of Document========= \n\n`
 
     console.log(final_prompt);
-    fs.writeFileSync('final_prompt.txt', final_prompt);
+    //fs.writeFileSync('final_prompt.txt', final_prompt);
 
 
     let response = '';
@@ -65,7 +65,7 @@ app.post('/upload', upload.single('file'), async (req, res) => {
         });
         console.log(completion.choices[0].message.content);
         response = completion.choices[0].message.content;
-        fs.writeFileSync('response.txt', response);
+        // fs.writeFileSync('response.txt', response);
     } catch (error) {
         console.error(error);
         response = 'Failed to generate response';
