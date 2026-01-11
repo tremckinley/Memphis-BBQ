@@ -1,5 +1,5 @@
 // JavaScript module - not JSON
-const rfpData = {
+const test_rfpData = {
   "confidence": "high",
   "flags": [],
   "projectInfo": {
@@ -371,4 +371,4 @@ const rfpData = {
   ]
 }
 
-export default rfpData;
+export default test_rfpData;

@@ -1,0 +1,147 @@
+```json
+{
+  "confidence": "high",
+  "flags": [],
+  "projectInfo": {
+    "rfpNumber": "325762",
+    "title": "Fire Sprinkler System Maintenance",
+    "issuingOrganization": "City of Memphis"
+  },
+  "summary": {
+    "scope": "This RFQ is for maintaining fire sprinkler systems for the City of Memphis.",
+    "contractDuration": null,
+    "contractValue": "TBD / Bidder sets price"
+  },
+  "keyDates": [
+    {
+      "event": "RFQ Published",
+      "date": "2025-10-20",
+      "time": "02:21 PM CT",
+      "sourceSection": "Page 1"
+    },
+    {
+      "event": "Question Deadline",
+      "date": "2025-11-05",
+      "time": "05:00 PM",
+      "sourceSection": "Page 2"
+    },
+    {
+      "event": "Answers Posted",
+      "date": "2025-11-12",
+      "time": "05:00 PM",
+      "sourceSection": "Page 2"
+    },
+    {
+      "event": "Bid Due Date",
+      "date": "2025-11-19",
+      "time": "12:00 PM CT",
+      "sourceSection": "Page 1"
+    }
+  ],
+  "keyContacts": [
+    {
+      "name": "Lakisha Sherrod",
+      "role": "Questions & Submission",
+      "contactInfo": "lakisha.sherrod@memphistn.gov; 901-636-6195",
+      "sourceSection": "Page 2"
+    }
+  ],
+  "keyAddresses": [
+    {
+      "type": "Bid Submission - By Hand",
+      "address": "City Hall, Main Lobby, Bid Drop Box, 125 N. Main St, Memphis, TN 38103",
+      "sourceSection": "Page 10"
+    },
+    {
+      "type": "Bid Submission - Mail",
+      "address": "City of Memphis, Purchasing Department, Room 354, Memphis, TN 38103",
+      "sourceSection": "Page 10"
+    }
+  ],
+  "qualifications": {
+    "eligibilityRequirements": [
+      {
+        "requirement": "Supplier registration with City of Memphis",
+        "details": "Vendors must be registered as a supplier with the City of Memphis to participate in bids. Visit the City of Memphis website and click the Online Suppliers Registration Form link.",
+        "sourceSection": "Page 1"
+      }
+    ],
+    "insuranceRequirements": [
+      {
+        "type": "General Insurance for Sprinkler System Maintenance",
+        "amount": "Refer to attachment for details.",
+        "sourceSection": "Page 8"
+      }
+    ],
+    "equipmentRequirements": []
+  },
+  "disqualifiers": [
+    {
+      "reason": "Unsigned hardcopy bids",
+      "sourceSection": "Page 10"
+    },
+    {
+      "reason": "Bids received after the deadline",
+      "sourceSection": "Page 10"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Supplier Registration",
+      "priority": "high",
+      "sourceText": "Vendors must be registered as a supplier with the City of Memphis to participate in City of Memphis bids.",
+      "sourceSection": "Page 1",
+      "subtasks": []
+    },
+    {
+      "id": 2,
+      "title": "Submit Questions by Deadline",
+      "priority": "medium",
+      "sourceText": "Proposer may submit questions based on its review of this RFQ, by adhering to the format template.",
+      "sourceSection": "Page 2",
+      "subtasks": []
+    },
+    {
+      "id": 3,
+      "title": "Complete and Submit Required Forms",
+      "priority": "high",
+      "sourceText": "ALL Bidders must complete each of the required forms that are attached to this RFQ and submit ALL required documentation with the Bidder's quote, per the specifications and the Terms & Conditions.",
+      "sourceSection": "Page 4",
+      "subtasks": []
+    },
+    {
+      "id": 4,
+      "title": "Ensure Hardcopy Bids are Signed",
+      "priority": "high",
+      "sourceText": "Emailed bids are not accepted. If a hardcopy bid is submitted the vendor must physically sign the bid or the bid will be considered non-conforming.",
+      "sourceSection": "Page 1",
+      "subtasks": []
+    }
+  ],
+  "requiredDocuments": [
+    {
+      "id": 1,
+      "name": "Memphis and Shelby County Tennessee Business Tax Receipt",
+      "required": false,
+      "instructions": "Provide a copy if you want consideration under the local preference ordinance.",
+      "sourceText": "A COPY OF YOUR MEMPHIS AND SHELBY COUNTY TENNESSEE BUSINESS TAX RECEIPT MUST ACCOMPANY YOUR BID FOR CONSIDERATION OF THIS ORDINANCE.",
+      "sourceSection": "Page 2"
+    },
+    {
+      "id": 2,
+      "name": "Bid Section Attachment",
+      "required": true,
+      "instructions": "Fill out and return in its entirety the attached Specifications/Bid Section.",
+      "sourceText": "Fill out, in its entirety the attached Specifications/Bid Section and return for evaluation and award purposes.",
+      "sourceSection": "Page 7"
+    }
+  ],
+  "scoringCriteria": [],
+  "caveats": [
+    {
+      "concern": "Submissions after 12:00 PM CT on November 19, 2025, will be considered non-conforming."
+    }
+  ]
+}
+```

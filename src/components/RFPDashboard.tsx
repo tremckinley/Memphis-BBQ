@@ -1,21 +1,88 @@
 // @ts-nocheck
 import React, { useState } from 'react';
 import { CheckCircle, Circle, Upload, AlertCircle, Clock, DollarSign, MapPin, FileText, ChevronDown, ChevronUp, Info, X, Inbox, Loader2, InfoIcon, File, ArrowLeft } from 'lucide-react';
-import rfpData from '../../rfp_data' // <-- 1. IMPORT THE DATA
 import { refresh } from 'less';
 import Header from './Header';
+import test_rfpdata from '../../rfp_data.js';
+
+interface Subtask {
+    id?: string;
+    name?: string;
+    title?: string;
+    completed?: boolean;
+}
+
+interface Task {
+    id?: string;
+    name?: string;
+    title?: string;
+    completed?: boolean;
+    expanded?: boolean;
+    priority?: string;
+    dueDate?: string;
+    sourceText?: string;
+    sourceSection?: string;
+    subtasks?: Subtask[];
+}
+
+interface Document {
+    id?: string;
+    name?: string;
+    uploaded?: boolean;
+    required?: boolean;
+    instructions?: string;
+    sourceText?: string;
+    sourceSection?: string;
+}
+
+interface KeyDate {
+    event?: string;
+    date?: string;
+    time?: string;
+}
+
+interface RFPData {
+    tasks?: Task[];
+    requiredDocuments?: Document[];
+    keyDates?: KeyDate[];
+    projectInfo?: {
+        rfpNumber?: string;
+        title?: string;
+    };
+    summary?: {
+        scope?: string;
+        contractValue?: string;
+        contractDuration?: string;
+        sourceSection?: string;
+        keyContacts?: Array<{ name?: string; role?: string; contactInfo?: string }>;
+    };
+    qualifications?: {
+        eligibilityRequirements?: Array<{ requirement?: string; details?: string }>;
+        insuranceRequirements?: Array<{ type?: string; amount?: string; details?: string }>;
+        equipmentRequirements?: Array<{ item?: string }>;
+    };
+    disqualifiers?: Array<{ reason?: string }>;
+    keyAddresses?: Array<{ address?: string; sourceSection?: string }>;
+}
+
 
 const RFPDashboard = () => {
+    const [rfpData, setRFPData] = useState<RFPData | null>(null);
     const [submitted, setSubmitted] = useState(false);
     const [selectedInfo, setSelectedInfo] = useState(null);
     const [expanded, setExpanded] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+    const [selectedFile, setSelectedFile] = useState(null); // Store the selected file
     // 2. INITIALIZE STATE FROM THE IMPORTED JSON
-    const [tasks, setTasks] = useState(rfpData?.tasks || []);
-    const [documents, setDocuments] = useState(rfpData?.requiredDocuments || []);
+    const [tasks, setTasks] = useState<Task[]>(rfpData?.tasks || []);
+    const [documents, setDocuments] = useState<Document[]>(rfpData?.requiredDocuments || []);
 
-    // Find the Bid Due Date from the imported data
-    const bidDueDateInfo = rfpData?.keyDates?.find(d => d.event === 'Bid Due Date') || { date: '2025-11-19', time: '12:00 PM CT' };
+    // Find the Bid Due Date from the imported data - check for various possible event names
+    const bidDueDateInfo = rfpData?.keyDates?.find(d =>
+        d.event?.toLowerCase()?.includes('due') ||
+        d.event?.toLowerCase()?.includes('submission deadline')
+    ) || { date: 'Not specified', time: 'Not specified' };
 
     const toggleTask = (taskId) => {
         setTasks(tasks.map(task =>
@@ -25,10 +92,91 @@ const RFPDashboard = () => {
 
     const fakeSubmit = async () => {
         setIsLoading(true);
+        setError(null);
+        setRFPData(test_rfpdata);
+        setTasks(test_rfpdata?.tasks || []);
+        setDocuments(test_rfpdata?.requiredDocuments || []);
         // Simulate file upload/processing delay
         await new Promise(resolve => setTimeout(resolve, 5000));
         setSubmitted(true);
         setIsLoading(false);
+    }
+
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        setSelectedFile(file); // Store in state
+        setError(null); // Clear any previous errors
+    };
+
+    const processFile = async () => {
+        if (!selectedFile) {
+            console.error('No file selected');
+            setError('Please select a file first');
+            return;
+        }
+        console.log('Processing file...');
+        setIsLoading(true);
+        setError(null);
+        try {
+            const formData = new FormData();
+            formData.append('file', selectedFile);
+            const response = await fetch('http://localhost:3001/upload', {
+                method: 'POST',
+                body: formData,
+            });
+
+            if (!response.ok) {
+                throw new Error(`Server error: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log(data);
+
+            // Check if the response contains an error message
+            if (data.response === 'Failed to generate response' || data.response === 'OpenAI API key not found') {
+                throw new Error(data.response);
+            }
+
+            // Parse the response - strip markdown code fences if present and parse JSON
+            let parsedResponse = data.response;
+            if (typeof parsedResponse === 'string') {
+                // Remove markdown code fences (```json ... ```)
+                parsedResponse = parsedResponse.replace(/^```json\s*\n?/i, '').replace(/\n?```\s*$/i, '');
+                parsedResponse = JSON.parse(parsedResponse);
+            }
+
+            setRFPData(parsedResponse);
+            setTasks(parsedResponse?.tasks || []);
+            setDocuments(parsedResponse?.requiredDocuments || []);
+            setSubmitted(true);
+            console.log('File processed successfully');
+        } catch (error) {
+            console.error(error);
+            setError(error instanceof Error ? error.message : 'An unexpected error occurred');
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    // Error page component
+    if (error && !isLoading) {
+        return (
+            <div className="min-h-screen bg-gradient-to-br from-[#E8F4F8] via-[#F0F9FC] to-[#E8F4F8] flex items-center justify-center p-6">
+                <div className="bg-white rounded-xl shadow-2xl border border-red-200 p-8 max-w-md w-full text-center">
+                    <div className="p-4 bg-red-100 rounded-full w-fit mx-auto mb-4">
+                        <AlertCircle className="w-12 h-12 text-red-600" />
+                    </div>
+                    <h2 className="text-2xl font-bold text-red-700 mb-2">Error</h2>
+                    <p className="text-gray-600 mb-6">{error}</p>
+                    <button
+                        onClick={() => setError(null)}
+                        className="w-full bg-[#4A6785] hover:bg-[#1E3A5F] text-white font-semibold py-3 px-6 rounded-xl transition-colors"
+                    >
+                        Try Again
+                    </button>
+                </div>
+            </div>
+        );
     }
 
     const toggleSubtask = (taskId, subtaskId) => {
@@ -56,11 +204,12 @@ const RFPDashboard = () => {
         ));
     };
 
-    // This function is still hardcoded for the demo date, which is fine.
     const getDaysUntil = (dateStr) => {
-        const today = new Date('2025-11-08'); // Demo date
+        if (!dateStr || dateStr === 'Not specified') return null;
+        const today = new Date();
         const target = new Date(dateStr);
-        const diff = Math.ceil((target - today) / (1000 * 60 * 60 * 24));
+        if (isNaN(target.getTime())) return null;
+        const diff = Math.ceil((target.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
         return diff;
     };
 
@@ -126,25 +275,15 @@ const RFPDashboard = () => {
                 dueTime={bidDueDateInfo?.time}
                 onBackClick={() => setSubmitted(false)}
                 onLogoClick={() => window.location.reload(true)}
+                rfpData={rfpData}
             />
 
             <div className="max-w-7xl mx-auto px-6 py-6">
+                {/*Warning Message*/}
+                <p className="text-red-600 font-bold text-center">Warning: This page will not be saved when you leave. Print/copy your work before leaving if you want to keep it.</p>
 
                 {/* 4. SUMMARY CARDS: NOW DYNAMIC */}
                 <div className="flex justify-around md:flex-nowrap flex-wrap mb-6">
-                    <div className="bg-white rounded-xl shadow-md p-5 border border-[#4A6785]/20 w-1/3 m-2 hover:shadow-lg transition-shadow">
-                        <div className="flex items-center justify-between mb-3">
-                            <h3 className="text-sm font-semibold text-[#4A6785]">Upload Document</h3>
-                            <FileText className="w-5 h-5 text-[#4A6785]" />
-                        </div>
-                        <div className="text-3xl font-bold text-[#1E3A5F] mb-2">{completedTasks}/{totalTasks}</div>
-                        <div className="w-full bg-[#E8F4F8] rounded-full h-2">
-                            <div
-                                className="bg-[#4A6785] h-2 rounded-full transition-all"
-                                style={{ width: `${(completedTasks / totalTasks) * 100}%` }}
-                            />
-                        </div>
-                    </div>
                     <div className="bg-white rounded-xl shadow-md p-5 border border-[#4A6785]/20 w-1/3 m-2 hover:shadow-lg transition-shadow">
                         <div className="flex items-center justify-between mb-3">
                             <h3 className="text-sm font-semibold text-[#4A6785]">Task Progress</h3>
@@ -195,7 +334,7 @@ const RFPDashboard = () => {
                                     </div>
                                     <div>
                                         <h2 className="text-lg font-bold text-[#1E3A5F]">Required Qualifications & Equipment</h2>
-                                        <p className='text-[#4A6785] hover:cursor-pointer hover:text-[#1E3A5F] transition-colors' onClick={() => setExpanded(!expanded)}>{expanded ? 'Collapse' : 'Expand for details'}</p>
+                                        <p className='text-[#4A6785] hover:cursor-pointer hover:text-[#1E3A5F] hover:underline transition-colors' onClick={() => setExpanded(!expanded)}>{expanded ? 'Collapse' : 'Expand for details'}</p>
                                     </div>
 
                                 </div>
@@ -266,9 +405,6 @@ const RFPDashboard = () => {
                                                         <span className="text-[#1E3A5F]">{item?.item || 'N/A'}</span>
                                                     </div>
                                                 ))}
-                                                <p className="text-xs text-[#4A6785] italic mt-3 pl-4">
-                                                    ⚠️ All equipment must be physically inspected after selection. Missing equipment = disqualification.
-                                                </p>
                                             </div>
                                         </div>
 
@@ -322,7 +458,6 @@ const RFPDashboard = () => {
                             </div>
                             <div>
                                 <div className="font-semibold text-[#4A6785] mb-1 flex items-center gap-2">
-                                    <MapPin className="w-4 h-4" />
                                     Locations
                                     <button
                                         onClick={() => setSelectedInfo({ item: { name: 'Locations', sourceText: rfpData?.keyAddresses?.map(a => a.address).join('; ') || 'No source text available', sourceSection: rfpData?.keyAddresses?.[0]?.sourceSection || '' }, type: 'summary' })}
@@ -356,9 +491,9 @@ const RFPDashboard = () => {
                             </div>
                             <div>
                                 <div className="font-semibold text-[#4A6785] mb-1 flex items-center gap-2">
-                                    Key Requirements
+                                    Key Contacts
                                     <button
-                                        onClick={() => setSelectedInfo({ item: { name: 'Key Requirements', sourceText: 'Mandatory site visits; Commercial-grade equipment; Equipment inspection after selection; Minimum 2 years experience', sourceSection: '' }, type: 'summary' })}
+                                        onClick={() => setSelectedInfo({ item: { name: 'Key Contacts', sourceText: rfpData?.keyContacts?.map(c => `${c.name} - ${c.role}`).join('; ') || 'No source text available', sourceSection: rfpData?.keyContacts?.[0]?.sourceSection || '' }, type: 'keyContacts' })}
                                         className="p-1 hover:bg-[#E8F4F8] rounded transition-colors"
                                         title="View source from RFQ"
                                     >
@@ -366,10 +501,9 @@ const RFPDashboard = () => {
                                     </button>
                                 </div>
                                 <div className="text-[#1E3A5F] space-y-1">
-                                    <div>✓ Mandatory site visits</div>
-                                    <div>✓ Commercial-grade equipment</div>
-                                    <div>✓ Equipment inspection after selection</div>
-                                    <div>✓ Minimum 2 years experience</div>
+                                    {rfpData?.keyContacts?.map((contact, idx) => (
+                                        <div key={`contact-${idx}`}>{contact.role}: {contact.name} - {contact.contactInfo}</div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
@@ -491,7 +625,7 @@ const RFPDashboard = () => {
                                 Document Checklist
                             </h2>
                         </div>
-                        <div className="p-5 space-y-2 max-h-[400px] overflow-y-auto">
+                        <div className="p-5 space-y-2">
                             {documents.map(doc => (
                                 <div
                                     key={doc?.id}
@@ -547,7 +681,7 @@ const RFPDashboard = () => {
             </div>
         </div>
     ) : (
-        <div className="bg-gradient-to-br from-[#E8F4F8] via-[#F0F9FC] to-[#E8F4F8]">
+        <div className="bg-gradient-to-br from-[#E8F4F8] via-[#F0F9FC] to-[#E8F4F8fa]">
             <Header mode="landing" />
             <div className="min-h-screen flex items-center justify-center p-6 pt-24">
                 <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-2xl shadow-[#4A6785]/30 border border-[#4A6785]/20 p-8 max-w-2xl w-full">
@@ -564,8 +698,8 @@ const RFPDashboard = () => {
                         </div>
                     ) : (
                         <div className="flex flex-col items-center justify-center gap-6">
-                            <div className="p-6 bg-[#D4F5E9] rounded-full">
-                                <Upload className="w-16 h-16 text-[#4A6785]" />
+                            <div className="p-4 bg-[#D4F5E9] rounded-full">
+                                <Upload className="w-8 h-8 text-[#4A6785]" />
                             </div>
                             <div className="text-center">
                                 <h2 className="text-2xl font-bold text-[#1E3A5F] mb-2">Upload a Proposal/Quote</h2>
@@ -573,16 +707,42 @@ const RFPDashboard = () => {
                             </div>
 
                             <div className="text-center border-2 border-[#4A6785]/30 p-4 rounded-xl text-[#1E3A5F] bg-[#D4F5E9]">
-                                <p>In order to deploy a Minimal Viable Product (MVP) without server costs, the AI capabilities for this app were outsourced to a Google Gemini "Gem".</p>
-                                <p className="mt-2">Attempting this level of analysis with a free tier LLM or LVM has proven to be too resource-intensive.</p>
-                                <p className="mt-2">As a result, this deployment does not analyze uploaded documents.</p>
+                                <p>This application is currently linked to a lost-cost tier of OpenAI's API. </p>
+                                <p>In order to reduce costs for this MVP, API calls are being limited.</p>
+                                <p className="mt-2">As a result, your attempt may fail if too many API calls have been made.</p>
                                 <br></br>
-                                <p className="font-semibold">Please click "View Demo Analysis" to see the results of the AI analysis completed during HackMemphis 2025.</p>
+                                <p className="font-semibold">Please click "View Demo Analysis" below to see the results of the AI analysis completed during HackMemphis 2025.</p>
+                                <div className="flex items-center justify-center gap-2 mt-2">
+                                    <FileText className="w-4 h-4 text-[#4A6785]" />
+                                    <a
+                                        href="/demo_rfp.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-[#4A6785] font-semibold hover:underline text-sm"
+                                    >
+                                        View PDF from Demo Analysis
+                                    </a>
+                                </div>
 
                             </div>
+                            
+                            <input
+                                type="file"
+                                accept="application/pdf"
+                                onChange={handleFileChange}
+                                className="w-xs md:w-sm text-sm text-[#4A6785] file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-[#4A6785] file:text-white hover:file:bg-[#1E3A5F] border-2 border-dashed border-[#4A6785]/30 rounded-xl p-4 bg-[#F0F9FC]/50 cursor-pointer transition-all"
+                            />
+                            <button
+                                onClick={processFile}
+                                className="w-full md:w-sm border-2 border-[#4A6785] bg-[#4A6785] hover:bg-[#1E3A5F] text-white font-semibold py-4 px-8 rounded-xl transition-colors text-lg shadow-lg hover:shadow-xl"
+                            >
+                                Analyze your own RFP/RFQ!
+                            </button>
+                            <p className="text-center text-[#4A6785] mt-2 italic">subject to API availability</p>
+                            <hr className="my-4 border-[#4A6785] border w-1/8 " />
                             <button
                                 onClick={fakeSubmit}
-                                className="w-full border-2 border-[#4A6785] bg-[#4A6785] hover:bg-[#1E3A5F] text-white font-semibold py-4 px-8 rounded-xl transition-colors text-lg shadow-lg hover:shadow-xl"
+                                className="w-full border-2 border-[#4A6785] bg-[#D4F5E9] hover:bg-[#1E3A5F] text-[#4A6785] font-semibold py-4 px-8 rounded-xl transition-colors text-lg shadow-lg hover:text-white hover:shadow-xl"
                             >
                                 View Demo Analysis
                             </button>
