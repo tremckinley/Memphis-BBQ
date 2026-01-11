@@ -11,7 +11,15 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.17",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "fs": "^0.0.1-security",
     "lucide-react": "^0.553.0",
+    "multer": "^2.0.2",
+    "openai": "^6.16.0",
+    "path": "^0.12.7",
+    "pdf-parse": "^2.4.5",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "tailwindcss": "^4.1.17"

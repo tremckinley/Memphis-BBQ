@@ -4,15 +4,79 @@ import { CheckCircle, Circle, Upload, AlertCircle, Clock, DollarSign, MapPin, Fi
 import rfpData from '../../rfp_data' // <-- 1. IMPORT THE DATA
 import { refresh } from 'less';
 import Header from './Header';
+import test_rfpdata from '../../rfp_data.js';
+
+interface Subtask {
+    id?: string;
+    name?: string;
+    title?: string;
+    completed?: boolean;
+}
+
+interface Task {
+    id?: string;
+    name?: string;
+    title?: string;
+    completed?: boolean;
+    expanded?: boolean;
+    priority?: string;
+    dueDate?: string;
+    sourceText?: string;
+    sourceSection?: string;
+    subtasks?: Subtask[];
+}
+
+interface Document {
+    id?: string;
+    name?: string;
+    uploaded?: boolean;
+    required?: boolean;
+    instructions?: string;
+    sourceText?: string;
+    sourceSection?: string;
+}
+
+interface KeyDate {
+    event?: string;
+    date?: string;
+    time?: string;
+}
+
+interface RFPData {
+    tasks?: Task[];
+    requiredDocuments?: Document[];
+    keyDates?: KeyDate[];
+    projectInfo?: {
+        rfpNumber?: string;
+        title?: string;
+    };
+    summary?: {
+        scope?: string;
+        contractValue?: string;
+        contractDuration?: string;
+        sourceSection?: string;
+    };
+    qualifications?: {
+        eligibilityRequirements?: Array<{ requirement?: string; details?: string }>;
+        insuranceRequirements?: Array<{ type?: string; amount?: string; details?: string }>;
+        equipmentRequirements?: Array<{ item?: string }>;
+    };
+    disqualifiers?: Array<{ reason?: string }>;
+    keyAddresses?: Array<{ address?: string; sourceSection?: string }>;
+}
+
 
 const RFPDashboard = () => {
+    const [rfpData, setRFPData] = useState<RFPData | null>(test_rfpdata);
     const [submitted, setSubmitted] = useState(false);
     const [selectedInfo, setSelectedInfo] = useState(null);
     const [expanded, setExpanded] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+    const [selectedFile, setSelectedFile] = useState(null); // Store the selected file
     // 2. INITIALIZE STATE FROM THE IMPORTED JSON
-    const [tasks, setTasks] = useState(rfpData?.tasks || []);
-    const [documents, setDocuments] = useState(rfpData?.requiredDocuments || []);
+    const [tasks, setTasks] = useState<Task[]>(rfpData?.tasks || []);
+    const [documents, setDocuments] = useState<Document[]>(rfpData?.requiredDocuments || []);
 
     // Find the Bid Due Date from the imported data
     const bidDueDateInfo = rfpData?.keyDates?.find(d => d.event === 'Bid Due Date') || { date: '2025-11-19', time: '12:00 PM CT' };
@@ -25,10 +89,77 @@ const RFPDashboard = () => {
 
     const fakeSubmit = async () => {
         setIsLoading(true);
+        setError(null);
         // Simulate file upload/processing delay
         await new Promise(resolve => setTimeout(resolve, 5000));
         setSubmitted(true);
         setIsLoading(false);
+    }
+
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        setSelectedFile(file); // Store in state
+        setError(null); // Clear any previous errors
+    };
+
+    const processFile = async () => {
+        if (!selectedFile) {
+            console.error('No file selected');
+            setError('Please select a file first');
+            return;
+        }
+        console.log('Processing file...');
+        setIsLoading(true);
+        setError(null);
+        try {
+            const formData = new FormData();
+            formData.append('file', selectedFile);
+            const response = await fetch('http://localhost:3001/upload', {
+                method: 'POST',
+                body: formData,
+            });
+
+            if (!response.ok) {
+                throw new Error(`Server error: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log(data);
+
+            // Check if the response contains an error message
+            if (data.response === 'Failed to generate response' || data.response === 'OpenAI API key not found') {
+                throw new Error(data.response);
+            }
+
+            setSubmitted(true);
+            console.log('File processed successfully');
+        } catch (error) {
+            console.error(error);
+            setError(error instanceof Error ? error.message : 'An unexpected error occurred');
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    // Error page component
+    if (error && !isLoading) {
+        return (
+            <div className="min-h-screen bg-gradient-to-br from-[#E8F4F8] via-[#F0F9FC] to-[#E8F4F8] flex items-center justify-center p-6">
+                <div className="bg-white rounded-xl shadow-2xl border border-red-200 p-8 max-w-md w-full text-center">
+                    <div className="p-4 bg-red-100 rounded-full w-fit mx-auto mb-4">
+                        <AlertCircle className="w-12 h-12 text-red-600" />
+                    </div>
+                    <h2 className="text-2xl font-bold text-red-700 mb-2">Error</h2>
+                    <p className="text-gray-600 mb-6">{error}</p>
+                    <button
+                        onClick={() => setError(null)}
+                        className="w-full bg-[#4A6785] hover:bg-[#1E3A5F] text-white font-semibold py-3 px-6 rounded-xl transition-colors"
+                    >
+                        Try Again
+                    </button>
+                </div>
+            </div>
+        );
     }
 
     const toggleSubtask = (taskId, subtaskId) => {
@@ -56,11 +187,10 @@ const RFPDashboard = () => {
         ));
     };
 
-    // This function is still hardcoded for the demo date, which is fine.
     const getDaysUntil = (dateStr) => {
-        const today = new Date('2025-11-08'); // Demo date
+        const today = new Date();
         const target = new Date(dateStr);
-        const diff = Math.ceil((target - today) / (1000 * 60 * 60 * 24));
+        const diff = Math.ceil((target.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
         return diff;
     };
 
@@ -547,7 +677,7 @@ const RFPDashboard = () => {
             </div>
         </div>
     ) : (
-        <div className="bg-gradient-to-br from-[#E8F4F8] via-[#F0F9FC] to-[#E8F4F8]">
+        <div className="bg-gradient-to-br from-[#E8F4F8] via-[#F0F9FC] to-[#E8F4F8fa]">
             <Header mode="landing" />
             <div className="min-h-screen flex items-center justify-center p-6 pt-24">
                 <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-2xl shadow-[#4A6785]/30 border border-[#4A6785]/20 p-8 max-w-2xl w-full">
@@ -580,12 +710,20 @@ const RFPDashboard = () => {
                                 <p className="font-semibold">Please click "View Demo Analysis" to see the results of the AI analysis completed during HackMemphis 2025.</p>
 
                             </div>
+                            <input type="file" accept="application/pdf" onChange={handleFileChange} />
                             <button
                                 onClick={fakeSubmit}
                                 className="w-full border-2 border-[#4A6785] bg-[#4A6785] hover:bg-[#1E3A5F] text-white font-semibold py-4 px-8 rounded-xl transition-colors text-lg shadow-lg hover:shadow-xl"
                             >
                                 View Demo Analysis
                             </button>
+                            <button
+                                onClick={processFile}
+                                className="w-full border-2 border-[#4A6785] bg-[#4A6785] hover:bg-[#1E3A5F] text-white font-semibold py-4 px-8 rounded-xl transition-colors text-lg shadow-lg hover:shadow-xl"
+                            >
+                                Try it out live!
+                            </button>
+                            <p className="text-center text-[#4A6785] mt-2">subject to API availability</p>
                         </div>
                     )}
                 </div>
