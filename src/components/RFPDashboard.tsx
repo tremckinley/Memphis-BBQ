@@ -1,7 +1,6 @@
 // @ts-nocheck
 import React, { useState } from 'react';
 import { CheckCircle, Circle, Upload, AlertCircle, Clock, DollarSign, MapPin, FileText, ChevronDown, ChevronUp, Info, X, Inbox, Loader2, InfoIcon, File, ArrowLeft } from 'lucide-react';
-import rfpData from '../../rfp_data' // <-- 1. IMPORT THE DATA
 import { refresh } from 'less';
 import Header from './Header';
 import test_rfpdata from '../../rfp_data.js';
@@ -67,7 +66,7 @@ interface RFPData {
 
 
 const RFPDashboard = () => {
-    const [rfpData, setRFPData] = useState<RFPData | null>(test_rfpdata);
+    const [rfpData, setRFPData] = useState<RFPData | null>(null);
     const [submitted, setSubmitted] = useState(false);
     const [selectedInfo, setSelectedInfo] = useState(null);
     const [expanded, setExpanded] = useState(false);
@@ -78,8 +77,11 @@ const RFPDashboard = () => {
     const [tasks, setTasks] = useState<Task[]>(rfpData?.tasks || []);
     const [documents, setDocuments] = useState<Document[]>(rfpData?.requiredDocuments || []);
 
-    // Find the Bid Due Date from the imported data
-    const bidDueDateInfo = rfpData?.keyDates?.find(d => d.event === 'Bid Due Date') || { date: '2025-11-19', time: '12:00 PM CT' };
+    // Find the Bid Due Date from the imported data - check for various possible event names
+    const bidDueDateInfo = rfpData?.keyDates?.find(d =>
+        d.event?.toLowerCase()?.includes('due') ||
+        d.event?.toLowerCase()?.includes('submission deadline')
+    ) || { date: 'Not specified', time: 'Not specified' };
 
     const toggleTask = (taskId) => {
         setTasks(tasks.map(task =>
@@ -90,6 +92,7 @@ const RFPDashboard = () => {
     const fakeSubmit = async () => {
         setIsLoading(true);
         setError(null);
+        setRFPData(test_rfpdata);
         // Simulate file upload/processing delay
         await new Promise(resolve => setTimeout(resolve, 5000));
         setSubmitted(true);
@@ -131,6 +134,17 @@ const RFPDashboard = () => {
                 throw new Error(data.response);
             }
 
+            // Parse the response - strip markdown code fences if present and parse JSON
+            let parsedResponse = data.response;
+            if (typeof parsedResponse === 'string') {
+                // Remove markdown code fences (```json ... ```)
+                parsedResponse = parsedResponse.replace(/^```json\s*\n?/i, '').replace(/\n?```\s*$/i, '');
+                parsedResponse = JSON.parse(parsedResponse);
+            }
+
+            setRFPData(parsedResponse);
+            setTasks(parsedResponse?.tasks || []);
+            setDocuments(parsedResponse?.requiredDocuments || []);
             setSubmitted(true);
             console.log('File processed successfully');
         } catch (error) {
@@ -188,8 +202,10 @@ const RFPDashboard = () => {
     };
 
     const getDaysUntil = (dateStr) => {
+        if (!dateStr || dateStr === 'Not specified') return null;
         const today = new Date();
         const target = new Date(dateStr);
+        if (isNaN(target.getTime())) return null;
         const diff = Math.ceil((target.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
         return diff;
     };
@@ -486,9 +502,16 @@ const RFPDashboard = () => {
                             </div>
                             <div>
                                 <div className="font-semibold text-[#4A6785] mb-1 flex items-center gap-2">
-                                    Key Requirements
+                                    Qualifications
                                     <button
-                                        onClick={() => setSelectedInfo({ item: { name: 'Key Requirements', sourceText: 'Mandatory site visits; Commercial-grade equipment; Equipment inspection after selection; Minimum 2 years experience', sourceSection: '' }, type: 'summary' })}
+                                        onClick={() => setSelectedInfo({
+                                            item: {
+                                                name: 'Qualifications',
+                                                sourceText: 'See eligibility, insurance, and equipment requirements',
+                                                sourceSection: ''
+                                            },
+                                            type: 'summary'
+                                        })}
                                         className="p-1 hover:bg-[#E8F4F8] rounded transition-colors"
                                         title="View source from RFQ"
                                     >
@@ -496,10 +519,24 @@ const RFPDashboard = () => {
                                     </button>
                                 </div>
                                 <div className="text-[#1E3A5F] space-y-1">
-                                    <div>✓ Mandatory site visits</div>
-                                    <div>✓ Commercial-grade equipment</div>
-                                    <div>✓ Equipment inspection after selection</div>
-                                    <div>✓ Minimum 2 years experience</div>
+                                    {/* Eligibility Requirements */}
+                                    {rfpData?.qualifications?.eligibilityRequirements?.map((item, idx) => (
+                                        <div key={`elig-${idx}`}>✓ {item?.requirement || 'Eligibility requirement'}</div>
+                                    ))}
+                                    {/* Insurance Requirements */}
+                                    {rfpData?.qualifications?.insuranceRequirements?.map((item, idx) => (
+                                        <div key={`ins-${idx}`}>✓ {item?.type || 'Insurance requirement'}</div>
+                                    ))}
+                                    {/* Equipment Requirements */}
+                                    {rfpData?.qualifications?.equipmentRequirements?.map((item, idx) => (
+                                        <div key={`equip-${idx}`}>✓ {item?.item || 'Equipment requirement'}</div>
+                                    ))}
+                                    {/* Show "Not specified" if all arrays are empty */}
+                                    {(!rfpData?.qualifications?.eligibilityRequirements?.length &&
+                                        !rfpData?.qualifications?.insuranceRequirements?.length &&
+                                        !rfpData?.qualifications?.equipmentRequirements?.length) && (
+                                            <div>Not specified</div>
+                                        )}
                                 </div>
                             </div>
                         </div>

@@ -9,7 +9,7 @@ interface HeaderProps {
     /** RFP title to display (dashboard mode only) */
     title?: string;
     /** Days remaining until submission (dashboard mode only) */
-    daysLeft?: number;
+    daysLeft?: number | string;
     /** Bid due date string (dashboard mode only) */
     dueDate?: string;
     /** Bid due time string (dashboard mode only) */
@@ -76,9 +76,13 @@ const Header: React.FC<HeaderProps> = ({
                         className='mr-4 cursor-pointer hover:opacity-80 transition-opacity'
                         onClick={onLogoClick}
                     />
-                    <div className="md:text-right text-center p-3 bg-[#D4F5E9] rounded-lg border border-[#4A6785]/20 m-2">
-                        <div className="text-2xl font-bold text-[#1E3A5F]">{daysLeft} DAYS</div>
-                        <div className="text-sm text-[#4A6785]">Until Submission</div>
+                    <div className={`md:text-right text-center p-3 rounded-lg border border-[#4A6785]/20 m-2 ${typeof daysLeft === 'number' && daysLeft < 0 ? 'bg-red-100' : 'bg-[#D4F5E9]'}`}>
+                        <div className={`text-2xl font-bold ${typeof daysLeft === 'number' && daysLeft < 0 ? 'text-red-700' : 'text-[#1E3A5F]'}`}>
+                            {typeof daysLeft === 'number' ? Math.abs(daysLeft) : 'N/A'} DAYS
+                        </div>
+                        <div className={`text-sm ${typeof daysLeft === 'number' && daysLeft < 0 ? 'text-red-600' : 'text-[#4A6785]'}`}>
+                            {typeof daysLeft === 'number' && daysLeft < 0 ? 'Past Due' : 'Until Submission'}
+                        </div>
                         <div className="text-xs text-[#4A6785] mt-1">
                             Due: {dueDate || 'N/A'} @ {dueTime || 'N/A'}
                         </div>

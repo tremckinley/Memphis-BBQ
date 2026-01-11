@@ -13,7 +13,7 @@ Citation is Mandatory: Every piece of information you extract MUST be traceable 
 
 Conciseness: Cut out all redundant or overly verbose "legalese" and "bureaucratese."
 
-Templatize: Adhere strictly to the JSON schema defined below. If a section is not present in the document, return an empty array [] or a null value for that key.
+Templatize: Adhere strictly to the JSON schema defined below. If a section is not present in the document, return an empty array [] or a null value for that key. Find the bid's due date and classify it as "bid due date" if possible.
 
 JSON Output Schema:
 
@@ -132,1837 +132,1102 @@ You will be given the full text of an RFP document. Read it thoroughly, then gen
 
 =========START of Document========= 
 
-Page | 1
-CITY OF MEMPHIS
-REQUEST FOR QUALIFICATION (RFQ)
-324770
-UNIFORMS, OFFICE APPAREL AND PROMOTIONAL
-ITEMS
-Date Issued:
-October 17, 2025
-Proposal Submission Deadline
-ON OR BEFORE 19 November 2025 NO LATER
-THAN 12:00 PM CT
-Please ensure your read and understand the entire solicitation
-before you submit your proposal.
+City of Memphis Request for Quotation 325762,1
+Proprietary and Confidential	Page 1 of XXVI
+Request for Quotation 325762,1
+Title Fire Sprinkler System Maintenance
+Amendment Date 24-OCT-2025 10:07:22
+Amendment
+Description
+Amendment One (1) to update Question - Answer due dates advertisement, and
+close dates. L.S. 10/24/25
+Preview Date 20-OCT-2025 14:21:01 Open Date 20-OCT-2025 14:21:01
+Close Date 19-NOV-2025 12:00:00 Award Date Not Specified
+Time Zone Central Time
+Note Bids can be submitted in three ways (ONLY):
+• USPS (or other common carrier) at City Hall Room 368
+• eProcurement system/online (which is the preferable method for bidding)
+• The locked drop box in the lobby of City Hall
+**Bids will not be accepted elsewhere in City Hall, including the Purchasing
+department other than
+what's state above. * *
+* * * Beginning October 1, 2020, bids submitted by individuals (not common
+carriers) in City Hall,
+must be submitted via the locked drop box. Bids will not be accepted anywhere
+else in City Hall. *
+* *
+Emailed bids are not accepted. If a hardcopy bid is submitted the vendor must
+physically sign the
+bid or the bid will be considered non-conforming.
+Vendors must be registered as a supplier with the City of Memphis to
+participate in City of Memphis
+bids. Bidders must have a username and password to access the City's
+eProcurement System, which
+will allow the bidder to fully view this RFQ in ORACLE as well as open the
+attachments. To
+register as a City of Memphis supplier, please visit the City of Memphis website
+(Memphistn.gov –
+Business – Supplier Registration) and click the Online Suppliers Registration
+Form link.
+If attachments are included with this RFQ, Bidders are to fill out and return, in
+their entirety,
+all required attachments (attachments may include, but are not limited to: Bid
+Sections,
+Exceptions to Specifications Pages, Comply/Exception Pages, and EBO
+Participation Plan documents).
+ALL Bidders must complete each of the required forms that are attached to this
+RFQ and submit ALL
+required documentation with the Bidder's quote, per the specifications and the
+Terms & Conditions.
+Failure to submit ALL required documentation may cause the Bidder's quote to
+be considered non-
+conforming.
+***Please review the City of Memphis insurance requirements for this RFQ.
 
--- 1 of 56 --
+-- 1 of 26 --
 
-Page | 2
-TABLE OF CONTENTS
-TABLE OF CONTENTS ..............................................................................................................2
-1. OVERVIEW .....................................................................................................................3
-1.1 GENERAL CONDITIONS ..................................................................................................... 3
-1.2 PRE-QUALIFICATION CONFERENCE...................................................................................... 4
-2. SCOPE OF SERVICES ..........................................................................................................5
-3. PROPOSAL RESPONSE ...........................................................................................................9
-3.1 COVER LETTER ................................................................................................................... 9
-3.2 NON-COLLUSION AFFIDAVIT ............................................................................................ 10
-3.3 CRIMINAL AND CIVIL PROCEEDINGS ................................................................................. 10
-3.4 DRUG FREE WORKPLACE .................................................................................................. 10
-3.5 PRICING........................................................................................................................... 10
-3.6 INVOICES ......................................................................................................................... 10
-3.7 REVELANT EXPERIENCE AND REFERENCES ....................................................................... 11
-4. INSTRUCTIONS ON RFQ PROCESS ................................................................................ 12
-4.1 USE OF INFORMATION ............................................................................................... 12
-4.2 SCHEDULE OF ACTIVITIES.......................................................................................... 12
-4.3 SUBMISSION OF QUESTIONS ..................................................................................... 13
-4.4 PROPOSAL SUBMISSION ........................................................................................... 13
-4.5 TERM OF VENDOR’S PROPOSAL ................................................................................. 15
-5. RFQ TERMS AND CONDITIONS ...................................................................................... 16
-6. INSTRUCTIONS ............................................................................................................ 18
-7. GENERAL GUIDELINES FOR RESPONSE PREPARATION .................................................. 19
-8. EXHIBITS ..................................................................................................................... 22
-8.1 EXHIBIT A – DRUG-FREE WORKPLACE ......................................................................... 22
-8.2 EXHIBIT B – SAMPLE CITY OF MEMPHIS STANDARD CONTRACT FOR GOODS AND/OR
-SERVICES .............................................................................................................................. 23
-8.3 EXHIBIT C – CRIMINAL AND CIVIL PROCEEDINGS DISCLOSURE ................................... 47
-8.4 EXHIBIT D – NON-COLLUSION AFFIDAVIT (NOTARY SEAL IS REQUIRED) .............................. 48
-8.5 EXHIBIT E – CONTRACTOR’S COVER SHEET................................................................. 52
-8.6 EXHIBIT F – PRICING SCHEDULE (USE TO SUBMIT YOUR PRICE/S) ........................................ 53
-8.7 EXHIBIT H – QUESTION AND ANSWER ......................................................................... 56
-
--- 2 of 56 --
-
-Page | 3
-1. OVERVIEW
-1.1 General Conditions
-The following data is intended to form the basis for submission of proposals to provide
-an unspecified number of qualified vendors who have the expertise to provide uniforms,
-office apparel, and promotional item services. This material contains general conditions
-for the procurement process, the scope of service requested, contract requirements,
-instructions for submissions of proposals, and submission forms that must be included
-in the proposal.
-The intention of this solicitation is to provide City of Memphis with an expedited means
-of procuring uniforms, office apparel, etc., for various Divisions at the lowest possible
-cost. This contract is for the convenience of the City of Memphis and is a “Non-
-Exclusive” use of this contract. The City of Memphis does not guarantee any usage.
-The RFQ should be read in its entirety before preparing the proposal. All materials
-submitted pursuant to this RFQ shall become the property of the City of Memphis.
-To the extent permitted by law, all documents pertaining to this Request for
-Qualifications shall be kept confidential, to the extent necessary for review, until the
-proposal evaluation is complete. No information about any submission of proposals
-shall be released until the process is complete. All information provided shall be
-considered by the City of Memphis in making a recommendation to enter into an
-agreement with the selected vendor/s.
-Any inquiries, suggestions or requests concerning interpretation, clarification or
-additional information pertaining to the RFQ shall be made in accordance with the
-requirements listed in Section 4.3 “Submission of Questions”. The City of Memphis
-is not responsible for oral interpretations given by any City employee, representative,
-or others. The issuance of written addenda is the only official method whereby
-interpretation, clarification, or additional information can be given. Any questions
-or concerns not submitted by the stated time and date will be deemed waived.
-If any addenda are issued to this Request for Proposals, the Purchasing Department
-will post them to the City's website at https://www.memphistn.gov/rfp/ . Submitting
-organizations are strongly encouraged to view this website often to see if addenda are
-posted. Failure of any proposer to receive such addendum or interpretation shall not
-relieve such Proposer from any obligation under his proposal as submitted
-
--- 3 of 56 --
-
-Page | 4
-The City of Memphis reserves the right to (a) accept or reject any and/or all
-submissions of proposals; (b) to waive irregularities, informalities, and technicalities; and
-(c) to accept any alternative submission of proposals presented which, in its opinion,
-would best serve the interests of the City. The City shall be the sole judge of the
-proposals, and the resulting negotiated agreement that is in its best interest, and its
-decision shall be final. The City also reserves the right to make such investigation as it
-deems necessary to determine the ability of any submitting entity to perform the work
-or service requested. Information the City deems necessary to make this determination
-shall be provided by the submitting entity. Such information may include, but is not
-limited to, current financial statements by an independent Certified Public Accountant
-(CPA), verification of availability of equipment and personnel, and past performance
-records.
-The City intends to select an unspecified number of contractors and enter a three (3)
-year contract with an option to extend for two (2) additional one-year periods based
-upon performance, need and/or funding availability to be agreed upon by both parties.
-As a result of proposals accepted the city will issue contracts to one, all or no vendors
-Any contracts as a result of the Request for Qualification (RFQ) at the discretion of
-the COM will be awarded to one, all or no vendors.
-All responses and any documents included in this RFQ must be signed by an
-authorized representative of your organization. Unsigned responses will be
-considered non-conforming and will be disqualified.
-1.2 Pre-Qualification Conference
-Project Note: There is no pre-bid meeting scheduled for this RFQ.
-1.3 OBJECTIVE
-The intention of this solicitation is to provide City of Memphis with an expedited
-means of procuring uniforms, office apparel, etc., for various Divisions at the lowest
-possible cost. This contract is for the convenience of the City of Memphis and is a
-“Non-Exclusive” use of this contract. The City of Memphis does not guarantee any
-usage.
-
--- 4 of 56 --
-
-Page | 5
-2. SCOPE OF SERVICES
-1. The City of Memphis is seeking offers from qualified Contractors who can supply a
-wide array of promotional items, uniforms, and apparel items. This contract will be
-on an as-needed basis whereby the provider will offer services in line with the
-requirements determined by each City Division. This contract does not grant the
-contractor an exclusive right. Contractors must have an active Tennessee business
-license.
-2.1 SPECIFICATIONS
-1. The Contractors will supply the various City Divisions with uniforms, polo shirts, t-
-shirts, hoodies, joggers, and a variety of hat styles (such as buckets, visors, beanies,
-snapbacks, etc.). As well as other promotional merchandise including but not limited
-to umbrellas, lapel pins, and clear waist packs, etc.
-2. The Contractors will provide the following based on the specifications included in
-this RFQ or something comparable. The two recommended brands for polo shirts, t-
-shirts, and hats are Port Authority (PA) and Port & Company (P&C). All items
-ordered will require the City of Memphis designated Division’s logo custom-
-embroidery. The details of the City of Memphis designated Division’s custom
-embroidery logos will be provided at the time of ordering. Certain products' colors
-are to be determined by the City of Memphis’ designated Division departments at
-the time of ordering. Below are the uniforms specifications (PA or P&C are the
-desired brands or similar) and promotional items specification
-3. The required items are listed below: Any items not currently listed may be added in
-the future based on the needs of the Division. Those items will be identified at that
-time.
-Shirts Sizes Color
-POLO SHIRTS, Unisex, Silk Touch VARIOUS VARIOUS
-T-SHIRTS, COTTON, Unisex VARIOUS VARIOUS
-T-SHIRTS, COTTON, Unisex Sport-TEK
-Dri-FIT VARIOUS VARIOUS
-SHORT SLEEVE VARIOUS VARIOUS
-MEN SHORT SLEEVE TACTICAL POLOS VARIOUS VARIOUS
-WOMEN SHORT SLEEVE SHORT SLEEVE
-TACTICAL POLOS VARIOUS VARIOUS
-HOODIES, PULL OVER, Unisex, Athletic VARIOUS VARIOUS
-
--- 5 of 56 --
-
-Page | 6
-Pullovers - Unisex Custom 1/4 Zip
-Pullover Sport -Tek Wick Stretch 1/4
-Pullover VARIOUS VARIOUS
-BUTTON DOWN SHIRTS (VARIOUS
-STYLES, Short Sleeve VARIOUS VARIOUS
-BUTTON DOWN SHIRTS (VARIOUS
-STYLES, Long Sleeve VARIOUS VARIOUS
-SHORT SLEEVE POCKET WORK SHIRTS VARIOUS VARIOUS
-LONG SLEEVE POCKET WORK SHIRTS VARIOUS VARIOUS
-NAVY TACTICAL PANTS VARIOUS VARIOUS
-COTTON BLEND CARGO PANTS VARIOUS VARIOUS
-Men's Pants VARIOUS VARIOUS
-Women's Pants VARIOUS VARIOUS
-CARDIGANS VARIOUS VARIOUS
-MEN SOFT SHELL JACKETS VARIOUS VARIOUS
-WOMEN SOFT SHELL JACKETS VARIOUS VARIOUS
-JACKETS for Men VARIOUS VARIOUS
-FLEECE JACKETS FOR WOMEN VARIOUS VARIOUS
-FLEECE JACKETS FOR MEN VARIOUS VARIOUS
-COATS for Men VARIOUS VARIOUS
-JACKETS for Women VARIOUS VARIOUS
-COATS for Women VARIOUS VARIOUS
-HI VISIBILITY VESTS VARIOUS VARIOUS
-HARD HATS VARIOUS VARIOUS
-COTTON TWILL HATS VARIOUS VARIOUS
-NAVY COTTON TWILL HATS VARIOUS VARIOUS
-NAVY SKULL CAP W/CUFF VARIOUS VARIOUS
-SKULL CAP W/CUFF VARIOUS VARIOUS
-SAFTEY EQUIPMENT VARIOUS VARIOUS
-GOGGLES VARIOUS VARIOUS
-SAFETY GLASSES VARIOUS VARIOUS
-SAFETY SUNGLASSES VARIOUS VARIOUS
-SAFETY GLOVES VARIOUS VARIOUS
-SAFETY BOOTS VARIOUS VARIOUS
-HI VISIBILITY RAIN GEAR VARIOUS VARIOUS
-Promotional Items Included but Not Limited To The
-Below Items
-AWARDS
-PLAQUES
-MEDALS
-
--- 6 of 56 --
-
-Page | 7
-TROPHIES
-DRINKWARE
-MUGS
-BAGS, CLEAR WAIST PACKS ETC
-BACKPACKS
-HEALTH AND WELLNESS ITEMS
-PENS
-LAPEL PINS
-WRITING PADS
-COASTERS
-PORTFOLIOS
-JOURNALS
-NOTEBOOKS
-LANYARDS
-BASEBALL CAPS/HATS
-DESK ACCESSORIES
-OTHER OFFICE ITEMS
-****PLEASE NOTE: The vendor must ensure he consider the below items in
-his/her quote:
-EMBROIDERY, SCREEN PRINTING AND MONAGRAMING SERVICES WILL
-BE REQUIRED FOR SOME ITEMS PURCHASED. ALSO NOTE THE
-DIVISION’S LOGO, CREST, NAMES, TILES AND/OR OTHER WORDING FOR
-SPECIFIED ITEMS WILL ALSO BE REQUIRED. ****
-4. These specifications do not indicate or guarantee the City will order these items
-annually, but orders will be placed throughout the duration of the contract. The
-items included in this specification are the essential requirements, but are not
-restricted to additional promotional items, uniforms, and/or apparel items upon
-review of your comprehensive catalogs of products.
-5. All items must meet or exceed ANSI/ISEA standards for visibility and safety and be
-available in a range of sizes.
-6. Vendor must be able to accommodate both bulk orders as well as occasional
-individual requests.
-7. The vendors must provide a designated point of contact (name, phone number and
-email address) and provide a streamlined reordering process. If unable to provide a
-streamline order process the vendors will explain in his proposal what that process
-will be.
-
--- 7 of 56 --
-
-Page | 8
-8. Vendor must provide space for COM employees to be able to try on clothing to
-ensure proper fit.
-9. Unless otherwise specified in your catalog, please note in your proposal your
-minimum amount purchase requirements and any price breaks offered (i.e., 1-10,
-11-20 and on) before items are placed in production.
-10. Contractors must provide City Division of Finance with their comprehensive catalog
-of products offered on a yearly basis and all relevant information include in the
-catalog, but not limited to:
-a. Lead or production time status
-b. Pricing
-c. Dimensions
-d. Imprint areas and method
-e. Weight
-f. Packaging
-11. Contractors must submit a comprehensive catalog of products including price with
-his/her proposal as well as discounted prices for increasing quantities (up to 2
-catalogs ONLY). Submission of outdated price list of catalogs may result in rejection
-of the bid. If a printed catalog is not available, please provide the website on which
-the catalog is listed.
-12. Vendors will be required to complete the bid and price sheet (Exhibit F) which must
-include applicable quotes/documentation for items requested/provided.
-Contractors must also provide in addition to the quotes any anticipated fees/cost
-for logo custom-embroidery set-up, and shipping.
-13. The scope of the contract shall not be limited to the items identified on the Bid and
-Price Sheet. The attached Bid and Price Sheet is provided solely as a reference for
-estimating the anticipated price of services. Additional items or services of a
-similar
-nature may be ordered, as required, to meet the needs of the Divisions.
-14. As the need arise new items may be added to the list however in the event we
-require need items, we will request a quote from the awarded vendor prior to
-ordering those items.
-2.2 CONTRACT TERM
-1. The initial contract term shall be for a period of three years from date of execution.
-The term of this agreement shall remain in effect for the entire period unless
-otherwise abbreviated upon mutual agreement of both parties and following
-execution of the appropriate documentation evidencing any modifications.
-
--- 8 of 56 --
-
-Page | 9
-2. The City may extend this Agreement for additional two (2) one (1) year periods,
-renewable on an annual basis, under the same terms and conditions at the City’s
-discretion. The City shall serve notice of the extensions in writing to the Contractors
-thru regular mail or email at least thirty (30) calendar days prior to the expiration of
-the original contract or any renewal term, for such extension to be effective.
-3. Delivery - Items shall be delivered within seven (7) business days after order
-placement. Contract holder must maintain adequate inventory of items requested
-under the specifications and/or your comprehensive catalog to meet this seven-day
-order placement requirement.
-4. Orders can only move forward to final production; after receiving written approval
-via email from the Memphis Parks department point of contact person or the
-department designee (point of contacts are), no verbal conversations of orders. All
-items shall be new in condition.
-3. PROPOSAL RESPONSE
-1. This Section describes the contents of Proposer’s Proposal and provides an outline
-of how the Proposer should organize it. Proposer’s Proposal will not be considered
-responsive unless it fully complies with the requirements in this Section. Specifically,
-Proposer’s Proposal shall include each of the sections referenced in the table below.
-Sections and Topics
-Section 1 – Cover Letter
-Section 2 – Non-Collusion Affidavit
-Section 3 – Criminal and Civil Proceedings Disclosure
-Section 4 – Proposal Submission
-Section 5 – Relevant Experience
-3.1 COVER LETTER
-Proposer’s Proposal shall contain a cover letter acknowledging Proposer's
-understanding of the RFQ process and requirements set forth in this RFQ, including
-its commitment to its Proposal. The cover letter shall be signed by an authorized
-representative of Proposer's company.
-Provide agency’s name, address, telephone and fax numbers. Please include name,
-
--- 9 of 56 --
-
-Page | 10
-title and e-mail address of the individual who will serve as agency’s primary contact
-(see Exhibit E).
-3.2 NON-COLLUSION AFFIDAVIT
-Please use the form provided in Exhibit D.
-3.3 CRIMINAL AND CIVIL PROCEEDINGS
-Please use the form provided in Exhibit C.
-3.4 DRUG FREE WORKPLACE
-The City of Memphis employees adhere to a drug free workplace and as such while
-vendors are operating on City of Memphis contracts in properties all vendors are
-expected to adhere to the same drug free workplace policy (see Exhibit A).
-3.5 PRICING
-Please use the form in Exhibit F.
-3.6 INVOICES
-INVOICE & POINT OF CONTACT INFORMATION: Invoices are paid net 30 days after
-receipt of goods and services. Invoices must be detailed and must include the
-department, purchase order number, quantities, product descriptions, and shipment
-details.
-The vendor will invoice each division/department via email for payment based on the
-orders received. Below is a list of all division POC’s and their contact information:
-Invoice shall be submitted after orders are delivered to the respective department (s)
-for acceptance. Payment will be made after review and approval of the vendor’s
-invoice.
-City Attorney
-Contact Person: Schuman Majumar - 901-636-6152
-schuman.majumar@memphistn.gov
-Community Enhancement
-Contact Person- Victoria Jones Clark 901-636-7451
-Victoriajones-clark@memphistn.gov
-Engineering
-Contact Person – Latoya Woods 901-636-6906
-
--- 10 of 56 --
-
-Page | 11
-Latoya.Woods@memphistn.gov
-Executive
-Contact Person- Renee Lowery 901-636-6536
-Renee.lowery@memphistn.gov
-Finance
-Lakisha Sherrod 901-636-6195
-Lakisha.sherrod@memphistn.gov
-Fire
-Contact Person- Kenneth Newton 901-636-5434
-kenneth.newton@memphistn.gov
-HCD
-Contact person-Starr Nichols 901-636-7284
-Starr.nichols@memphistn.gov
-Human Resources
-Contact Information:
-HRFinanceOPS@memphistn.gov
-Public Works
-Contact Person- Rickena Patterson 901-636-6017
-Rickena.patterson@memphistn.gov
-Solid Waste
-Datrelle LaSane 901-636-6868
-Datrelle.lasane@memphistn.gov
-Please Note: The City of Memphis is exempt from Federal Excise, State, and Local
-taxes on all purchases. Tax exemption certificates will be issued to the company as
-requested.
-3.7 REVELANT EXPERIENCE AND REFERENCES
-• Briefly describe agency’s relevant experience as it relates to this project.
-Respondents must have a minimum of XX years of experience or equivalent.
-Discuss the firms’ capabilities, experience and qualifications to perform the
-required services.
-• Staffing – Proposer should identify the staff and provide relevant experience as it
-relates to this project.
-
--- 11 of 56 --
-
-Page | 12
-• Proposer must include copies of Licenses and Certifications (if required).
-• Provide at least three references to include name of company, address, point of
-contact and phone number from previous jobs.
-4. INSTRUCTIONS ON RFQ PROCESS
-4.1 USE OF INFORMATION
-All correspondence about this RFQ and the Initiative should be limited to the Principal
-Contact listed in Section 4.2 or other designated City personnel or agents.
-Chequita Crim and Frances Brooks are the points of contact (the “Principal Contact”) for
-all matters relating to this RFQ. Proposers should direct all inquiries to the Principal
-Contact at: Chequita.crim@memphistn.gov , frances.brooks@memphistn.gov , and
-procurement@memphistn.gov .
-Proposer should not, under any circumstances, contact any City personnel (including
-senior City management or City employees with whom Proposer has an existing
-business or personal relationship) to discuss this RFQ without the Principal Contact’s
-prior written consent. Utmost discretion is expected of Proposer and all other RFQ
-recipients. Any recipient attempting to circumvent this process will risk elimination from
-further participation in the bidding process.
-4.2 SCHEDULE OF ACTIVITIES
-• The City will move as quickly and efficiently as possible to determine the
-feasibility of each Proposer’s Proposal and to move forward with term sheet
-discussions and ultimately conclude an agreement accordingly.
-• The City reserves the right to modify or update this schedule at any point in time.
-In no event shall the deadline for submission of the proposal be changed except by
-written modification by the City of Memphis Purchasing Department.
-
--- 12 of 56 --
-
-Page | 13
-Activity Date
-Publish RFQ October 17, 2025
-Proposer Questions Deadline October 29, 2025
-City Response to Questions November 7, 2025
-Proposal Submission Deadline November 19, 2025
-4.3 SUBMISSION OF QUESTIONS
-Proposer may submit an initial set of questions based on its review of this RFQ, by
-adhering to the format template provided in (8.7 Exhibit G, Questions) and submitted
-as an attached WORD document or as part of the body of the email (no pdf documents)
-and sending it via email by 5:00 pm CST on the date listed in Section 4.2 “Schedule of
-Activities”. Questions received after this time and date will not be answered. This email
-should be sent to the individual(s) listed in Section 4.1 “Use of Information”, with the
-subject heading: “Your company’s name – RFQ #XXXXX - RFQ Name – Questions”. The
-City will post responses to the questions on the City’s website on or before the date
-listed in Section 4.2 “Schedule of Activities”. To ensure the fair and consistent
-distribution of information, no individual answers will be given. The only official answer
-or position of the City will be the one posted via the City's website. Any questions or
-concerns not submitted by the stated time and date will be deemed waived.
-Chequita Crim and Frances Brooks are the single points of contact (the “Principal
-Contact”) for all matters relating to this RFQ. Proposer should direct all inquiries to the
-Principal Contact at: chequita.crim@memphistn.gov, frances.brooks@memphistn.gov
-and procurement@memphistn.gov.
-Proposer should not, under any circumstances, contact any City personnel (including
-senior City management or City employees with whom Proposer has an existing
-business or personal relationship) to discuss this RFQ without the Principal Contact’s
-prior written consent. Utmost discretion is expected of Proposer and all other RFQ
-recipients. Any recipient attempting to circumvent this process will risk elimination from
-further participation in the bidding process.
-4.4 PROPOSAL SUBMISSION
-PROPOSAL SUBMISSION AND DUE DATE
-
--- 13 of 56 --
-
-Page | 14
-Proposer shall submit, in a sealed packet, one (1) original (clearly marked on the outside
-of the binder as “ORIGINAL”), three (3) complete printed copies, and two (2) thumb
-drives containing softcopies of its entire Proposal (including the signed Cover Letters) on
-or before the date specified in Section 4.2 Schedule of Activities no later than 12:00
-noon CT, to the addressee provided below:
-USPS (or other common carrier) Hand Delivery
-City of Memphis City of Memphis
-Purchasing Department, Room 368 Main Lobby – Bid Drop Box
-125 N. Main Street 125 N. Main Street
-Memphis, TN 38103 Memphis, TN 38103
-Note: Please ensure you time stamp and date your envelope using the clock and labels
-downstairs in the Lobby prior to dropping your bid in the box. If you drop it off in
-room 368, please ensure someone is there to verify the time and date you dropped it
-off.
-PROPOSALS SUBMITTED AFTER THE DEADLINE OR WHICH STATE THAT INFORMATION
-WILL BE PROVIDED ‘AT A LATER DATE’, OR WHICH ARE OTHERWISE INCOMPLETE OR
-FAIL TO COMPLY WITH THE REQUIREMENTS SET FORTH IN THIS RFQ WILL BE
-DISQUALIFIED FROM PARTICIPATION IN THIS RFQ PROCESS.
-Proposals may not be amended after the submission deadline. Notwithstanding any
-legends on the proposal or any other statements to the contrary, all materials submitted
-in connection with proposer’s response to this RFQ will become the property of the City
-of Memphis and may be returned only at the City’s option.
-Any recipient attempting to circumvent this process will risk elimination from further
-participation in the bidding process.
-Although we encourage all responses be typed, printed responses will be acceptable
-however, they must be printed clearly and legibly. Any responses that cannot be read
-or interpreted will be considered unresponsive.
-Responders must sign all documents where a signature is required, or your response
-will be disqualified.
-
--- 14 of 56 --
-
-Page | 15
-4.5 TERM OF VENDOR’S PROPOSAL
-Proposals in response to this RFQ shall remain valid for six (6) months from the Proposal
-due date. The City may request an extension of time if needed.
-
--- 15 of 56 --
-
-Page | 16
-5. RFQ TERMS AND CONDITIONS
-The City of Memphis seeks proposals from firms who have the expertise to provide to
-provide the products and/or services as is in accordance with this RFQ document. This is
-a Request for Qualifications that may be modified by the City in the selection process.
-The City of Memphis is an Equal Opportunity Employer and does not discriminate on the
-basis of race, color, national origin, sex, religion, age, or handicap status in employment
-or in the provision of services.
-Any protest of award must be filed with the Purchasing Agent. Notice of Intent to Award
-will be emailed to all vendors that submit a valid proposal. The intent to award
-notification shall be deemed publicly announced on the date specified on the notice.
-Only proposals submitted on the provided form(s) with no changes, additions or
-deletions to the terms and conditions will be considered. Proposals containing terms
-and conditions other than those contained herein may be considered non-conforming.
-No objections with regard to the application, meaning, or interpretation of the
-specifications will be considered after the opening of the subject proposals. If there are
-questions or concerns regarding any part of plans, terms, specifications or other
-proposed documents, a written request for interpretation thereof may be submitted to
-the City Purchasing Agent prior to the deadline date, pursuant to Section 4.5.1 “Proposal
-Submission and Due Date”. The organization submitting the request shall be responsible
-for the prompt delivery of the request. Any interpretation in response to the written
-request will be made only by addendum duly issued, and a copy of such addendum will
-be mailed or delivered to each organization receiving a set of such documents and/or
-posted on the City's website. The City of Memphis will not be responsible for any other
-explanation or interpretation of the proposed documents. By submission of its proposal,
-a proposer shall be deemed to have understood fully the contents and meaning of the
-RFQ.
-All proposals must be signed by an authorized representative of your organization.
-Unsigned proposals will be considered non-conforming.
-Any contract resulting from the proposals received in response to this solicitation shall
-be construed in accordance with and governed by the laws of the State of Tennessee. All
-actions, whether sounding in contract or in tort, relating to the validity, construction,
-interpretation and enforcement of this Agreement shall be instituted and litigated in the
-courts of the State of Tennessee, located in Shelby County, Tennessee without regard to
-conflicts of laws principles.
-
--- 16 of 56 --
-
-Page | 17
-By order of the Mayor of the City of Memphis, Tennessee.
-PAUL A. YOUNG, MAYOR
-Chequita Crim, Interim City Purchasing Agent
-Published in The Daily News on OCTOBER 21 & 22, 2025 2 Copies
-
--- 17 of 56 --
-
-Page | 18
-6. INSTRUCTIONS
-Proposers shall submit their signed proposal in a sealed envelope INDICATING ON THE
-OUTSIDE: COMPANY NAME and REQUEST FOR QUALIFICATION NUMBER.
-Proposers must comply with all applicable licensing requirements. Pursuant to the City
-of Memphis Charter, Article 71, Section 777 et seq., it is unlawful to operate a business
-within the limits of the city of Memphis without possessing a Memphis and Shelby
-County business license, excepting non-profit organizations that qualify as tax exempt
-under Sec. 501(c)(3) of the Internal Revenue Code. Upon award notification and prior to
-the City issuing a properly executed purchase order or entering into a contract with the
-proposer, the successful proposer, whose principal business address is located within
-the limits of the city of Memphis, will be required to submit, along with the required
-insurance and other required documentation, a copy of (1) the tax-exempt ruling or
-determination letter from the Internal Revenue Service; or (2) its current Memphis and
-Shelby County Business Tax Receipt/License.
-Issuance of this RFQ does not obligate the City to contract, in whole or in part, for
-services specified herein. The City of Memphis reserves the right to cancel this
-solicitation, in whole or in part, or to reject, in whole or in part, any and all proposals.
-Bidders will be notified of any cancellation, and cancellation of this RFQ or any
-subsequent award will be posted on the City's website.
-To request additional information concerning this solicitation, please see Section 4.5.1
-“Proposal Submission and Due Date”.
-This solicitation shall be in accordance with the City of Memphis Ordinances and
-Purchasing Policies and Procedures, which may be amended from time to time.
-All materials submitted pursuant to this RFQ shall become the property of the City of
-Memphis.
-To the extent permitted by law, all proposals submitted in response to this RFQ shall be
-kept confidential until the proposals have been evaluated and the intent to award is
-announced. Until the intent to award is announced, no information regarding any
-proposal will be released to anyone, except members of the Evaluation Committee who
-are responsible for evaluating the proposals and other appropriate City staff. All
-information provided by the Proposer in response to this RFQ will be considered by the
-Evaluation Committee in evaluating the proposal and making an award
-recommendation to the City.
-The Mayor of the City of Memphis is the only individual who can legally sign contracts
-on behalf of the City. Costs chargeable to the proposed contract shall not be incurred
-before receipt of a fully executed contract.
-
--- 18 of 56 --
-
-Page | 19
-7. GENERAL GUIDELINES FOR RESPONSE PREPARATION
-Response Format: The format in which responses are to be submitted is included in this
-RFQ. Responses that do not conform to this format will be declared non-responsive and
-will not be considered for an award from the City.
-Addendums to RFQ:
-If any addenda are issued to this Request for Qualification, the Purchasing Department
-will post them to the City's website at https://www.memphistn.gov. Submitting
-organizations are strongly encouraged to view this website often to see if addenda are
-posted. Failure of any proposer to receive such addendum or interpretation shall not
-relieve such Proposer from any obligation under his proposal as submitted. All addenda
-so issued shall become part of the Contract Documents.
-The City reserves the right to re-issue or change any portion of this RFQ, in its sole
-discretion. Any revisions to the solicitation will be made only by an addendum issued by
-the City, which will be posted on the City's website (https://www.memphistn.gov).
-Deadline Extension
-The City reserves the right to extend the submission deadline, if such action is
-considered necessary by the City. Any extension will be done through addendum only
-and will be posted on the City’s website.
-Withdrawing RFQ: The City reserves the right to withdraw this solicitation at any time
-prior to making an award based on this solicitation.
-Preparation and Presentation Costs: The Respondent shall bear the total costs for any
-and all appearances and the costs associated with preparing the response or responding
-to the RFQ. The City shall not, in any event, be liable for any expenses incurred by
-Respondents in the preparation and/or submission of the responses. Responses shall
-not include any such expenses as part of the proposed budget.
-Ambiguity, Conflict, or other Errors in the RFQ: If a Respondent discovers any ambiguity,
-conflict, discrepancy, omission or other error in the RFQ, it shall immediately notify the
-City, in writing via e-mail, of such error and request modification or clarification of the
-document. The Respondent shall include the RFQ number, page number and the
-applicable paragraph title. The City will issue/post any revisions to the RFQ on the City's
-website (https://www.memphistn.gov). The Respondent is responsible for clarifying any
-ambiguity, conflict, discrepancy, omission, or other error in the solicitation prior to
-submitting the response or any ambiguity, conflict, discrepancy, etc. shall be waived.
-Withdrawing a Response: At any time prior to the scheduled deadline for receipt of
-responses, the Respondent may withdraw its response by submitting a written request
-
--- 19 of 56 --
-
-Page | 20
-from the authorized representative whose name and signature appears on the response.
-A written request to withdraw the response must be submitted in writing to: Office of the
-City of Memphis Purchasing Agent, Room 368, City Hall, 125 North Main, Memphis, TN
-38103.
-Acceptance/Rejection of Responses: The City reserves the right to accept or reject, in
-whole or in part, any or all responses submitted. The City shall reject the response of any
-Respondent that is determined to be non-responsive.
-Informalities/Minor Irregularities: The City reserves the right to waive minor
-irregularities or informalities in a Respondent's response when the City determines that
-it will be in City's best interest to do so. Any such waiver shall not modify any remaining
-RFQ specifications or excuse the Respondent from full compliance with the RFQ
-specifications and other contract requirements if the Respondent is awarded the
-contract.
-Respondent indebted to the City: No contract will be awarded to any or all organization/s
-which, in the City's sole discretion, is in arrears to the City of Memphis upon any debt or
-contract, or which is a defaulter as surety or otherwise under any obligations to the City
-of Memphis, or which has failed to perform faithfully on any previous contract with the
-City of Memphis.
-Validity of Responses: All responses shall be valid for a period of 120 days from the
-opening date of the responses.
-Compliance with the RFQ: The submission of a response shall be taken as prima facie
-evidence that the Respondent has familiarized itself with the contents of the RFQ and
-with these terms and conditions, in particular. The failure or omission by the Respondent
-to receive or examine this RFQ shall in no way relieve the Respondent of any obligation
-with respect to its submission or of any term or condition of this RFQ and may result in
-disqualification. In order to be deemed responsive, Respondents must provide responses
-to address all items in the RFQ.
-Lengthy Responses: The City discourages overly lengthy and costly responses; however,
-in order for the City to evaluate responses fairly and completely, Respondents should
-follow the format set out herein and provide all information requested. Responses shall
-be as thorough and detailed as possible, but prepared simply providing a straightforward,
-concise description of the Offeror's capabilities to provide the services and satisfy the
-requirements of the RFQ. Emphasis should be placed on completeness and clarity of
-content.
-Contract Award: The City may fund all or any part of a response, and the City will only
-accept responses for the services requested. The response submitted in response to this
-solicitation is not a legally binding document; however, the contract, which will be based
-
--- 20 of 56 --
-
-Page | 21
-on information provided in the response, becomes legally binding once all parties have
-signed it. Any contract resulting from this RFQ shall be subject to the City of Memphis
-General Terms and Conditions set forth in this solicitation. The successful Contractors
-shall be required to execute the contracts originated by the City of Memphis and satisfy
-all contract requirements as specified by the City (See General Conditions of Contract
-included herein). Any contract awards and amounts pursuant to this solicitation are
-subject to the availability and appropriation of funds.
-Insurance: Insurance requirements are listed as Exhibit B of the attached Sample
-Contract.
-Business License: Pursuant to the City of Memphis Charter, Article 71, Section 777 et seq.,
-it is unlawful to operate a business within the limits of the city of Memphis without
-possessing a Memphis and Shelby County business license, excepting non-profit
-organizations that qualify as tax exempt under Sec. 501(c)(3) of the Internal Revenue
-Code. Upon award notification and prior to the City entering into a contract with the
-vendor, the successful vendor, whose principal business address is located within the
-limits of the city of Memphis, will be required to submit, along with the required insurance
-and other required documentation, a copy of (1) the tax-exempt ruling or determination
-letter from the Internal Revenue Services; or (2) its current Memphis and Shelby County
-Business Tax Receipt/License.
-
--- 21 of 56 --
-
-Page | 22
-8. EXHIBITS
-8.1 EXHIBIT A – DRUG-FREE WORKPLACE
-CITY OF MEMPHIS CERTIFICATE OF DRUG FREE WORKPLACE
-As A Contractor on a City of Memphis XXXXX Contract,
-the undersigned states that he/she acknowledges and adheres to the
-City of Memphis Drug Free Workplace policy and if awarded a contract
-for this project, agrees in performance of work: Please note this
-requirement will flow down from the Contractor to any Subcontractors.
-1. To require drug and alcohol screening (urine testing, breath
-analysis, or other testing procedures) in the following situations:
-Reasonable Suspicion; Post Accident and Follow Up Drug Testing as
-part of Substance Abuse Rehabilitation.
-2. To operate a drug free workplace program or alcohol testing
-program with requirements at least as stringent as the City of Memphis.
-______________________________________
-Contractor's Name
-_____________________________________
-Date
-______________________________________
+City of Memphis Request for Quotation 325762,1
+Proprietary and Confidential	Page 2 of XXVI
+***
+THIS PROCUREMENT MAY BE SUBJECT TO THE REQUIREMENTS OF
+ORDINANCE NO. 5114 WHICH ESTABLISHES A LOCAL
+PREFERENCE FOR LOCAL BUSINESSES LOCATED WITHIN THE CITY
+OF MEMPHIS. A COPY OF YOUR MEMPHIS AND
+SHELBY COUNTY TENNESSEE BUSINESS TAX RECEIPT MUST
+ACCOMPANY YOUR BID FOR CONSIDERATION OF THIS
+ORDINANCE.
+Q & A
+Proposer may submit questions based on its review of this RFQ, by adhering to
+the format template.
+provided as part of the RFQ and submitted as an attached WORD document
+(no pdf documents) and
+sending it via submission in Oracle as part of your Bid/Quote no later than 5:00
+pm on the Wednesday
+November 5, 2025. listed in the RFQ. Questions received after this time and date
+will not be
+answered.
+Answers to questions will be posted in Oracle on or before Wednesday
+November 12th, 2025. no later than
+5:00PM.
+Please submit your response to:
+Company City of Memphis, Tennessee
+Buyer Sherrod, Lakisha
+Location City of Memphis, Tennessee
+125 N Main St, Room 368
+Memphis,TN 38103
+United States
+Phone 901-636-6195
+Fax 901-636-6191
+Email lakisha.sherrod@memphistn.gov
+Your Company
+Name
+Address
+Contact Name
+Phone
 Signature
-Printed or Typed Name and Title
+This document has important legal consequences. The information contained in this document is
+proprietary of City of Memphis, Tennessee. It shall not be used, reproduced, or disclosed to others
+without the express and written consent of City of Memphis, Tennessee.
 
--- 22 of 56 --
+-- 2 of 26 --
 
-Page | 23
-8.2 EXHIBIT B – SAMPLE CITY OF MEMPHIS STANDARD CONTRACT FOR GOODS
-AND/OR SERVICES
-(Sample Contract Only)
-CITY OF MEMPHIS STANDARD CONTRACT FOR GOODS AND / OR SERVICES
-PARTIES TO THE AGREEMENT. This Agreement is made and entered as of the date of
-execution by and between [@CONTRACTOR NAME@] ("Contractor") and the City of
-Memphis, a municipal corporation of the State of Tennessee ("City").
-WITNESSETH
-WHEREAS, City, by and through its Division of [@DIVISION NAME@] has the need for
-[@SERVICES / GOODS TO BE PROVIDED@]; and
-WHEREAS, Contractor has the knowledge and expertise to provide such goods/services;
-and
-WHEREAS, the parties desire to enter into an agreement setting forth the terms and
-conditions under which Contractor shall provide said goods/services;
-NOW THEREFORE, for and in consideration of the mutual promises and covenants
-contained herein and for other good and valuable consideration, the parties hereby agree
-as follows:
-PAYMENT TERMS AND CONDITIONS
-DESCRIPTION OF GOODS / SCOPE OF SERVICES. The goods / services to be provided in
-connection with this Agreement will include, but not be limited to, those items listed, if
-applicable, in the Request for Quote (RFQ)/Request for Proposal (RFP) and Contractor's
-response thereto, which are incorporated herein by reference and, if applicable, Exhibit
-[@EXHIBIT IDENTIFICATION@], attached hereto and incorporated herein as if stated
-verbatim. Said goods / services shall be provided in accordance with the applicable terms
-and conditions set forth, if applicable, in City solicitation, and it is understood and agreed
-among the parties that in the event of a variance between the terms and conditions of
-this Agreement and any amendment hereto and the terms and conditions contained, if
-applicable either in the solicitation document or the response thereto, the order of
-precedence shall be as follows: (1) This Agreement; (2) Contractor's response, if
-applicable; (3) City's solicitation, if applicable.
-TERM. This Agreement shall not be binding upon the parties until it has been signed first
-by Contractor and then by the authorized representatives of City in accordance with
-applicable ordinances, laws and regulations.
+Request for Quotation 325762,1
+Proprietary and Confidential	Page 3 of XXVI
+Table of Contents
+1 Header Information.........................................................................................................................................4
+1.1 General Information...............................................................................................................................4
+1.2 Terms.....................................................................................................................................................5
+1.3 Response Rules......................................................................................................................................5
+2 Price Schedule................................................................................................................................................6
+2.1 Line Information....................................................................................................................................6
+2.2 Line Details............................................................................................................................................7
+2.2.1 Line 1.............................................................................................................................................7
 
--- 23 of 56 --
+-- 3 of 26 --
 
-Page | 24
-The Initial Term of this Agreement shall commence beginning [@CONTRACT BEGIN
-DATE@] and shall end on the earlier of [@CONTRACT END DATE@] or until all
-goods/services herein have been provided to City ("Initial Term"), subject to the
-availability and appropriation of funds to finance the same and the successful operation
-of the program.
-City shall have the option to extend the Initial Term for [@NO. OF OPTION PERIODS@]
-additional [@LENGTH OF OPTION PERIOD@] period(s) (the "Option Periods"), subject to
-the appropriation of funds by the Memphis City Council and mutual agreement of the
-parties, evidenced in writing. The Initial Term and the exercised Option Periods are
-collectively referred to hereinafter as the "Term."
-Eligible costs authorized by City and incurred after the Initial Term begins, but prior to the
-execution of this Agreement, shall be paid under this Agreement.
-INVOICES. Contractor shall submit original invoices, or copies of original invoices certified
-as such by Contractor, on Contractor's letterhead and in form and substance acceptable
-by City and with all necessary supporting documentation, to City. Contractor shall invoice
-in duplicate, if requested. The invoice shall describe the goods (the items sold) or services
-provided, list the price per unit, reflect any applicable terms of payment, and show the
-contract number to which it relates. Unless the contract number is shown on the invoice,
-it may be returned to Contractor. Invoices shall be submitted to: [@DIVISION NAME@],
-[@INVOICE ADDRESS@]; Memphis, Tennessee [@ZIP CODE - INVOICE@]; Attn: [@CITY
-CONTACT/REPRESENTATIVE@].
-COMPENSATION. Unless City has good faith and reasonable objections to Contractor's
-invoice(s), City shall compensate Contractor, based on invoices submitted by Contractor
-in accordance with the terms of this Agreement, the sum total [@CHOOSE NOT TO
-EXCEED OR ESTIMATED TO BE@] $[@CONTRACT AMOUNT@] (the "Fee") per year during
-the Initial Term of the Agreement, which shall include all reimbursable expenses/cost.
-City shall use its best efforts to remit payment based on Contractor's invoice within thirty
-(30) days after receipt of accurate invoice and approval by City. City is not obligated to
-pay, and may withhold from payment, any amounts City has in dispute with Contractor
-based on Contractor's non-performance/delivery, unsatisfactory performance/delivery
-or negligent performance/delivery of any services or goods hereunder.
-City reserves the right to review all Charges billed and incurred on a monthly basis.
-COMPENSATION FOR CORRECTIONS. No compensation shall be due or payable to
-Contractor pursuant to this Agreement for any of the goods delivered or services
-performed by Contractor to correct goods delivered or services performed, when such
-corrections are required as a direct result of negligence by Contractor to properly fulfill
-any of its obligations herein.
+Request for Quotation 325762,1
+Proprietary and Confidential	Page 4 of XXVI
+1 Header Information
+1.1 General Information
+Title Fire Sprinkler System Maintenance
+Description Fire Sprinkler System Maintenance
+Amendment Date 24-OCT-2025 10:07:22
+Amendment
+Description
+Amendment One (1) to update Question - Answer due dates advertisement, and
+close dates. L.S. 10/24/25
+Preview Date 20-OCT-2025 14:21:01 Open Date 20-OCT-2025 14:21:01
+Close Date 19-NOV-2025 12:00:00 Award Date Not Specified
+Time Zone Central Time Buyer Sherrod, Lakisha
+Quote Style Sealed Email lakisha.sherrod@memphistn.gov
+Outcome Standard Purchase Order
+Note Bids can be submitted in three ways (ONLY):
+• USPS (or other common carrier) at City Hall Room 368
+• eProcurement system/online (which is the preferable method for bidding)
+• The locked drop box in the lobby of City Hall
+**Bids will not be accepted elsewhere in City Hall, including the Purchasing
+department other than
+what's state above. * *
+* * * Beginning October 1, 2020, bids submitted by individuals (not common carriers)
+in City Hall,
+must be submitted via the locked drop box. Bids will not be accepted anywhere else in
+City Hall. *
+* *
+Emailed bids are not accepted. If a hardcopy bid is submitted the vendor must
+physically sign the
+bid or the bid will be considered non-conforming.
+Vendors must be registered as a supplier with the City of Memphis to participate in City
+of Memphis
+bids. Bidders must have a username and password to access the City's eProcurement
+System, which
+will allow the bidder to fully view this RFQ in ORACLE as well as open the
+attachments. To
+register as a City of Memphis supplier, please visit the City of Memphis website
+(Memphistn.gov –
+Business – Supplier Registration) and click the Online Suppliers Registration Form
+link.
+If attachments are included with this RFQ, Bidders are to fill out and return, in their
+entirety,
+all required attachments (attachments may include, but are not limited to: Bid Sections,
+Exceptions to Specifications Pages, Comply/Exception Pages, and EBO Participation
+Plan documents).
+ALL Bidders must complete each of the required forms that are attached to this RFQ
+and submit ALL
+required documentation with the Bidder's quote, per the specifications and the Terms &
+Conditions.
+Failure to submit ALL required documentation may cause the Bidder's quote to be
+considered non-
+conforming.
+***Please review the City of Memphis insurance requirements for this RFQ. ***
 
--- 24 of 56 --
+-- 4 of 26 --
 
-Page | 25
-TRAVEL EXPENSES. Where travel expenses are otherwise allowed and
-payable herein, such travel expenses shall be in accordance with City's Travel Policy and
-Procedures, as may be amended from time to time. This includes advance written travel
-authorization, submission of travel claims, documentation requirements, and
-reimbursement rates. No travel advances will be made by City.
-TAX PAYMENTS. City of Memphis is exempt from federal excise, state and local taxes on
-all purchases and upon request will issue tax exemption certificates to Contractor.
-Contractor shall be solely responsible and liable for any taxes and business license fees
-assessed or imposed by any government having jurisdiction over the services and/or
-goods to be provided herein.
-PAYMENT DOES NOT IMPLY ACCEPTANCE OF GOOD/SERVICE. The payment of an invoice
-shall not prejudice City's right to object to or question any invoice or matter in relation
-thereto. Such payment by City shall neither be construed as acceptance of the
-good/service nor as final approval of any of the costs invoiced therein, and City's payment
-shall not relieve Contractor from its obligation to replace or correct any good/service that
-do not conform to this Agreement, even if the unsatisfactory character of such
-good/service may have been apparent or detected at the time such payment was
-made. Good/service, data or components that do not conform to the requirements of this
-Agreement shall be rejected by City and replaced by Contractor, without delay or
-additional cost to City.
-If Contractor receives payment from City for good/service or reimbursement(s) that is
-later disallowed or rejected by City (or another governmental entity on the basis of audit
-or monitoring), Contractor shall promptly refund the disallowed amount to City upon
-City's request. At its option, City may offset the amount disallowed from any payment
-due to Contractor under this Agreement or any other agreement.
-FINAL CONTRACT INVOICE. Contractor shall submit to City a final contract invoice within
-45 calendar days from the termination date of the Agreement, for any goods/services
-provided pursuant to this Agreement. Contractor further acknowledges and agrees City
-will not be responsible for any Contractor invoices, pertaining to this Agreement,
-submitted to City after the final contract invoice. Contractor shall close out its accounting
-records at the end of the Agreement period in such a manner that reimbursable
-expenditures and revenue collections, related to this Agreement, are NOT carried
-forward.
+Request for Quotation 325762,1
+Proprietary and Confidential	Page 5 of XXVI
+THIS PROCUREMENT MAY BE SUBJECT TO THE REQUIREMENTS OF
+ORDINANCE NO. 5114 WHICH ESTABLISHES A LOCAL
+PREFERENCE FOR LOCAL BUSINESSES LOCATED WITHIN THE CITY OF
+MEMPHIS. A COPY OF YOUR MEMPHIS AND
+SHELBY COUNTY TENNESSEE BUSINESS TAX RECEIPT MUST
+ACCOMPANY YOUR BID FOR CONSIDERATION OF THIS
+ORDINANCE.
+Q & A
+Proposer may submit questions based on its review of this RFQ, by adhering to the
+format template.
+provided as part of the RFQ and submitted as an attached WORD document (no pdf
+documents) and
+sending it via submission in Oracle as part of your Bid/Quote no later than 5:00 pm on
+the Wednesday
+November 5, 2025. listed in the RFQ. Questions received after this time and date will
+not be
+answered.
+Answers to questions will be posted in Oracle on or before Wednesday November 12th,
+2025. no later than
+5:00PM.
+1.2 Terms
+Ship-To Address 130201-Apparatus
+Maintenance
+354 Adams Avenue
+Memphis, TN 38103
+United States
+Bill-To Address 130201-Apparatus Maintenance
+354 Adams Avenue
+Memphis, TN 38103
+United States
+Payment Terms Net 30 Carrier Best Way
+FOB Delivered Price Freight Terms Prepaid & Allowed
+1.3 Response Rules
+This negotiation is governed by all the rules displayed below.
+Negotiation is restricted to invited suppliers
+Suppliers are allowed to view other suppliers' contract terms, notes and attachments
+Suppliers are allowed to respond to selected lines
+X Suppliers are required to respond with full quantity on each line
+X Suppliers are allowed to provide multiple responses
+X Buyer may close the negotiation before the Close Date
+X Buyer may manually extend the negotiation while it is open
+
+-- 5 of 26 --
+
+Request for Quotation 325762,1
+Proprietary and Confidential	Page 6 of XXVI
+2 Price Schedule
+2.1 Line Information
+Display Rank As No indicator displayed
+Ranking Price Only
+Cost Factors None
+Line Item, Rev Target
+Quantity
+Unit Unit Price Amount Promised Date
+1 Fire Sprinkler System
+Maintenance
+1 Each
+
+-- 6 of 26 --
+
+Request for Quotation 325762,1
+Proprietary and Confidential	Page 7 of XXVI
+2.2 Line Details
+2.2.1 Line 1 Fire Sprinkler System Maintenance
+Category 34016 Start Price (USD) Not Specified
+Need-By Date Not Specified Target Price (USD) Not Specified
+Ship-To Address 131000-Fire
+Administration
+2670 Avery Avenue
+Memphis, TN 38112
+United States
+Note Bids can be submitted in three ways (ONLY):
+USPS (or other common carrier) at City Hall Room 368
+eProcurement system/online (which is the preferable method for bidding)
+The locked drop box in the lobby of City Hall
+**Bids will not be accepted elsewhere in City Hall, including the Purchasing
+department other than
+what's stated above. * *
+Vendors must be registered as a supplier with the City of Memphis to participate
+in City of Memphis
+bids.
+Emailed bids are not accepted.
+Hardcopy bids must be physically signed by the vendor.
+Bidders are to fill out and return all required attachments.
+Bidders are to include all required documentation with their bid.
+In Oracle, enter the Grand Total from the attached Bid Section. Fill out, in its
+entirety the
+attached Specifications/Bid Section and return for evaluation and award purposes.
+Any bid
+submitted without this attachment may be deemed non-conforming.
+Bid Sessions are now available on Teams for viewing. The link will be provided
+on the City of Memphis Business website. Please see link below for access to
+attend the weekly Teams meeting. https://www.memphistn.gov/business/
+Q & A
+Proposer may submit questions based on its review of this RFQ, by adhering to
+the format template.
+provided as part of the RFQ and submitted as an attached WORD document (no
+pdf documents) and
+sending it via submission in Oracle as part of your Bid/Quote no later than 5:00
+pm on the Wednesday
+November 5, 2025. listed in the RFQ. Questions received after this time and date
+will not be
+answered.
+Answers to questions will be posted in Oracle on or before Wednesday November
+12th, 2025. no later than
+5:00PM.
+
+-- 7 of 26 --
+
+Request for Quotation 325762,1
+Proprietary and Confidential	Page 8 of XXVI
+Attachments
+Name Data Type Description
+Fire Sprinkler Systems
+maintenance
+File Bid & Price Sheet
+Fire Sprinkler System
+Maintenance Specifications
+File Specifications
+Fire Sprinkler System
+Maintenance Insurance
+Requirements
+File Insurance Requirements for Sprinkler System
+Maintenance
+
+-- 8 of 26 --
+
+Request for Quotation 325762,1
+Proprietary and Confidential	Page IX of XXVI
+Contract Terms and Conditions
+Table of Contents
+Terms and Conditions.......................................................................................................................................X
+RFQ TERMS & CONDITIONS .............................................................................................................X
+CMEM RFQ TERMS & CONDITIONS ........................................................................................X
+CMEM RFQ CONTRACT EXAMPLE .....................................................................................XIV
+
+-- 9 of 26 --
+
+Request for Quotation 325762,1
+Proprietary and Confidential	Page X of XXVI
+Terms and Conditions
+RFQ TERMS & CONDITIONS
+CMEM RFQ TERMS & CONDITIONS
+RFQ TERMS & CONDITIONS
+HEADER FOR CONTRACT SPECIFICATIONS
+To the Honorable Mayor of Memphis, Tennessee:
+Gentlemen:
+(I/we) do hereby declare that (I am/we are) the only person, firm or corporation interested in this proposal,
+and that no other person, firm or corporation than the one herein named has any interest herein or in the
+contract proposed to be taken; that it is made without any connection with any person, firm or corporation
+making proposal for the same work, and that it is in all respects fair as to each item bid upon and as to the
+proposal as a whole and without collusion or fraud: also that no officer or employee of the City of
+Memphis, who is by law excluded from participating therein, is directly or indirectly interested herein, or in
+the furnishing of the supplies, or doing the work to which it relates, or in furnishing surety, or in any
+portion of the profits thereof;
+With the understanding that any contract resulting from the bids taken herein shall be governed, construed
+and enforced according to the laws of the State of Tennessee. All actions whether sounding in contract or
+in tort, relating to the validity, construction, interpretation, and enforcement of this contract shall be
+instituted and litigated in the courts of the State of Tennessee located in Shelby County, Tennessee, without
+regard to conflicts of laws principles. In accordance herewith the parties to this proposal submit to the
+jurisdiction of the courts of the State of Tennessee, located in Shelby County, Tennessee;
+And do further declare that (I/we) have carefully examined the annexed specifications, and hereby propose
+to furnish the following items, and/or do the following work for the sum hereinafter set forth, VIZ:
+REQUEST FOR QUOTE TERMS AND CONDITIONS
+QUOTATION CONDITIONS:
+1. Bids must be submitted in one of the following three ways:
+i. via the eProcurement system (which is the preferable method for bidding); or
+ii. hand delivery to: City of Memphis, Main Lobby, Bid Drop Box, 125 N. Main St, Memphis, TN
+38103; or
+iii. USPS (or other common carrier) to: City of Memphis, Purchasing Department, Room 354,
+Memphis, TN 38103.
+Bids must be received no later than 12:00 P.M. CT on November 12, 2025 in order to be considered. Only
+bids submitted on the provided form(s), with no changes, additions or deletions to the provided forms, to
+the terms and conditions of this RFQ, or to the terms and conditions listed in section City of Memphis
+General Terms and Conditions will be considered. Bids containing modifications, or terms and conditions
+other than those contained herein may be considered nonconforming.
+
+-- 10 of 26 --
+
+Request for Quotation 325762,1
+Proprietary and Confidential	Page XI of XXVI
+LATE BIDS WILL BE CONSIDERED NONCONFORMING AND WILL NOT BE CONSIDERED IN
+THE EVALUATION PROCESS.
+2. Any questions or concerns concerning the solicitation must be submitted via the Oracle online
+discussion tool. Please be aware that a vendor's contact with any City personnel (other than the person
+clearly identified in the solicitation) regarding the solicitation may disqualify such vendor from
+consideration of award for the solicitation. The written correspondence should reference the section of the
+solicitation to which the question pertains, and must clearly specify the question(s) and identify the
+solicitation number to which such questions pertain. Unless otherwise specified in the solicitation,
+questions or concerns must be submitted at least three (3) days before the bid or proposal deadline date.
+Any questions or concerns not submitted within a timely manner will be deemed waived. Any response to
+the submitted questions or concerns will be made via the online discussion tool, or an addendum, which
+will be made available to each vendor known to have received a copy of the solicitation, pursuant to the
+City's Purchasing Policies & Procedures and/or posted on the City's website (www.memphistn.gov). The
+Addendum and/or the online discussion document will become a part of the solicitation.
+Any oral interpretations or instructions given by a City employee or other person do not affect the terms
+and conditions of the solicitation, as amended.
+3. All hardcopy bids must be signed by an authorized representative of your firm. Unsigned bids will be
+considered nonconforming. Signing in with a user ID and password and submitting an online bid via the
+City's eProcurement system will suffice as a signed bid.
+4. "DEL NA DAYS ARO" SHALL MEAN THE NUMBER OF CONSECUTIVE CALENDAR DAYS
+FOLLOWING RECEIPT OF A FULLY EXECUTED CONTRACT, F.O.B. TO DESIGNATED
+FACILITY, CITY OF MEMPHIS, TENNESSEE. THERE WILL BE NO EXCEPTIONS.
+5. The award of a contract will be made on the basis of the lowest and best bid, as determined by the City,
+which meets the requirements and criteria set forth in the solicitation. The City of Memphis Purchasing
+Department will issue a contract to the successful vendor for execution. Upon execution, the vendor shall
+return the signed contract to the City for signatory execution by the necessary officials of the City. Any
+vendor who manufactures or delivers an order or provides services without a fully executed contract does
+so at its own risk.
+6. The City reserves the right to itemize and award individually, where applicable.
+7. The City reserves the right to cancel this solicitation at any time prior to making an award based on this
+solicitation. The City reserves the right to reject any and all bids, and to waive any informality in bids.
+8. Any protest of award must be filed in writing with the Purchasing Agent within 5 calendar days of the
+intent to award announcement at the following address: City of Memphis Purchasing Agent; 125 North
+Main, Room 354; Memphis, Tennessee 38103. Electronic notification will be sent to each bidder that
+submitted a timely bid. The notification will indicate whether or not the bidder has been selected for award
+for any part of the solicitation. The "intent to award notification" shall be deemed publicly announced on
+the date specified on said notice.
+9. BRAND NAMES or TRADE NAMES are given as a quality reference and aid bidders in offering the
+right quality for this solicitation. Except where said quality reference is followed by the word "ONLY",
+any quotation will be considered if, in the opinion of the City, the products are equal to those specified.
+PLEASE INDICATE BRAND AND MODEL PROPOSED.
+10. The successful bidder must return the Certificate of Insurance evidencing the required insurance
+coverage, and all other required information, within five (5) days of notification of bid award.
+11. Upon opening, all bids and attendant documents become a matter of public record.
+
+-- 11 of 26 --
+
+Request for Quotation 325762,1
+Proprietary and Confidential	Page XII of XXVI
+12. Vendors must comply with all applicable licensing requirements. Pursuant to the City of Memphis
+Charter, Article 71, Section 777 et seq., it is unlawful to operate a business within the limits of the city of
+Memphis without possessing a Memphis and Shelby County business license, excepting non-profit
+organizations that qualify as tax exempt under Sec. 501(c)(3) of the Internal Revenue Code. Upon award
+notification and prior to the City issuing a properly executed purchase order or entering into a contract with
+the vendor, the successful vendor, whose principal business address is located within the limits of the city
+of Memphis, will be required to submit, along with the required insurance and other required
+documentation, a copy of (1) the tax-exempt ruling or determination letter from the Internal Revenue
+Services; or (2) its current Memphis and Shelby County Business Tax Receipt/License.
+13. The City reserves the right to split award among various manufacturers depending on the City's
+inventory needs.
+14. The City of Memphis is exempt from Federal Excise, State and local taxes on all purchases and will
+issue tax exemption certificates, as requested.
+15. The bid/proposal submitted in response to this solicitation is not a legally binding document; however,
+any ensuing contract shall be subject to the City of Memphis Contract General Terms and Conditions,
+which are included in this procurement. The successful Contractor shall be required to execute the contract
+originated by the City of Memphis.
+16. The City reserves the right to audit the records of the Contractor. The Contractor shall make and keep
+as the same accrue, full and complete records and books as account of revenue and income, costs and
+expenses that specifically relate to performance under this Agreement. Records and books of accounts
+together with any and all other memoranda pertaining thereto that may be kept, maintained or possessed by
+the Contractor, shall be open to examination during regular business hours by the City or its representatives
+for the purpose of inspecting, auditing, verifying or copying the same or making extracts therefrom. The
+Contractor shall make and keep said records and books of accounts for a period of seven years from the
+completion of the contract obligations or the final payment under the contract, whichever is later.
+The City of Memphis is an Equal Opportunity Employer and does not discriminate on the basis of race,
+color, national origin, sex, religion, age or handicap status in employment or in the provision of services.
+THIS PROCUREMENT MAY BE SUBJECT TO THE REQUIREMENTS OF ORDINANCE NO. 5114
+WHICH ESTABLISHES A LOCAL PREFERENCE FOR LOCAL BUSINESSES LOCATED WITHIN
+THE CITY OF MEMPHIS. A COPY OF YOUR CURRENT MEMPHIS AND SHELBY COUNTY
+TENNESSEE BUSINESS TAX RECEIPT MUST ACCOMPANY YOUR BID FOR CONSIDERATION
+OF THIS ORDINANCE.
+This procurement shall be in accordance with the City of Memphis Purchasing Policies and Procedures,
+which may be amended from time to time by the City.
+Published in The Daily News: October 28,29 th (2) copies
+By Order of the Mayor of the City of Memphis, Tennessee.
+PAUL A. YOUNG
+MAYOR
+CHEQUITA CRIM
+PURCHASING AGENT
+
+-- 12 of 26 --
+
+Request for Quotation 325762,1
+Proprietary and Confidential	Page XIII of XXVI
+INSTRUCTIONS TO BIDDERS
+1. PROPOSING FIRM'S DISCLOSURE OF CRIMINAL AND CIVIL PROCEEDINGS. Describe,
+if any, all ongoing civil or criminal proceedings. Also describe, if any, all civil or criminal proceedings that
+has occurred within the last 10 years. Indicate the status of current proceeding and the outcome of closed
+or completed actions. Additionally, describe how the outcome of said actions impacted company business
+operations. This information must be included as part of your bid response.
+2. The bidder is required to list all exceptions, deviations or variations to the specifications in a clear,
+logical fashion on a sheet designated by the bidder as such. Brochures, standard catalog sheets or technical
+data should accompany each proposal, but may not be considered as notice of exceptions, deviations, or
+variations to the specifications.
+3. The successful bidder shall submit all invoices associated with the resulting purchase order/contract to:
+KEITH JAMES at 2668 AVERY AVENUE; Memphis, Tennessee 38112.
+4. If the solicitation requires that the bid/proposal be delivered to a physical location, it shall be submitted
+in a sealed envelope by the deadline date and time indicating, at minimum, the following information on
+the outside of the envelope: the Company Name and the applicable Request for Quote/Proposal Number.
+5. At any time prior to the scheduled deadline for receipt of bids, the Offeror may withdraw or amend its
+bid by submitting a written request from the authorized representative whose name and signature appears
+on the bid to the City's Purchasing Agent.
+6. IF YOU ARE NOT QUOTING, RETURN THIS FORM STATING THE REASON, OR YOUR
+FIRM'S NAME MAY BE REMOVED FROM THE MAILING LIST FOR THIS APPLICABLE
+COMMODITY CODE. ANY FIRM RECEIVING AN EMAILED SOLICITATION ON THE
+ABOVE SUBJECT AND NOT BIDDING WILL BE ELECTRONICALLY REMOVED FROM THE
+CITY'S MAILING LIST USED FOR THE ABOVE-REFERENCED COMMODITY AFTER 3
+CONSECUTIVE NON-RESPONSES OR NO BIDS.
+7. For additional information regarding this solicitation, contact LAKISHA SHERROD at
+lakisha.sherrod@memphistn.gov. Offerors shall not, under any circumstances, contact any City official,
+employee, agent (including senior City management or City employees with whom Offeror has an existing
+business or personal relationship) to discuss this solicitation. Utmost discretion is expected from Offerors
+and all solicitation recipients. Any Offeror attempting to circumvent this process may be subject to
+elimination from further participation in the solicitation process.
+8.BID BOND REQUIREMENTS/INSTRUCTIONS - A bid bond issued by a surety company licensed
+to do business in the State of Tennessee, certified/cashiers' check on a solvent bank, irrevocable letter of
+credit, or certificate of deposit, in the amount of NA % of the total bid price, must accompany the bid. Said
+instrument shall remain in effect for the successful vendor(s) until (and will be returned only after) the
+contract has been fully executed and secured. Bid bonds submitted by unsuccessful vendors will be
+returned upon award of the contract.
+9. INSURANCE REQUIREMENTSSEE TABLE OF CONTENTS
+10. EBO PARTICIPATION REQUIREMENTS NA.
+
+-- 13 of 26 --
+
+Request for Quotation 325762,1
+Proprietary and Confidential	Page XIV of XXVI
+CMEM RFQ CONTRACT EXAMPLE
+RFQ CONTRACT EXAMPLE
+The successful Contractor will be required to comply with and execute an agreement specifying the
+following general terms and conditions, as may be modified and/or supplemented at the City's sole
+discretion:
 GENERAL TERMS AND CONDITIONS
-AMENDMENT. This Agreement may be modified or amended only by a written
-amendment executed by all parties hereto and approved by the appropriate City officials
-in accordance with applicable laws and regulations.
-
--- 25 of 56 --
-
-Page | 26
-ASSIGNMENT, SUBCONTRACTING, or TRANSFER. Contractor shall not subcontract,
-assign, delegate or transfer all or part of its rights, responsibilities, or interest under this
-Agreement without the prior written consent of City. Any purported assignment, transfer,
-or delegation in violation of this Section shall be voidable by City. No subcontracting,
-assignment, delegation or transfer shall relieve Contractor from performance of its duties
-hereunder; neither shall City be responsible for the fulfillment of Contractor's obligations
-to its transferors or subcontractors. Upon request of City, the subcontracting, assigning,
-delegating or transferring party shall provide all documents evidencing the transfer. At
-any time, City may, in its sole discretion, revoke its prior approval of a subcontractor and
-direct Contractor to replace such subcontractor or perform the services that were being
-performed by such Contractor itself if City finds in its reasonable judgment that (i) such
-subcontractor's performance is materially deficient or otherwise unacceptable to City; (ii)
-good faith doubts exist concerning the subcontractor's ability to render future
-performance because of changes in the subcontractor's ownership, management,
-financial condition, or otherwise; or (iii) there have been one (1) or more material
-misrepresentations by or concerning the subcontractor. City reserves the right to
-terminate the Agreement if Contractor, in whole or in part, is acquired by another entity
-during the term of this Agreement. In the event Contractor is allowed to sublet any part
-of the Agreement, Contractor shall be as fully responsible to City for the acts and
-omissions of the subcontractor and the subcontractor’s employees, as Contractor is
-responsible for the acts and omissions of Contractor’s own employees.
+AMENDMENT. This Agreement may be modified or amended only by a written amendment executed by
+all parties hereto and approved by the appropriate City officials in accordance with applicable laws and
+regulations.
+ASSIGNMENT, SUBCONTRACTING, or TRANSFER. Contractor shall not subcontract, assign,
+delegate or transfer all or part of its rights, responsibilities, or interest under this Agreement without the
+prior written consent of the City. Any purported assignment, transfer, or delegation in violation of this
+Section shall be voidable by the City. No subcontracting, assignment, delegation or transfer shall relieve
+Contractor from performance of its duties hereunder; neither shall the City be responsible for the
+fulfillment of Contractor's obligations to its transferors or subcontractors. Upon request of the City, the
+subcontracting, assigning, delegating or transferring party shall provide all documents evidencing the
+transfer. At any time, City may, in its sole discretion, revoke its prior approval of a subcontractor and direct
+Contractor to replace such subcontractor or perform the services that were being performed by such
+Contractor itself if the City finds in its reasonable judgment that (i) such subcontractor's performance is
+materially deficient or otherwise unacceptable to City; (ii) good faith doubts exist concerning the
+subcontractor's ability to render future performance because of changes in the subcontractor's ownership,
+management, financial condition, or otherwise; or (iii) there have been one (1) or more material
+misrepresentations by or concerning the subcontractor. The City reserves the right to terminate the
+Agreement if Contractor, in whole or in part, is acquired by another entity during the term of this
+Agreement. In the event Contractor is allowed to sublet any part of the Agreement, Contractor shall be as
+fully responsible to the City for the acts and omissions of the subcontractor and the subcontractor's
+employees, as Contractor is responsible for the acts and omissions of Contractor's own employees.
 ASSIGNS. See SUCCESSORS.
 AUDITS. See RECORDS.
-BOYCOTT OF ISRAEL. In connection with Tennessee Code Annotated Section 12-4-119,
-Contractor certifies that it is not currently engaged in nor will it engage in a boycott of
-Israel. For this purpose, a “boycott of Israel” shall mean engaging in refusals to deal,
-terminating business activities, or other commercial actions that are intended to limit
-commercial relations with Israel, or companies doing business in or with Israel or
-authorized by, licensed by, or organized under the laws of the State of Israel to do
-business, or persons or entities doing business in Israel, when such actions are taken (i) in
-compliance with, or adherence to, calls for a boycott of Israel, or (ii) in a manner that
-discriminates on the basis of nationality, national origin, religion, or other unreasonable
-basis, and is not based on a valid business reason. This provision is not applicable to
-contracts with a value less than $250,000 or to companies with less than 10 employees.
-CITY FACILITIES. Except to the extent otherwise approved by City in its sole discretion,
-Contractor shall use any and all items provided by City for the sole and exclusive purpose
-of providing the services or for delivery of goods described in this Agreement. Use of City
-facilities by Contractor does not constitute a leasehold interest in favor of Contractor or
-Contractor's customers.
+CITY FACILITIES. Except to the extent otherwise approved by the City in its sole discretion, Contractor
+shall use any and all items provided by the City for the sole and exclusive purpose of providing the services
+or for delivery of goods described in this Agreement. Use of City facilities by Contractor does not
+constitute a leasehold interest in favor of Contractor or Contractor's customers.
+Contractor shall use any and all items provided by the City in an efficient manner. To the extent that
+Contractor utilizes such items provided by the City in any manner that unnecessarily increases facility costs
+or other costs incurred by the City, City reserves the right to set-off the excess costs of such practices.
+Contractor shall be responsible for any damage to any and all item(s) provided by the City resulting from
+the abuse, misuse, or neglect of Contractor, its employees and subcontractors or other failure to comply
+with its obligations respecting such items provided by the City.
+Contractor, its employees and agents shall keep any and all items provided by the City in good order, not
 
--- 26 of 56 --
+-- 14 of 26 --
 
-Page | 27
-Contractor shall use any and all items provided by City in an efficient manner. To the
-extent that Contractor utilizes such items provided by City in any manner that
-unnecessarily increases facility costs or other costs incurred by City, City reserves the right
-to set-off the excess costs of such practices. Contractor shall be responsible for any
-damage to any and all item(s) provided by City resulting from the abuse, misuse, or
-neglect of Contractor, its employees and subcontractors or other failure to comply with
-its obligations respecting such items provided by City.
-Contractor, its employees and agents shall keep any and all items provided by City in good
-order, not commit or permit waste or damage to such items, and not use such items for
-any unlawful purpose. Contractor shall act and comply with City's standard policies and
-procedures as made available to Contractor regarding access to and use of such City-
-provided items, including procedures for the physical security of City facilities.
-Contractor shall permit City and its agents and representatives to enter into those
-portions of City facilities occupied by Contractor staff at any time to perform facilities-
-related services.
-Contractor shall not make any improvements or changes involving structural, mechanical
-or electrical alterations to City facilities without City's prior written approval. Any
-improvements to City facilities will become the property of City.
-When City facilities are no longer required for performance of the services described in
-Exhibit “[@EXHIBIT IDENTIFICATION@]”, Contractor shall return such facilities to City in
-substantially the same condition as when Contractor began use of such facilities, subject
-to reasonable wear and tear.
-CITY LIABILITY. City shall have no liability except as specifically provided in this
-Agreement. City, by execution of this Agreement, assumes no liability for damages caused
-to persons or property by reason of Contractor providing goods or services herein or for
-injury to any employee, agent or subcontractor of the Contractor performing under this
-Agreement.
-CITY'S RIGHT TO WITHHOLD CERTAIN AMOUNTS AND MAKE APPLICATION THEREOF. If
-evidence is produced before the final settlement of all or any balances that Contractor
-has failed to pay subcontractors, laborers employed on its work, or failed to pay for
-materials used therein, or if City has reason to suspect the same, City may withhold such
-balances and upon evidence satisfactory to City as to the amount due for such goods,
-labor, and materials, City, acting as the agent of Contractor, may settle and pay for the
-same and charge the amounts to Contractor and deduct the same from the said balance
-or balances.
-COMPANY’S/CONTRACTOR'S PERSONNEL. (This paragraph/section is applicable only to
-purchase of services contracts). Contractor certifies that it presently has adequate
+Request for Quotation 325762,1
+Proprietary and Confidential	Page XV of XXVI
+commit or permit waste or damage to such items, and not use such items for any unlawful purpose.
+Contractor shall act and comply with City's standard policies and procedures as made available to
+Contractor regarding access to and use of such City-provided items, including procedures for the physical
+security of the City facilities.
+Contractor shall permit City and its agents and representatives to enter into those portions of the City
+facilities occupied by Contractor staff at any time to perform facilities-related services.
+Contractor shall not make any improvements or changes involving structural, mechanical or electrical
+alterations to the City facilities without the City's prior written approval. Any improvements to the City
+facilities will become the property of the City.
+When the City facilities are no longer required for performance of the services described in Exhibit "[
+@EXHIBIT IDENTIFICATION@ ]", Contractor shall return such facilities to the City in substantially the
+same condition as when Contractor began use of such facilities, subject to reasonable wear and tear.
+CITY LIABILITY. The City shall have no liability except as specifically provided in this Agreement. The
+City, by execution of this Agreement, assumes no liability for damages caused to persons or property by
+reason of Contractor providing goods or services herein or for injury to any employee, agent or
+subcontractor of the Contractor performing under this Agreement.
+CITY'S RIGHT TO WITHHOLD CERTAIN AMOUNTS AND MAKE APPLICATION
+THEREOF. If evidence is produced before the final settlement of all or any balances that Contractor has
+failed to pay subcontractors, laborers employed on its work, or failed to pay for materials used therein, or if
+the City has reason to suspect the same, the City may withhold such balances and upon evidence
+satisfactory to the City as to the amount due for such goods, labor, and materials, the City, acting as the
+agent of Contractor, may settle and pay for the same and charge the amounts to Contractor and deduct the
+same from the said balance or balances.
+COMPANY'S/CONTRACTOR'S PERSONNEL. (This paragraph/section is applicable only to
+purchase of services contracts). Contractor certifies that it presently has adequate qualified personnel to
+perform all services required under this Agreement and that all services performed under this Agreement
+shall be supervised by Contractor. Contractor will make its personnel aware of and cause them to comply
+with the City's policies that have been made known to Contractor while performing pursuant to this
+Agreement. Contractor further certifies that all of its employees assigned to perform any services hereunder
+shall have such knowledge and experience as required to perform the duties assigned to them. Any
+employee of Contractor who, in the opinion of the City, is incompetent, whose conduct becomes
+detrimental to the services, or whom the City deems to be unsatisfactory for any reason, shall immediately
+be removed from association with the services hereunder per the City's request. Upon such request,
+Contractor shall use all reasonable efforts to promptly replace such employee(s) with substitute
+employee(s) having appropriate skills and training. Contractor is responsible for the acts or omissions of its
+personnel under or relating to this Agreement.
+Contractor shall be solely liable and responsible for providing all employee compensation and benefits to,
+or on behalf of, all persons performing services pursuant to this Agreement. The City shall have no liability
+or responsibility for the payment of any salaries, wages, unemployment benefits, health, welfare and
+disability benefits, federal and local taxes, or other compensation, benefits or taxes for any personnel
+provided on behalf of Contractor. In addition, Contractor shall be solely liable and responsible for any and
+all workers' compensation benefits to any person as a result of injuries arising from or connected with any
+services performed by or on behalf of Contractor pursuant to this Agreement.
+CONFIDENTIALITY. Subject to the open records laws of the State of Tennessee, while performing
+under this Agreement, the parties may gain access to proprietary and/or confidential information that, if
+disclosed to third parties, may be damaging to each other. The parties agree not to disclose such
+information to third parties and shall take all reasonable steps to prevent unauthorized access to any of each
 
--- 27 of 56 --
+-- 15 of 26 --
 
-Page | 28
-qualified personnel to perform all services required under this Agreement and that all
-services performed under this Agreement shall be supervised by Contractor. Contractor
-will make its personnel aware of and cause them to comply with City's policies that have
-been made known to Contractor while performing pursuant to this
-Agreement. Contractor further certifies that all of its employees assigned to perform any
-services hereunder shall have such knowledge and experience as required to perform the
-duties assigned to them. Any employee of Contractor who, in the opinion of City, is
-incompetent, whose conduct becomes detrimental to the services, or whom City deems
-to be unsatisfactory for any reason, shall immediately be removed from association with
-the services hereunder per City's request. Upon such request, Contractor shall use all
-reasonable efforts to promptly replace such employee(s) with substitute employee(s)
-having appropriate skills and training. Contractor is responsible for the acts or omissions
-of its personnel under or relating to this Agreement.
-Contractor shall be solely liable and responsible for providing all employee compensation
-and benefits to, or on behalf of, all persons performing services pursuant to this
-Agreement. City shall have no liability or responsibility for the payment of any salaries,
-wages, unemployment benefits, health, welfare and disability benefits, federal and local
-taxes, or other compensation, benefits or taxes for any personnel provided on behalf of
-Contractor. In addition, Contractor shall be solely liable and responsible for any and all
-workers' compensation benefits to any person as a result of injuries arising from or
-connected with any services performed by or on behalf of Contractor pursuant to this
-Agreement.
-CONFIDENTIALITY. Subject to the open records laws of the State of Tennessee, while
-performing under this Agreement, the parties may gain access to proprietary and/or
-confidential information that, if disclosed to third parties, may be damaging to each other.
-The parties agree not to disclose such information to third parties and shall take all
-reasonable steps to prevent unauthorized access to any of each other’s confidential and
-proprietary information. Such information shall include, but shall not be limited to,
-materials considered to be confidential information as a matter of law (e.g., personnel
-records), and shall also include (i) all materials in any form developed or created by each
-party related to funding and financial and business information; (ii) all information owned,
-possessed or used by a party, which is communicated to, learned, developed or otherwise
-acquired by that party in the performance of this Agreement; (iii) the terms, conditions
-and pricing contained herein; and (iv) any other information that has been advised by a
-party is confidential, privileged or proprietary. Confidential information, as used in this
-Agreement, shall not include (i) information in a party’s possession prior to disclosure; (ii)
-information generally available to the public or that becomes available to the public
-through a source other than a party under this Agreement, or (iii) information that was
-rightfully obtained by a party from a third party who is under no obligation of
-confidentiality to either party to this Agreement with respect to such information. Each
-party agrees that it will accept and hold confidential information obtained from each
-other in confidence at all times during and after termination of this Agreement. A party
+Request for Quotation 325762,1
+Proprietary and Confidential	Page XVI of XXVI
+other's confidential and proprietary information. Such information shall include, but shall not be limited to,
+materials considered to be confidential information as a matter of law (e.g., personnel records), and shall
+also include (i) all materials in any form developed or created by each party related to funding and financial
+and business information; (ii) all information owned, possessed or used by a party, which is communicated
+to, learned, developed or otherwise acquired by that party in the performance of this Agreement; (iii) the
+terms, conditions and pricing contained herein; and (iv) any other information that has been advised by a
+party is confidential, privileged or proprietary. Confidential information, as used in this Agreement, shall
+not include (i) information in a party's possession prior to disclosure; (ii) information generally available to
+the public or that becomes available to the public through a source other than a party under this agreement,
+or (iii) information that was rightfully obtained by a party from a third party who is under no obligation of
+confidentiality to either party to this Agreement with respect to such information. Each party agrees that it
+will accept and hold confidential information obtained from each other in confidence at all times during
+and after termination of this Agreement. A party shall neither use nor disclose such information, except as
+provided in this Agreement or as required by law, without the prior written permission of affected party.
+Subject to the open record laws of the State of Tennessee, each party acknowledges and agrees that a
+breach of this section may cause the affected party irreparable injury and damage; therefore, each party
+expressly agrees that the affected party shall be entitled to seek injunctive or other equitable relief in any
+court of competent jurisdiction to prevent or otherwise restrain a breach of this Agreement. Each party
+agrees that it will disclose confidential information only to those employees who have a right and need to
+know, and shall require its employees, agents, and subcontractors to comply with the requirements of this
+provision and the requirements of the provisions herein titled "Public Statements" and "Rights in Data."
+CONFLICT OF INTEREST. Neither party shall engage in any conduct or activity in the performance of
+this Agreement that constitutes a conflict of interest under applicable federal, state or local laws, rules and
+regulations. Contractor covenants that it has no public or private interest, and shall not acquire any interest,
+directly or indirectly, which would conflict in any manner with the performance required under this
+Agreement, and Contractor covenants that no gratuities, in the form of entertainment, gifts, or otherwise,
+were offered or given by Contractor or any agent or representative of Contractor, to any officer, official,
+agent or employee of the City, in an effort to secure the Agreement or favorable treatment with respect to
+any determinations concerning the performance of the Agreement. Contractor warrants that no part of the
+total contract amount provided herein shall be paid directly or indirectly to any officer or employee of the
+City as wages, compensation, or gifts in exchange for acting as officer, agent, employee, subcontractor or
+consultant to Contractor in connection with anything contemplated or performed relative to this
+Agreement. For breach or violation of this provision, the City shall have the right to recover or withhold the
+full amount of such gratuities.
+COUNTERPARTS. This Agreement may be signed in multiple counterparts and/or counterpart signature
+pages, each of which shall be deemed an original, and all of which when taken together shall constitute one
+and the same instrument.
+COVENANT AGAINST CONTINGENT FEES. Contractor warrants that it has not employed or
+retained any company or person other than a bona fide employee working solely for Contractor, to solicit or
+secure this Agreement, and that it has not paid or agreed to pay any company or person, other than a bona
+fide employee working solely for Contractor any fee, commission, percentage, brokerage fee, gift, or any
+other consideration contingent upon or resulting from the award or making of this Agreement. For breach
+or violation of this provision/warranty, the City shall have the right to recover the full amount of such fee,
+commission, percentage, brokerage fee, gift, or other consideration.
+DEBARRED OR SUSPENDED ENTITIES. By signing this Agreement, Contractor certifies that it is
+not presently listed by any federal agency as debarred, suspended, or proposed for debarment from any
+federal contract activity. If during the term of this Agreement this information changes, Contractor shall
+notify City without delay. Such notice shall contain all relevant particulars of any debarment, suspension,
+or proposed debarment.
 
--- 28 of 56 --
+-- 16 of 26 --
 
-Page | 29
-shall neither use nor disclose such information, except as provided in this Agreement or
-as required by law, without the prior written permission of affected party.
-Subject to the open record laws of the State of Tennessee, each party acknowledges and
-agrees that a breach of this section may cause the affected party irreparable injury and
-damage; therefore, each party expressly agrees that the affected party shall be entitled
-to seek injunctive or other equitable relief in any court of competent jurisdiction to
-prevent or otherwise restrain a breach of this Agreement. Each party agrees that it will
-disclose confidential information only to those employees who have a right and need to
-know, and shall require its employees, agents, and subcontractors to comply with the
-requirements of this provision and the requirements of the provisions herein titled "Public
-Statements" and "Rights in Data."
-CONFLICT OF INTEREST. Neither party shall engage in any conduct or activity in the
-performance of this Agreement that constitutes a conflict of interest under applicable
-federal, state or local laws, rules and regulations. Contractor covenants that it has no
-public or private interest, and shall not acquire any interest, directly or indirectly, which
-would conflict in any manner with the performance required under this Agreement, and
-Contractor covenants that no gratuities, in the form of entertainment, gifts, or otherwise,
-were offered or given by Contractor or any agent or representative of Contractor, to any
-officer, official, agent or employee of City, in an effort to secure the Agreement or
-favorable treatment with respect to any determinations concerning the performance of
-the Agreement. Contractor warrants that no part of the total contract amount provided
-herein shall be paid directly or indirectly to any officer or employee of City as wages,
-compensation, or gifts in exchange for acting as officer, agent, employee, subcontractor
-or consultant to Contractor in connection with anything contemplated or performed
-relative to this Agreement. For breach or violation of this provision, City shall have the
-right to recover or withhold the full amount of such gratuities.
-COUNTERPARTS. This Agreement may be signed in multiple counterparts and/or
-counterpart signature pages, each of which shall be deemed an original, and all of which
-when taken together shall constitute one and the same instrument.
-COVENANT AGAINST CONTINGENT FEES. Contractor warrants that it has not employed
-or retained any company or person other than a bona fide employee working solely for
-Contractor, to solicit or secure this Agreement, and that it has not paid or agreed to pay
-any company or person, other than a bona fide employee working solely for Contractor
-any fee, commission, percentage, brokerage fee, gift, or any other consideration
-contingent upon or resulting from the award or making of this Agreement. For breach or
-violation of this provision/warranty, City shall have the right to recover the full amount of
-such fee, commission, percentage, brokerage fee, gift, or other consideration.
-DEBARRED OR SUSPENDED ENTITIES. By signing this Agreement, Contractor certifies that
-it is not presently listed by any federal agency as debarred, suspended, or proposed for
-
--- 29 of 56 --
-
-Page | 30
-debarment from any federal contract activity. If during the term of this Agreement this
-information changes, Contractor shall notify City without delay. Such notice shall contain
-all relevant particulars of any debarment, suspension, or proposed debarment.
+Request for Quotation 325762,1
+Proprietary and Confidential	Page XVII of XXVI
 DESCRIPTION OF GOODS / SCOPE OF SERVICES. See SCOPE OF SERVICES.
-DISPUTE RESOLUTION. In the event of any dispute, controversy, or claim arising out of or
-relating to this Agreement or the breach thereof, the parties agree that they shall first use
-their best efforts in an attempt to settle the dispute through negotiations involving
-themselves or their representatives as they each deem appropriate. Any dispute
-concerning a question of fact in connection with this Agreement between Contractor and
-City shall be referred in successive order for resolution, first to City’s Purchasing Agent,
-second to City’s Chief Legal Officer/City Attorney, and thirdly to the Mayor of the City of
-Memphis, whose decision regarding City’s position as to the same shall be final.
-DRAFTER. This Agreement is the result of arm's-length negotiations between the parties
-and shall be construed to have been drafted by all parties such that any ambiguities in
-this Agreement shall not be construed against either party.
-DUE DILIGENCE AND NON-RELIANCE. Contractor represents, warrants and covenants
-that it has had opportunity to conduct, and has conducted, due diligence with respect to
-this Agreement, and all other items and conditions it deems necessary to conclude this
-Agreement, and Contractor represents, warrants and covenants that it has not relied
-upon any written or oral statement of City or its employees, directors, officers,
-consultants, attorneys or any elected or appointed officials in executing this Agreement.
-EMPLOYMENT OF CITY WORKERS. Contractor shall not engage, on a full-time, part-time
-or any other basis during the term of this Agreement, any professional or technical
-personnel who are or have been at any time during the term of this Agreement in the
-employment of City.
+DISPUTE RESOLUTION. In the event of any dispute, controversy, or claim arising out of or relating to
+this Agreement or the breach thereof, the parties agree that they shall first use their best efforts in an
+attempt to settle the dispute through negotiations involving themselves or their representatives as they each
+deem appropriate. Any dispute concerning a question of fact in connection with this Agreement between
+Contractor and the City shall be referred in successive order for resolution, first to the City's Purchasing
+Agent, second to the City's Chief Legal Officer/City Attorney, and thirdly to the Mayor of the City of
+Memphis, whose decision regarding the City's position as to the same shall be final.
+DRAFTER. This Agreement is the result of arm's-length negotiations between the parties and shall be
+construed to have been drafted by all parties such that any ambiguities in this Agreement shall not be
+construed against either party.
+DUE DILIGENCE AND NON-RELIANCE. Contractor represents, warrants and covenants that it has
+had opportunity to conduct, and has conducted, due diligence with respect to this Agreement, and all other
+items and conditions it deems necessary to conclude this Agreement, and Contractor represents, warrants
+and covenants that it has not relied upon any written or oral statement of City or its employees, directors,
+officers, consultants, attorneys or any elected or appointed officials in executing this Agreement.
+EMPLOYMENT OF CITY WORKERS. Contractor shall not engage, on a full-time, part-time or any
+other basis during the term of this Agreement, any professional or technical personnel who are or have been
+at any time during the term of this Agreement in the employment of the City.
 EMPLOYMENT OF ILLEGAL IMMIGRANTS. Contractor hereby certifies to comply with all
-applicable federal and state laws prohibiting the employment of individuals not legally
-authorized to work in the United States. Contractor shall not knowingly (i) utilize the
-services of illegal immigrants; or (ii) utilize the services of any subcontractor who will
-utilize the services of illegal immigrants in the performance of the contract. In the event
-Contractor fails to comply with any and all local, state and federal laws prohibiting the
-employment of individuals not legally authorized to work in the United States, this
-Agreement may be canceled, terminated or suspended in whole or in part by City, and
-Contractor may be prohibited from contracting to supply goods and/or services to City
-for a period of one (1) year from the date of discovery of the usage of illegal immigrant
-services in the performance of a contract with City.
-ENTIRE AGREEMENT. This Agreement, together with all exhibits, attachments, and
-
--- 30 of 56 --
-
-Page | 31
-addendums hereto (if applicable), constitutes the full and final understanding of the
-parties with respect to the subject matter hereof and supersedes and replaces any and
-all prior or contemporaneous agreements or understandings, whether written or oral,
-express or implied, between the parties with respect to the subject matter of the
+applicable federal and state laws prohibiting the employment of individuals not legally authorized to work
+in the United States. Contractor shall not knowingly (i) utilize the services of illegal immigrants; or (ii)
+utilize the services of any subcontractor who will utilize the services of illegal immigrants in the
+performance of the contract. In the event Contractor fails to comply with any and all local, state and federal
+laws prohibiting the employment of individuals not legally authorized to work in the United States, this
+Agreement may be canceled, terminated or suspended in whole or in part by the City, and Contractor may
+be prohibited from contracting to supply goods and/or services to the City for a period of one (1) year from
+the date of discovery of the usage of illegal immigrant services in the performance of a contract with the
+City.
+ENTIRE AGREEMENT. This Agreement, together with all exhibits, attachments, and addendums hereto
+(if applicable), constitutes the full and final understanding of the parties with respect to the subject matter
+hereof and supersedes and replaces any and all prior or contemporaneous agreements or understandings,
+whether written or oral, express or implied, between the parties with respect to the subject matter of the
 Agreement.
-FORCE MAJEURE. Neither City nor Contractor shall be deemed in default hereunder, nor
-shall either be responsible for any delay, interruption, or cessation in the performance of
-its obligations under this Agreement where such failure of performance is the result of
-any force majeure event, including, but not limited to, acts of God, riots, wars, strikes,
-epidemics, acts, governmental authorities or acts of nature or other similar cause beyond
-its control. Both shall put forward its best efforts to mitigate any delay, interruption, or
-cessation in the performance of its obligations under this Agreement related to said force
+FORCE MAJEURE. Neitherthe City nor Contractor shall be deemed in default hereunder, nor shall either
+be responsible for any delay, interruption, or cessation in the performance of its obligations under this
+Agreement where such failure of performance is the result of any force majeure event, including, but not
+limited to, acts of God, riots, wars, strikes, epidemics, acts, governmental authorities or acts of nature or
+other similar cause beyond its control. Both shall put forward its best efforts to mitigate any delay,
+interruption, or cessation in the performance of its obligations under this Agreement related to said force
 majeure event.
-GENERAL COMPLIANCE WITH LAWS. If required, Contractor certifies that it is qualified
-or will take steps necessary to qualify to do business in the State of Tennessee and that it
-will take such action as, from time to time, may be necessary to remain so qualified and
-shall obtain, at its own expense, all licenses, permits, insurance, and governmental
-approvals, if any, necessary to the performance of its obligations under this Agreement.
-Such permits and licenses will be made available to City upon request.
-Contractor is assumed to be familiar with and agrees that at all times it will observe and
-comply with all applicable federal, state, and local laws, ordinances, and regulations in
-any manner affecting this Agreement. The preceding shall include, but is not limited to,
-compliance with all Equal Employment Opportunity laws, the Fair Labor Standards Act,
-Occupational Safety and Health Administration (OSHA) requirements, and the Americans
-with Disabilities Act (ADA). Contractor shall promptly notify City of any conflict discovered
-between the Agreement and any applicable laws, rules, regulations, and/or permits and
-licenses, and await resolution of the conflict.
-GOVERNING LAW. The terms and conditions of this Agreement shall be construed in
-accordance with and governed by the laws of the State of Tennessee. All actions, whether
-sounding in contract or in tort, relating to the validity, construction, interpretation and
-enforcement of this Agreement shall be instituted and litigated in the courts of the State
-of Tennessee, located in Shelby County, Tennessee, without regard to conflicts of laws
-principles. In accordance herewith, the parties to this Agreement submit to the
-jurisdiction of the courts of the State of Tennessee located in Shelby County, Tennessee.
-HEADINGS. Titles, articles, and/or section headings to the provisions herein are for
-reference purposes only and will be disregarded completely in the interpretation and
-validity of this Agreement or any of its terms.
+GENERAL COMPLIANCE WITH LAWS. If required, Contractor certifies that it is qualified or will
+take steps necessary to qualify to do business in the State of Tennessee and that it will take such action as,
+from time to time, may be necessary to remain so qualified and shall obtain, at its own expense, all licenses,
+permits, insurance, and governmental approvals, if any, necessary to the performance of its obligations
+under this Agreement. Such permits and licenses will be made available to City upon request.
+
+-- 17 of 26 --
+
+Request for Quotation 325762,1
+Proprietary and Confidential	Page XVIII of XXVI
+Contractor is assumed to be familiar with and agrees that at all times it will observe and comply with all
+applicable federal, state, and local laws, ordinances, and regulations in any manner affecting this
+Agreement. The preceding shall include, but is not limited to, compliance with all Equal Employment
+Opportunity laws, the Fair Labor Standards Act, Occupational Safety and Health Administration (OSHA)
+requirements, and the Americans with Disabilities Act (ADA). Contractor shall promptly notify City of
+any conflict discovered between the Agreement and any applicable laws, rules, regulations, and/or permits
+and licenses, and await resolution of the conflict.
+GOVERNING LAW. The terms and conditions of this Agreement shall be construed in accordance with
+and governed by the laws of the State of Tennessee. All actions, whether sounding in contract or in tort,
+relating to the validity, construction, interpretation and enforcement of this Agreement shall be instituted
+and litigated in the courts of the State of Tennessee, located in Shelby County, Tennessee, without regard to
+conflicts of laws principles. In accordance herewith, the parties to this Agreement submit to the jurisdiction
+of the courts of the State of Tennessee located in Shelby County, Tennessee.
+HEADINGS. Titles, articles, and/or section headings to the provisions herein are for reference purposes
+only and will be disregarded completely in the interpretation and validity of this Agreement or any of its
+terms.
 HOLD HARMLESS. See INDEMNIFICATION.
-
--- 31 of 56 --
-
-Page | 32
-INCORPORATION OF “WHEREAS” CLAUSES. The foregoing “WHEREAS” clauses are
-hereby incorporated into this Agreement and made a part hereof.
-INDEMNIFICATION. Contractor shall indemnify, defend, save and hold harmless City and
-its officers, agents and employees from and against any and all claims, losses, demands,
-suits, actions, penalties, damages (consequential or otherwise), settlements, costs,
-expenses, or other liabilities of any kind and character, including without limitation
-attorney fees and litigation expenses, arising out of or in connection with
-the performance of this Agreement by Contractor, its employees, subcontractors, or
-agents or the breach of this Agreement by Contractor, its employees, subcontractors or
-agents. This obligation shall survive the expiration or termination of this
-Agreement. Neither Contractor nor any employees of Contractor shall be liable under this
-section for damages arising out of injury or damage to persons or property directly caused
-by the negligence of City or any of its officers, agents, or employees.
-Contractor expressly understands and agrees that any insurance protection required by
-this Agreement or otherwise provided by Contractor shall in no way limit Contractor's
-responsibility to indemnify, defend, save and hold harmless City or its elected or
-appointed officials, officers, employees, agents, assigns, and instrumentalities as herein
-required.
-City reserves the right to appoint its own counsel regarding any matter defended
-hereunder. Contractor acknowledges that City has no obligation to provide legal counsel
-or defense to Contractor, its employees or subcontractors in the event that a suit, claim
-or action of any character is brought by any person not a party to this Agreement against
-Contractor as a result of or relating to obligations under this Agreement. City shall have
-no obligation for the payment of any judgments or the settlement of any claims asserted
-against Contractor or its subcontractors or employees as a result of or relating to
+INCORPORATION OF "WHEREAS" CLAUSES. The foregoing "WHEREAS" clauses are hereby
+incorporated into this Agreement and made a part hereof.
+INDEMNIFICATION. Contractor shall indemnify, defend, save and hold harmless the City and its
+officers, agents and employees from and against any and all claims, losses, demands, suits, actions,
+penalties, damages (consequential or otherwise), settlements, costs, expenses, or other liabilities of any
+kind and character, including without limitation attorney fees and litigation expenses, arising out of or in
+connection with the performance of this Agreement by Contractor, its employees, subcontractors, or agents
+or the breach of this Agreement by Contractor, its employees, subcontractors or agents. This obligation
+shall survive the expiration or termination of this Agreement. Neither Contractor nor any employees of
+Contractor shall be liable under this section for damages arising out of injury or damage to persons or
+property directly caused by the negligence of the City or any of its officers, agents, or employees.
+Contractor expressly understands and agrees that any insurance protection required by this Agreement or
+otherwise provided by Contractor shall in no way limit Contractor's responsibility to indemnify, defend,
+save and hold harmless the City or its elected or appointed officials, officers, employees, agents, assigns,
+and instrumentalities as herein required.
+The City reserves the right to appoint its own counsel regarding any matter defended hereunder. Contractor
+acknowledges that the City has no obligation to provide legal counsel or defense to Contractor, its
+employees or subcontractors in the event that a suit, claim or action of any character is brought by any
+person not a party to this Agreement against Contractor as a result of or relating to obligations under this
+Agreement. The City shall have no obligation for the payment of any judgments or the settlement of any
+claims asserted against Contractor or its subcontractors or employees as a result of or relating to
 Contractor's obligations hereunder.
-Contractor shall immediately notify City c/o Chief Legal Officer/City Attorney; 125 North
-Main Street, Room 336; Memphis, TN 38103, of any claim or suit made or filed against
-Contractor or its subcontractors regarding any matter resulting from or relating to
-Contractor's obligations under this Agreement and agrees to cooperate, assist and consult
-with City in the defense or investigation thereof.
-INDEPENDENT CONTRACTORS. Nothing in this Agreement shall be deemed or construed
-to represent that Contractor, or any of Contractor's employees or agents, are the agents,
-representatives, or employees of City. Contractor acknowledges that it is an independent
-contractor over the details and means for performing this Agreement. Anything in this
-Agreement which may appear to give City the right to direct Contractor as to the details
-of the performance of its obligations hereunder or to exercise a measure of control over
-Contractor is solely for purposes of compliance with local, state and federal regulations
+Contractor shall immediately notify the City c/o Chief Legal Officer/City Attorney; 125 North Main Street,
+Room 336; Memphis, TN 38103, of any claim or suit made or filed against Contractor or its subcontractors
+regarding any matter resulting from or relating to Contractor's obligations under this Agreement and agrees
+to cooperate, assist and consult with the City in the defense or investigation thereof.
+INDEPENDENT CONTRACTORS. Nothing in this Agreement shall be deemed or construed to
 
--- 32 of 56 --
+-- 18 of 26 --
 
-Page | 33
-and means Contractor will follow the desires of City only as to the intended results of the
+Request for Quotation 325762,1
+Proprietary and Confidential	Page XIX of XXVI
+represent that Contractor, or any of Contractor's employees or agents, are the agents, representatives, or
+employees of the City. Contractor acknowledges that it is an independent contractor over the details and
+means for performing this Agreement. Anything in this Agreement which may appear to give the City the
+right to direct Contractor as to the details of the performance of its obligations hereunder or to exercise a
+measure of control over Contractor is solely for purposes of compliance with local, state and federal
+regulations and means Contractor will follow the desires of the City only as to the intended results of the
 scope of this Agreement.
-It is further expressly agreed and understood by Contractor that neither it nor its
-employees or agents shall hold themselves out contrary to the terms of this paragraph,
-and City shall not be liable for any representation, act or omission of Contractor contrary
-to the provisions hereof.
-INSURANCE. See insurance requirements attached hereto as Exhibit [@EXHIBIT
-IDENTIFICATION FOR INSURANCE@] and incorporated herein as if stated verbatim within
-the Agreement.
-JURISDICTION AND VENUE. See GOVERNING LAW.
-MODIFICATION. See AMENDMENT.
+It is further expressly agreed and understood by Contractor that neither it nor its employees or agents shall
+hold themselves out contrary to the terms of this paragraph, and the City shall not be liable for any
+representation, act or omission of Contractor contrary to the provisions hereof.
+INSURANCE.See insurance requirements as referenced in the RFQ/RFP and such, insurance
+requirements, are incorporated herein as if stated verbatim within the Agreement.
+JURISDICTION AND VENUE. SeeGOVERNING LAW.
+MODIFICATION. SeeAMENDMENT.
 MONITORING RIGHTS. See RECORDS.
-NONDISCRIMINATION. Contractor hereby agrees to abide by, to take affirmative action
-to ensure that, and to comply with Title VI and Title VII of the Civil Rights Act of 1964 and
-all other federal, state or local laws prohibiting discrimination, which provide in whole or
-in part, that no person shall be excluded from participation in, or be denied benefits of,
-or be otherwise subjected to discrimination in the performance of this Agreement or in
-Contractor's employment practices on the grounds of handicap and/or disability, age,
-race, color, religion, sex, national origin, or any other classification protected by federal,
-state or statutory law. Contractor shall, upon request, show proof of such
-nondiscrimination, and shall post in conspicuous places available to all employees and
-applicants notices of nondiscrimination. In the event Contractor fails to comply with City's
-nondiscrimination policy and any and all other laws prohibiting discrimination, this
-Agreement may be canceled, terminated or suspended in whole or in part by City.
-City reserves the right to investigate any claims of illegal discrimination by Contractor and
-in the event a finding of discrimination is made and upon written notification thereof,
-Contractor shall take all necessary steps to cure and rectify such action to the reasonable
-satisfaction of City. Contractor's failure or refusal to do so shall be cause for termination
-of this Agreement in accordance with the terms of this Agreement.
-Any other agreement which relates to this Agreement to which Contractor is a party,
-including without limitation, Contractor’s agreements with its subcontractors, shall
-specifically contain a provision to this effect.
-NOTICES. All notices, approvals, and other communications required or permitted to be
-given hereunder shall be written and hand-delivered with signed receipt; delivered by a
-nationally-recognized overnight courier; or mailed via certified U.S. mail, postage prepaid
+NONDISCRIMINATION. Contractor hereby agrees to abide by, to take affirmative action to ensure that,
+and to comply with Title VI and Title VII of the Civil Rights Act of 1964 and all other federal, state or
+local laws prohibiting discrimination, which provide in whole or in part, that no person shall be excluded
+from participation in, or be denied benefits of, or be otherwise subjected to discrimination in the
+performance of this Agreement or in Contractor's employment practices on the grounds of handicap and/or
+disability, age, race, color, religion, sex, national origin, or any other classification protected by federal,
+state or statutory law. Contractor shall, upon request, show proof of such nondiscrimination, and shall post
+in conspicuous places available to all employees and applicants notices of nondiscrimination. In the event
+Contractor fails to comply with the City's nondiscrimination policy and any and all other laws prohibiting
+discrimination, this Agreement may be canceled, terminated or suspended in whole or in part by the City.
+The City reserves the right to investigate any claims of illegal discrimination by Contractor and in the event
+a finding of discrimination is made and upon written notification thereof, Contractor shall take all
+necessary steps to cure and rectify such action to the reasonable satisfaction of the City. Contractor's failure
+or refusal to do so shall be cause for termination of this Agreement in accordance with the terms of this
+Agreement.
+Any other agreement which relates to this Agreement to which Contractor is a party, including without
+limitation, Contractor's agreements with its subcontractors, shall specifically contain a provision to this
+effect.
+NOTICES. All notices, approvals, and other communications required or permitted to be given hereunder
+shall be written and hand-delivered with signed receipt; delivered by a nationally-recognized overnight
+courier; or mailed via certified U.S. mail, postage prepaid and return receipt requested. All notices shall be
+deemed received and effectively given as follows: (i) if by hand-delivery, on the date of delivery; (ii) if by
+delivery via U.S. mail, on the date of receipt appearing on a return receipt card; or (iii) if by overnight
+courier, on the date receipt is confirmed by such courier service. All notices must be addressed to the
+respective party at the following addresses or to such other person or address as either party may designate
+in writing and deliver as provided herein:
+To the CITY:
+City of Memphis [ @DIVISION NAME@ ]
 
--- 33 of 56 --
+-- 19 of 26 --
 
-Page | 34
-and return receipt requested. All notices shall be deemed received and effectively given
-as follows: (i) if by hand-delivery, on the date of delivery; (ii); if by delivery via U.S. mail,
-on the date of receipt appearing on a return receipt card; or (iii) if by overnight courier,
-on the date receipt is confirmed by such courier service. All notices must be addressed to
-the respective party at the following addresses or to such other person or address as
-either party may designate in writing and deliver as provided herein:
-To City:
-City of Memphis [@DIVISION NAME@]
-[@ADDRESS - NOTICES@]
-Memphis, TN [@ZIP CODE - NOTICES@]
-Attn: [@CITY CONTACT/REPRESENTATIVE@]
+Request for Quotation 325762,1
+Proprietary and Confidential	Page XX of XXVI
+[ @ADDRESS - NOTICES@ ]
+Memphis, TN [ @ZIP CODE - NOTICES@ ]
+Attn: [ @CITY CONTACT/REPRESENTATIVE@ ]
 With copy, if requested,
 to:
 Chief Legal Officer/City Attorney
 125 N. Main Street, Room 336
 Memphis, TN 38103
 To CONTRACTOR:
-[@CONTRACTOR NAME@]
-[@CONTRACTOR ADDRESS@]
-[@CONTRACTOR CITY@], [@CONTRACTOR STATE@] [@CONTRACTOR ZIP CODE@]
-Attn: [@CONTRACTOR REPRESENTATIVE@]
-Contractor shall advise City as to any changes to the notice party and address as
-identified above.
-NUMBER AND GENDER. Unless the context requires otherwise, (i) use of a specific gender
-imports the other gender(s); and (ii) use of the singular imports the plural and vice versa.
+[ @CONTRACTOR NAME@ ]
+[ @CONTRACTOR ADDRESS@ ]
+[ @CONTRACTOR CITY@ ], [ @CONTRACTOR STATE@ ] [ @CONTRACTOR ZIP CODE@ ]
+Attn: [ @CONTRACTOR REPRESENTATIVE@ ]
+NUMBER AND GENDER. Unless the context requires otherwise, (i) use of a specific gender imports the
+other gender(s); and (ii) use of the singular imports the plural and vice versa.
 OBLIGATIONS EXTENDED BEYOND PERIOD OF PERFORMANCE. See SURVIVAL.
-ORGANIZATION STATUS AND AUTHORITY. Contractor represents and warrants that it is
-a corporation, limited liability company, partnership, or other entity duly organized,
-validly existing and in good standing under the laws of the State of Tennessee; it has the
-power and authority to own its properties and assets and is duly qualified to carry on its
-business in every jurisdiction wherein such qualification is necessary.
-The execution, delivery and performance of this Agreement by Contractor has been duly
-authorized by all requisite action and will not violate any provision of law, any order of
-any court or other agency of government, the organizational documents of Contractor,
-any provision of any indenture, agreement or other instrument to which Contractor is a
-party, or by which Contractor's respective properties or assets are bound, in conflict with,
-
--- 34 of 56 --
-
-Page | 35
-result in a breach of, or constitute (with due notice or lapse of time or both) a default
-under any such indenture, agreement or other instrument, or result in the creation or
-imposition of any lien, charge or encumbrance of any nature whatsoever upon any of the
-properties or assets.
-Each person executing this Agreement represents that he/she is lawfully authorized to
-sign the Agreement on behalf of the party he/she represents and execution of the
-Agreement was duly and regularly authorized by the party's governing body.
+ORGANIZATION STATUS AND AUTHORITY. Contractor represents and warrants that it is a
+corporation, limited liability company, partnership, or other entity duly organized, validly existing and in
+good standing under the laws of the State of Tennessee; it has the power and authority to own its properties
+and assets and is duly qualified to carry on its business in every jurisdiction wherein such qualification is
+necessary.
+The execution, delivery and performance of this Agreement by Contractor has been duly authorized by all
+requisite action and will not violate any provision of law, any order of any court or other agency of
+government, the organizational documents of Contractor, any provision of any indenture, agreement or
+other instrument to which Contractor is a party, or by which Contractor's respective properties or assets are
+bound, in conflict with, result in a breach of, or constitute (with due notice or lapse of time or both) a
+default under any such indenture, agreement or other instrument, or result in the creation or imposition of
+any lien, charge or encumbrance of any nature whatsoever upon any of the properties or assets.
+Each person executing this Agreement represents that he/she is lawfully authorized to sign the Agreement
+on behalf of the party he/she represents and execution of the Agreement was duly and regularly authorized
+by the party's governing body.
 PARTIES IN INTEREST. See SUCCESSORS.
-PATENT INDEMNIFICATION. Contractor warrants that any goods/services furnished
-hereunder do not infringe or violate any patent, trademark, copyright, trade secret, or
-any other proprietary right of any third party; that it shall defend all suits that may arise
-with respect thereto; and that it shall indemnify, defend, save and hold harmless City, its
-officials, employees, agents, successors and assigns, from and against all liabilities, suits,
-claims, damages, costs or expenses, including without limitation attorney and expert
-witness fees, for or by reason of any actual or alleged claim the goods/services purchased
-by City hereunder infringe any patent, copyright, or are a violation of trade secret
-disclosure laws, whether by reason of Contractor's purchase or otherwise. This
-indemnification obligation shall survive the expiration or termination of this Agreement.
-PENALTIES AND LIQUIDATED DAMAGES. Contractor recognizes that various losses,
-penalties (including service level penalties), and/or liquidated damages may be assessed
-against City for certain failures to perform. In any such case where City’s failure to
-perform is due to some negligent act, omission, or failure to perform on Contractor’s part,
-Contractor agrees to pay or reimburse City for such assessments and City may deduct
-same from any Contractor’s invoices as applicable. In any such case where Contractor is
-assessed penalties, such penalties will not exceed the corresponding amount for which
-City is penalized due to Contractor’s negligent act, omission, or failure to perform.
-PRECEDENCE. In the event of any inconsistency between the terms or provisions
-expressed in this Agreement, and any term or provision in any of the other contract
-documents, the order of precedence shall be as follows: (1) this Agreement, including all
-Exhibits, except that all general terms and conditions contained in the main body of this
-Agreement shall control over any conflicting general terms and conditions contained in
-any Exhibit hereto; (2) Contractor's response, if applicable; (3) City's solicitation, if
-applicable.
-PUBLIC RECORDS. Notwithstanding anything to the contrary contained herein or within
-any other document supplied to City by Contractor, Contractor understands and
-acknowledges that City is a governmental entity subject to the State of Tennessee Public
-Records Act, and any reports, data or other information supplied to City regarding goods
-supplied or services performed hereunder may be subject to disclosure as a public record
-
--- 35 of 56 --
-
-Page | 36
-in accordance with the laws of the State of Tennessee.
-PUBLIC STATEMENTS. Contractor shall not make any announcement, release any
-information, or authorize or participate in any interview concerning this Agreement and
-the goods and/or services required herein, without obtaining prior written consent from
-City. Contractor shall require its employees, agents, and subcontractors to comply with
-the requirements of this provision. This provision shall survive the expiration or
+PATENT INDEMNIFICATION. Contractor warrants that any goods/services furnished hereunder do not
+infringe or violate any patent, trademark, copyright, trade secret, or any other proprietary right of any third
+party; that it shall defend all suits that may arise with respect thereto; and that it shall indemnify, defend,
+save and hold harmless the City, its officials, employees, agents, successors and assigns, from and against
+all liabilities, suits, claims, damages, costs or expenses, including without limitation attorney and expert
+witness fees, for or by reason of any actual or alleged claim the goods/services purchased by City
+hereunder infringe any patent, copyright, or are a violation of trade secret disclosure laws, whether by
+reason of Contractor's purchase or otherwise. This indemnification obligation shall survive the expiration or
 termination of this Agreement.
-RECORDS. Contractor shall make and keep as the same legally enforceable, full and
-complete books, documents, accounting records and other evidence, that specifically
-relate to this Agreement, in accordance with generally accepted accounting
-principles. Contractor shall retain such records, and shall make same available to City,
-upon reasonable request, during the term of this Agreement, and for a minimum period
-of seven (7) full years after completion of the contract obligations or from the date of final
-payment under this Agreement, whichever is later. In the event any litigation, claim or
-audit is instituted prior to the expiration of the required retention period, such records
-shall be retained until such litigation, claim or audit finding has been resolved.
-Contractor's activities conducted pursuant to this Agreement shall be subject to
-monitoring and evaluation by City, the state, the federal government or their duly
-appointed agents or employees. Upon reasonable notice, Contractor shall permit City,
-any other governmental entity, any agency participating in the funding of this Agreement,
-or any of their duly authorized representatives, to enter Contractor's offices, during
-regular business hours, to interview employees and to inspect and/or copy said records
-and books of accounts together with any and all documents pertaining hereto that may
-be kept, maintained or possessed by Contractor. Reviews may also be accomplished at
-meetings that are arranged at mutually agreeable times and places.
-RELATIONSHIP OF PARTIES. This Agreement does not and shall not be construed to
-create a partnership or joint venture between the parties hereto. Contractor is
-performing its obligations hereunder as an independent contractor and not as City’s agent
-or employee. Contractor will not hold itself out contrary to the terms of this paragraph
-and City will not become liable for any representation, act, or omission of Contractor
-contrary to the provisions hereof.
-REMEDIES CUMULATIVE. All remedies available to City herein are cumulative and shall
-be in addition to all other rights and remedies provided by law. The termination,
-expiration, or suspension of this Agreement shall not limit City from pursuing other
-remedies available at law or in equity.
-REPORTS. Upon request, Contractor shall prepare and submit reports of its activities,
-funded under this Agreement, to the originating department of City. The reports shall
-include an itemization of the use of City's funds, inclusive of specific services delivered by
 
--- 36 of 56 --
+-- 20 of 26 --
 
-Page | 37
-Contractor. Any such reports provided to City shall be prepared with the understanding
-that City may make such reports available to the public.
-In addition, Contractor shall submit and, as necessary, update subcontractor information
-(including but not limited to payments thereto), for any and all subcontractors used on
-City project(s) via the purchase of goods or services, in City's compliance tracking
-software, B2GNow. City shall have the right to withhold future disbursement of funds
-under this Agreement and any future agreements until the requirements of this provision
-have been met.
-RIGHTS IN DATA / SOFTWARE. Contractor agrees that all reports, studies, plans, models,
-drawings, specifications, and any other information or data of any type relating to its
-activities under this Agreement, whether or not the same is accepted or rejected by City,
-shall remain the property of City and shall not be used or published by Contractor or any
-other party without the express prior consent of City. Software development, if any,
-specifically developed as part of this Agreement shall be the intellectual property of City.
-Contractor recognizes that said data including software development, if any, specifically
-developed as part of this Agreement shall be the intellectual property of City and is the
-exclusive property of City and that City reserves the right to use, market, license, or sell it
-to others.
-Contractor shall obtain assurances similar to those contained in this subsection from
-persons, contractors and subcontractors retained by Contractor. Contractor
-acknowledges and agrees that a breach by Contractor of the provisions of this section will
-cause City irreparable injury and damage. Contractor, therefore, expressly agrees that
-City shall be entitled to injunctive or other equitable relief in any court of competent
-jurisdiction to prevent or otherwise restrain a breach of this Agreement.
-SERVICE MARKS. Contractor agrees that it shall not, without City's prior written consent,
-use the name, service mark or trademarks of City.
-SEVERABILITY. If any terms or provisions of this Agreement are held to be unlawful,
-invalid or unenforceable under any present or future laws, such provision shall be fully
-severable; and this Agreement shall then be construed and enforced as if such unlawful,
-invalid or unenforceable provision had not been a part hereof. The remaining provisions
-of this Agreement shall remain in full force and effect and shall not be affected by such
-unlawful, invalid or unenforceable provision or by its severance herefrom. Furthermore,
-in lieu of such unlawful, invalid, or unenforceable provision, there shall be added as a part
-of this Agreement, upon good-faith negotiation by the parties, a provision as similar in
-terms to such unlawful, invalid or unenforceable provision as may be possible, and still be
-legal, valid and enforceable. Parties acknowledge that some Agreement provisions may
-be inapplicable to the scope of work or goods that are germane to this Agreement. Parties
-waive no rights or remedies where the provisions are applicable.
+Request for Quotation 325762,1
+Proprietary and Confidential	Page XXI of XXVI
+PENALTIES AND LIQUIDATED DAMAGES. Contractor recognizes that various losses, penalties
+(including service level penalties), and/or liquidated damages may be assessed against City for certain
+failures to perform. In any such case where City's failure to perform is due to some negligent act, omission,
+or failure to perform on Contractor's part, Contractor agrees to pay or reimburse City for such assessments
+and City may deduct same from any Contractor's invoices as applicable. In any such case where Contractor
+is assessed penalties, such penalties will not exceed the corresponding amount for which the City is
+penalized due to Contractor's negligent act, omission, or failure to perform.
+PRECEDENCE. In the event of any inconsistency between the terms or provisions expressed in this
+Agreement, and any term or provision in any of the other contract documents, the order of precedence shall
+be as follows: (1) this Agreement, including all Exhibits, except that all general terms and conditions
+contained in the main body of this Agreement shall control over any conflicting general terms and
+conditions contained in any Exhibit hereto; (2) Contractor's response, if applicable; (3) City's solicitation, if
+applicable.
+PUBLIC RECORDS. Notwithstanding anything to the contrary contained herein or within any other
+document supplied to the City by Contractor, Contractor understands and acknowledges that the City is a
+governmental entity subject to the State of Tennessee Public Records Act, and any reports, data or other
+information supplied to the City regarding goods supplied or services performed hereunder may be subject
+to disclosure as a public record in accordance with the laws of the State of Tennessee.
+PUBLIC STATEMENTS. Contractor shall not make any announcement, release any information, or
+authorize or participate in any interview concerning this Agreement and the goods and/or services required
+herein, without obtaining prior written consent from the City. Contractor shall require its employees,
+agents, and subcontractors to comply with the requirements of this provision. This provision shall survive
+the expiration or termination of this Agreement.
+RECORDS. Contractor shall make and keep as the same legally enforceable, full and complete books,
+documents, accounting records and other evidence, that specifically relate to this Agreement, in accordance
+with generally accepted accounting principles. Contractor shall retain such records, and shall make same
+available to the City, upon reasonable request, during the term of this Agreement, and for a minimum
+period of seven (7) full years after completion of the contract obligations or from the date of final payment
+under this Agreement, whichever is later. In the event any litigation, claim or audit is instituted prior to the
+expiration of the required retention period, such records shall be retained until such litigation, claim or
+audit finding has been resolved.
+Contractor's activities conducted pursuant to this Agreement shall be subject to monitoring and evaluation
+by the City, the state, the federal government or their duly appointed agents or employees. Upon
+reasonable notice, Contractor shall permit the City, any other governmental entity, any agency participating
+in the funding of this Agreement, or any of their duly authorized representatives, to enter Contractor's
+offices, during regular business hours, to interview employees and to inspect and/or copy said records and
+books of accounts together with any and all documents pertaining hereto that may be kept, maintained or
+possessed by Contractor. Reviews may also be accomplished at meetings that are arranged at mutually
+agreeable times and places.
+RELATIONSHIP OF PARTIES. This Agreement does not and shall not be construed to create a
+partnership or joint venture between the parties hereto. Contractor is performing its obligations hereunder
+as an independent contractor and not as City's agent or employee. Contractor will not hold itself out
+contrary to the terms of this paragraph and City will not become liable for any representation, act, or
+omission of Contractor contrary to the provisions hereof.
+REMEDIES CUMULATIVE. All remedies available to the City herein are cumulative and shall be in
+addition to all other rights and remedies provided by law. The termination, expiration, or suspension of this
+Agreement shall not limit the City from pursuing other remedies available at law or in equity.
 
--- 37 of 56 --
+-- 21 of 26 --
 
-Page | 38
+Request for Quotation 325762,1
+Proprietary and Confidential	Page XXII of XXVI
+REPORTS. Upon request, Contractor shall prepare and submit reports of its activities, funded under this
+Agreement, to the originating department of the City. The reports shall include an itemization of the use of
+the City's funds, inclusive of specific services delivered by Contractor. Any such reports provided to the
+City shall be prepared with the understanding that the City may make such reports available to the public.
+In addition, Contractor shall submit and, as necessary, update subcontractor information (including but not
+limited to payments thereto), for any and all subcontractors used on City project(s) via the purchase of
+goods or services, in the City's compliance tracking software, B2GNow. The City shall have the right to
+withhold future disbursement of funds under this Agreement and any future agreements until the
+requirements of this provision have been met.
+RIGHTS IN DATA / SOFTWARE. Contractor agrees that all reports, studies, plans, models, drawings,
+specifications, and any other information or data of any type relating to its activities under this Agreement,
+whether or not the same is accepted or rejected by City, shall remain the property of City and shall not be
+used or published by Contractor or any other party without the express prior consent of City. Software
+development, if any, specifically developed as part of this Agreement shall be the intellectual property of
+City. Contractor recognizes that said data including software development, if any, specifically developed as
+part of this Agreement shall be the intellectual property of City and is the exclusive property of the City and
+that the City reserves the right to use, market, license, or sell it to others.
+Contractor shall obtain assurances similar to those contained in this subsection from persons, contractors
+and subcontractors retained by Contractor. Contractor acknowledges and agrees that a breach by Contractor
+of the provisions of this section will cause the City irreparable injury and damage. Contractor, therefore,
+expressly agrees that the City shall be entitled to injunctive or other equitable relief in any court of
+competent jurisdiction to prevent or otherwise restrain a breach of this Agreement.
+SERVICE MARKS. Contractor agrees that it shall not, without City's prior written consent, use the name,
+service mark or trademarks of the City.
+SEVERABILITY. If any terms or provisions of this Agreement are held to be unlawful, invalid or
+unenforceable under any present or future laws, such provision shall be fully severable; and this Agreement
+shall then be construed and enforced as if such unlawful, invalid or unenforceable provision had not been a
+part hereof. The remaining provisions of this Agreement shall remain in full force and effect and shall not
+be affected by such unlawful, invalid or unenforceable provision or by its severance herefrom.
+Furthermore, in lieu of such unlawful, invalid, or unenforceable provision, there shall be added as a part of
+this Agreement, upon good-faith negotiation by the parties, a provision as similar in terms to such unlawful,
+invalid or unenforceable provision as may be possible, and still be legal, valid and enforceable. Parties
+acknowledge that some Agreement provisions may be inapplicable to the scope of work or goods that are
+germane to this Agreement. Parties waive no rights or remedies where the provisions are applicable.
 SHIPMENTS. (This paragraph/section is applicable only to purchase of goods contracts).
-Substitutions will not be accepted, unless otherwise specified herein. Partial shipments
-may be allowed unless otherwise stated in writing by City, however, full shipment of all
-items ordered hereunder must be completed by the date specified in this Agreement or
-this Agreement will be subject to cancellation by City. Contractor shall not ship excess
-quantities without City's prior written approval.
-STANDARD OF PERFORMANCE. All services by Contractor shall be performed in
-compliance with the specified requirements, in a manner satisfactory to City, and in
-accordance with the generally accepted business practices and procedures of City and
-pursuant to the governing rules, practices and regulations of the industry for the type of
-work performed under this Agreement.
+Substitutions will not be accepted, unless otherwise specified herein. Partial shipments may be allowed
+unless otherwise stated in writing by City, however, full shipment of all items ordered hereunder must be
+completed by the date specified in this Agreement or this Agreement will be subject to cancellation by the
+City. Contractor shall not ship excess quantities without the City's prior written approval.
+SIGNATURE(S)/CONTRACT EXECUTION. Contractor acknowledges that it has executed, by and
+through its duly authorized representative, this Agreement. Contractor may consent to provide an electronic
+signature as allowed by state and federal law and agrees that any such electronic approval/signature used to
+accept the Agreement on Contractor's behalf (with the intent to bind Contractor thereto) shall have the same
+legal force and effect as a handwritten signature.
+STANDARD OF PERFORMANCE. All services by Contractor shall be performed in compliance with
+the specified requirements, in a manner satisfactory to the City, and in accordance with the generally-
+accepted business practices and procedures of the City and pursuant to the governing rules, practices and
+
+-- 22 of 26 --
+
+Request for Quotation 325762,1
+Proprietary and Confidential	Page XXIII of XXVI
+regulations of the industry for the type of work performed under this Agreement.
 SUBCONTRACTING. See ASSIGNMENT.
-SUBJECT TO FUNDING. This Agreement is subject to availability and annual appropriation
-of funds by the Memphis City Council. In the event sufficient funds for this Agreement are
-not available or appropriated by the Memphis City Council for any of its fiscal period
-during the term hereof, then City shall immediately terminate this Agreement upon
-written notice to Contractor. In the event of such termination, Contractor shall be entitled
-to receive just and equitable compensation for any satisfactory work performed up to the
-termination date. Such termination by City shall not be deemed a breach of contract by
-City, and Contractor shall have no right to any actual, general, specific, incidental,
-consequential, or any other damages whatsoever of any description or amount that have
-not been earned as of the date of termination.
-SUCCESSORS. This Agreement shall be binding upon and inure to the benefit of the
-parties hereto and their respective heirs, legal representatives, successors and assigns.
-SURVIVAL. The parties hereto acknowledge that provisions that require or contemplate
-performance or observance after expiration or termination of this Agreement shall
-survive the expiration or termination of this Agreement and continue in full force and
-effect.
+SUBJECT TO FUNDING. This Agreement is subject to availability and annual appropriation of funds by
+the Memphis City Council. In the event sufficient funds for this Agreement are not available or
+appropriated by the Memphis City Council for any of its fiscal period during the term hereof, then the City
+shall immediately terminate this Agreement upon written notice to Contractor. In the event of such
+termination, Contractor shall be entitled to receive just and equitable compensation for any satisfactory
+work performed up to the termination date. Such termination by the City shall not be deemed a breach of
+contract by the City, and Contractor shall have no right to any actual, general, specific, incidental,
+consequential, or any other damages whatsoever of any description or amount that have not been earned as
+of the date of termination.
+SUCCESSORS. This Agreement shall be binding upon and inure to the benefit of the parties hereto and
+their respective heirs, legal representatives, successors and assigns.
+SURVIVAL. The parties hereto acknowledge that provisions that require or contemplate performance or
+observance after expiration or termination of this Agreement shall survive the expiration or termination of
+this Agreement and continue in full force and effect.
 TERMINATION: Termination of this Agreement with or without cause.
-1. It shall be cause for the immediate termination of this Agreement if, after its
-execution, City determines that either:
-a. Contractor or any of its principals, partners or corporate officers, if a
-corporation, including the corporation itself, has pleaded nolo contendere,
-or has pleaded or been found guilty of a criminal violation, whether state
-or federal, involving, but not limited to, governmental sales or purchases,
-including but not limited to the rigging of bids, price fixing,
+1. It shall be cause for the immediate termination of this Agreement if, after its execution, the City
+determines that either:
+a. Contractor or any of its principals, partners or corporate officers, if a corporation,
+including the corporation itself, has pleaded nolo contendere, or has pleaded or been
+found guilty of a criminal violation, whether state or federal, involving, but not limited to,
+governmental sales or purchases, including but not limited to the rigging of bids, price
+fixing, misappropriation of government funds, or any other collusive and illegal activity
+pertaining to bidding and governmental contracting; or
+b. Contractor subcontracted, assigned, delegated, or transferred its rights, obligations
+or interests, voluntarily or involuntarily, under this Agreement without the City's consent
+or approval; or
+c. Contractor has filed for bankruptcy, has been adjudicated bankrupt, become
+insolvent or made an assignment for the benefit of creditors, or a receiver or similar
+officer is appointed to take charge of all or part of Contractor's assets.
+2. The City may cancel/terminate this Agreement, in whole or in part, upon providing written notice
+to Contractor of the City's intention to terminate the Agreement as a result of Contractor's failure
+to provide the goods and/or services specified under this Agreement or in violation(s) of any of the
+terms herein, and Contractor has failed to cure such breach within ten (10) calendar days of such
+notice. The City may reject the goods and/or services and cancel this Agreement for any
+goods/services rendered or to be rendered hereunder. At its option, City may return the rejected
+portion of such goods to Contractor at its expense or hold the same for such disposal as Contractor
+shall indicate. In the event of any such rejection/termination, the City shall, at the City's option,
+have the right to obtain like goods and/or services elsewhere or to take over the work and
+prosecute the same to completion, both at Contractor's expense; and in such event, the City may
+take possession of and utilize in completing the work, such materials, appliances, etc. as may be
+on the site of the work and necessary therefore. Contractor shall be liable to the City for any loss,
+damage, or additional cost incurred thereby, including but not limited to any difference between
+the cost for procuring such like services and the price specified herein, attorneys' fees and court
+costs.
+3. Notwithstanding the foregoing or any section herein to the contrary, Contractor shall not be
+relieved of liability to the City for damages sustained by the City by virtue of any breach of the
 
--- 38 of 56 --
+-- 23 of 26 --
 
-Page | 39
-misappropriation of government funds, or any other collusive and illegal
-activity pertaining to bidding and governmental contracting; or
-b. Contractor subcontracted, assigned, delegated, or transferred its rights,
-obligations or interests, voluntarily or involuntarily, under this Agreement
-without City's consent or approval; or
-c. Contractor has filed for bankruptcy, has been adjudicated bankrupt,
-become insolvent or made an assignment for the benefit of creditors, or a
-receiver or similar officer is appointed to take charge of all or part of
-Contractor's assets.
-2. City may cancel/terminate this Agreement, in whole or in part, upon providing
-written notice to Contractor of City's intention to terminate the Agreement as a
-result of Contractor's failure to provide the goods and/or services specified under
-this Agreement or in violation(s) of any of the terms herein, and Contractor has
-failed to cure such breach within ten (10) calendar days of such notice. City may
-reject the goods and/or services and cancel this Agreement for any goods/services
-rendered or to be rendered hereunder. At its option, City may return the rejected
-portion of such goods to Contractor at its expense or hold the same for such
-disposal as Contractor shall indicate. In the event of any such
-rejection/termination, City shall, at City's option, have the right to obtain like
-goods and/or services elsewhere or to take over the work and prosecute the same
-to completion, both at Contractor's expense; and in such event, City may take
-possession of and utilize in completing the work, such materials, appliances, etc.
-as may be on the site of the work and necessary therefore. Contractor shall be
-liable to City for any loss, damage, or additional cost incurred thereby, including
-but not limited to any difference between the cost for procuring such like services
-and the price specified herein, attorneys' fees and court costs.
-3. Notwithstanding the foregoing or any section herein to the contrary, Contractor
-shall not be relieved of liability to City for damages sustained by City by virtue of
-any breach of the Agreement by Contractor, and City may withhold any payments
-to Contractor, for the purpose of setoff, until such time as the exact amount of
-damages due City from Contractor is determined.
-4. City may, in its sole discretion, suspend and/or terminate this Agreement for
-convenience upon giving thirty (30) calendar days’ prior written notice to
-Contractor. In the event a purported termination for cause by City is in error, then
-such termination may, at City's sole discretion, be deemed to be a termination for
-convenience under this section. In the event of such termination, Contractor shall
-be entitled to receive just and equitable compensation, as determined by City, for
-any satisfactory authorized work performed in accordance with the Agreement up
-to the termination date; but in no event shall City be liable to Contractor for
-expenses incurred after the termination date.
-
--- 39 of 56 --
-
-Page | 40
-5. Contractor shall deliver to City all hard copy and electronic files maintained on
-behalf of City within thirty (30) calendar days of termination of this Agreement.
-Upon reasonable request, City reserves the right to obtain such information prior
-to the termination of this Agreement.
-6. All goods accepted by City or services completed by Contractor prior to the
-termination date shall be documented and all tangible work documents shall be
-transferred to City prior to payment for services rendered and shall become the
-sole property of City. Such termination by City shall not be deemed a breach of
-contract by City, and Contractor shall not be compensated for any anticipatory
-profits, or other damages of any description, that have not been earned as of the
-date of termination.
+Request for Quotation 325762,1
+Proprietary and Confidential	Page XXIV of XXVI
+Agreement by Contractor, and the City may withhold any payments to Contractor, for the purpose
+of setoff, until such time as the exact amount of damages due the City from Contractor is
+determined.
+4. The City may, in its sole discretion, suspend and/or terminate this Agreement for convenience
+upon giving thirty (30) calendar days' prior written notice to Contractor. In the event a purported
+termination for cause by the City is in error, then such termination may, at the City's sole
+discretion, be deemed to be a termination for convenience under this section. In the event of such
+termination, Contractor shall be entitled to receive just and equitable compensation, as determined
+by the City, for any satisfactory authorized work performed in accordance with the Agreement up
+to the termination date; but in no event shall the City be liable to Contractor for expenses incurred
+after the termination date.
+5. Contractor shall deliver to the City all hard copy and electronic files maintained on
+behalf of the City within thirty (30) calendar days of termination of this Agreement. Upon
+reasonable request, the City reserves the right to obtain such information prior to the termination
+of this Agreement.
+6. All goods accepted by City or services completed by Contractor prior to the termination
+date shall be documented and all tangible work documents shall be transferred to the City prior to
+payment for services rendered, and shall become the sole property of the City. Such termination
+by the City shall not be deemed a breach of contract by the City, and Contractor shall not be
+compensated for any anticipatory profits, or other damages of any description, that have not been
+earned as of the date of termination.
 TERMINATION OF PRIOR AGREEMENTS. See ENTIRE AGREEMENT.
-THIRD PARTY BENEFICIARY: This Agreement is entered into solely between, and may be
-enforced only by, City and Contractor. Unless otherwise specified herein, this Agreement
-shall not be deemed to create any rights in third parties, including suppliers or customers
-of either party.
-TITLE & RISK. (This paragraph/section is applicable only to purchase of goods
-contracts). The title and risk of loss of any goods hereunder shall not pass to City until City
-actually receives and takes possession of the goods at the point or points of
-delivery. Contractor shall assume all liability and responsibility for delivery of such goods
-in good condition to City.
+THIRD PARTY BENEFICIARY: This Agreement is entered into solely between, and may be enforced
+only by, City and Contractor. Unless otherwise specified herein, this Agreement shall not be deemed to
+create any rights in third parties, including suppliers or customers of either party.
+TITLE & RISK.(This paragraph/section is applicable only to purchase of goods contracts). The title
+and risk of loss of any goods hereunder shall not pass to the City until the City actually receives and takes
+possession of the goods at the point or points of delivery. Contractor shall assume all liability and
+responsibility for delivery of such goods in good condition to the City.
 TRANSFER. See ASSIGNMENT.
-TRANSPORTATION CHARGES/F.O.B. DELIVERY. (This paragraph/section is applicable
-only to purchase of goods contracts). All pricing is F.O.B. destination, in which Contractor
-shall be responsible for freight, transportation costs, and all incidental charges, unless
-delivery terms are specified otherwise in the bid and agreed to by City. In the event
-shipping other than F.O.B destination is allowed by City, City agrees to reimburse
-Contractor for transportation costs in the amount specified in Contractor's bid, or actual
-costs, whichever is lower, provided City shall have the right to designate what method of
+TRANSPORTATION CHARGES/F.O.B. DELIVERY. (This paragraph/section is applicable only to
+purchase of goods contracts). All pricing is F.O.B. destination, in which Contractor shall be responsible
+for freight, transportation costs, and all incidental charges, unless delivery terms are specified otherwise in
+the bid and agreed to by the City. In the event shipping other than F.O.B destination is allowed by the City,
+the City agrees to reimburse Contractor for transportation costs in the amount specified in Contractor's bid,
+or actual costs, whichever is lower, provided the City shall have the right to designate what method of
 transportation shall be used to ship the goods.
-WAIVER OF CONTRACTUAL RIGHT. No term or provision of this Agreement, or of any
-document executed pursuant hereto, shall be held to be waived, modified or deleted
-unless in writing and executed by the parties hereto; provided that any such waiver shall
-not be identified as a waiver of any succeeding breach hereto or of any other provision
-herein contained. No delay or failure of either to enforce any right or provision of this
-Agreement or in any document executed pursuant hereto shall operate as a waiver,
-limitation, or relinquishment of that party(s) right to subsequently enforce and compel
+WAIVER OF CONTRACTUAL RIGHT. No term or provision of this Agreement, or of any document
+executed pursuant hereto, shall be held to be waived, modified or deleted unless in writing and executed by
+the parties hereto; provided that any such waiver shall not be identified as a waiver of any succeeding
+breach hereto or of any other provision herein contained. No delay or failure of either to enforce any right
+or provision of this Agreement or in any document executed pursuant hereto shall operate as a waiver,
+limitation, or relinquishment of that party(s) right to subsequently enforce and compel strict compliance
+with such provision and/or any other provision herein or in any document related hereto. Parties
+acknowledge that some Agreement provisions may be inapplicable to the scope of work or goods that are
+germane to this Agreement. Parties waive no rights or remedies where the provisions are applicable.
 
--- 40 of 56 --
+-- 24 of 26 --
 
-Page | 41
-strict compliance with such provision and/or any other provision herein or in any
-document related hereto. Parties acknowledge that some Agreement provisions may be
-inapplicable to the scope of work or goods that are germane to this Agreement. Parties
-waive no rights or remedies where the provisions are applicable.
-No consent or waiver, express or implied, by either party to or of any breach or default
-by the other in the performance of any of its obligations shall be deemed or construed to
-be a consent or waiver to or of any other breach or default by such party. Failure on the
-part of either party to complain of any act or failure to act of the other party or to declare
-the other party in default, irrespective of how long such failure continues, shall not
-constitute a waiver of the rights of such party.
-The enforcement by any party of any right or remedy it may have under this Agreement
-or applicable law shall not be deemed an election of remedies or otherwise prevent such
-party from enforcement of one or more other remedies at any time.
-WARRANTY. Contractor warrants to City that all goods/services shall be free from defects
-in design and faulty or improper materials and/or workmanship, shall be in strict
-compliance with the terms of this Agreement and shall be fit and sufficient for the
-purpose intended or shall have met the specification of the solicitation or the accepted
-Contractor response relating to this Agreement. This warranty shall be effective for a
-period of not less than one year from the date of acceptance by City of such goods and/or
-services as satisfactorily complete, and shall be in addition to all other warranties,
-express, implied or statutory. The warranty shall survive the termination or expiration of
-this Agreement.
-END OF DOCUMENT - SIGNATURE PAGE NEXT
-Remainder of Page Left Intentionally Blank
+Request for Quotation 325762,1
+Proprietary and Confidential	Page XXV of XXVI
+No consent or waiver, express or implied, by either party to or of any breach or default by the other in the
+performance of any of its obligations shall be deemed or construed to be a consent or waiver to or of any
+other breach or default by such party. Failure on the part of either party to complain of any act or failure to
+act of the other party or to declare the other party in default, irrespective of how long such failure
+continues, shall not constitute a waiver of the rights of such party.
+The enforcement by any party of any right or remedy it may have under this Agreement or applicable law
+shall not be deemed an election of remedies or otherwise prevent such party from enforcement of one or
+more other remedies at any time.
+WARRANTY. Contractor warrants to the City that all goods/services shall be free from defects in design
+and faulty or improper materials and/or workmanship, shall be in strict compliance with the terms of this
+Agreement and shall be fit and sufficient for the purpose intended or shall have met the particular
+specification of the solicitation or the accepted Contractor response relating to this Agreement. This
+warranty shall be effective for a period of not less than one year from the date of acceptance by the City of
+such goods and/or services as satisfactorily complete, and shall be in addition to all other warranties,
+express, implied or statutory. The warranty shall survive the termination or expiration of this Agreement.
 
--- 41 of 56 --
+-- 25 of 26 --
 
-Page | 42
-IN WITNESS WHEREOF, the parties, by and through their duly authorized
-representatives, have executed this Agreement.
-CITY OF MEMPHIS [@CONTRACTOR NAME@]
-By: _______________________ By: ________________________
-Paul A. Young, Mayor
-Name: _____________________
-Date: _____________________
-Title: ______________________
-Approved as to Form: Date: ______________________
-By: ____________________________
-Tannera Gibson
-Chief Legal Officer/City Attorney
-Attest:
-By: __________________________
-Comptroller
+Request for Quotation 325762,1
+Proprietary and Confidential	Page XXVI of XXVI
+SIGNATURE FOR CONTRACT SPECIFICATIONS
+For either of the two following numbered reason, (I/we) herewith declare that (I/we) will forfeit any claim
+to any contract resulting from the bid stated herein and the related bid bond, if a bid bond is required in
+order to comply with the enclosed "legal notice to bidders":
+(I/we) will forfeit as liquidated damages to the City of Memphis (my/our) bidder's bond, or certified or
+cashier's check on a solvent bank in the sum of ________________________:
+1) if the contract is not signed and returned to the City WITHIN TEN (10) DAYS AFTER
+RECEIPT OF SAME, or:
+2) if a performance bond is required, failure to enter into a contract with a good and solvent bond
+in surety company, licensed to do business in the State of Tennessee and acceptable to the City of
+Memphis, in an amount equal to the gross amount of said contract (or for an amount as specified),
+and the contract is not signed and returned to the City WITHIN TEN (10) DAYS AFTER
+RECEIPT OF SAME.
+The full name and residence of all persons interested in the foregoing as principals are as follows: (If out-
+of-the state company, PLEASE list Tennessee office address.)
+BUSINESS ADDRESS OF BIDDER (including City, State and Zip Code):
+______________________________________________________________________________
+If Bidder is an INDIVIDUAL, fill out the following:
+______________________________________________________________________________
+(NAME OF OWNER)
+If Bidder is a PARTNERSHIP, fill out the following:
+PARTNER NAME: ADDRESS:
+______________________________________ ____________________________________
+______________________________________ ____________________________________
+If Bidder is a CORPORATION, fill out the following:
+NAME OF CORPORATION PRESIDENT: __________________________________________
+NAME OF CORPORATION SECRETARY: _________________________________________
+NAME OF COMPANY: _________________________________________________________
+SIGNATURE OF BIDDER: ______________________________________________________
+TITLE: _____________________________________________
+PHONE NUMBER: __________________________________
 
--- 42 of 56 --
-
-Page | 43
-ADDENDUM
-ADDENDUM. The following Addendum to the Agreement is by and between City and
-Contractor. If not otherwise defined herein, defined terms shall have the meaning as set
-forth in the Agreement, which is specifically referenced and incorporated herein. In the
-event of any discrepancy between other provisions of the Agreement and this Addendum,
-the terms of this Addendum shall govern.
-The parties agree that the following provisions shall be added to or amend the
-Agreement as follows:
-(IF NO ADDENDUM THIS PAGE SHOULD BE DELETED/REMOVED)
-
--- 43 of 56 --
-
-Page | 44
-EXHIBIT B-1
-INSURANCE REQUIREMENTS:
-The Company shall not commence any work under this contract until it has obtained and
-caused its subcontractors to procure and keep in force all insurance required. The
-Company shall require all subcontractors to carry insurance as outlined below, in case
-they are not protected by the policies carried by the Company. The Company is required
-to provide copies of the insurance policies upon request. The Company shall furnish the
-Division to which services or materials are being provided under this contract a Certificate
-of Insurance and/or each policy attested by a duly authorized representative of the
-insurance carrier evidencing that the insurance required hereunder is in effect. All
-insurance companies must be acceptable to the City of Memphis and licensed in the state
-of Tennessee with a Best Insurance Rating of A and Class VII or better and authorized to
-do business in the state where the work is performed.
-If any of the Insurance Requirements are non-renewed at the expiration dates, payment
-to the company may be withheld until those requirements have been met, or at the
-option of the City. The City may pay the renewal premiums and withhold such payments
-from any monies due the Company.
-Certificate Holder: City of Memphis
-Attn: Risk Management
-170 N. Main St., 5th Floor
-Memphis, TN. 38103
-Each certificate or policy shall require and state in writing the following clauses:
-“The City of Memphis, its officials, agents, employees and representatives shall be
-named as additional insured on General Liability and Auto Liability policies.” The
-additional insured endorsements shall be attached to the Certificate of Insurance and
-the Certificate of Insurance shall also state: “The additional insured endorsement is
-attached to the Certificate of Insurance.”
-Company shall provide notice to the City within three (3) business days following receipt
-of any notice of cancellation or material change in Company’s insurance policy from
-Company’s insurer. Such notice shall be provided to City by registered mail, to the
-following address:
-City of Memphis
-Attn: Purchasing Agent
-125 North Main, Room 368
-Memphis, TN 38103
-
--- 44 of 56 --
-
-Page | 45
-WORKERS COMPENSATION:
-Option I: The Company shall maintain in force Workers’ Compensation coverage in
-accordance with the Statutory Requirements and Minimum Limits of the State of
-Tennessee and shall require all subcontractors to do likewise.
-Employer’s Liability $100,000 Each Accident
-$500,000 Disease-Policy Limit
-$100,000 Disease-Each Employee
-Option II: Company has submitted the Workers’ Compensation letter to the City of
-Memphis affirming they have fewer than five (5) employees and acknowledge they are
-financially responsible for any and all of their employees on the job injuries. Company
-further affirms that should they employ five (5) or more employees in the future,
-Company will notify the City and provide a certificate of insurance confirming the required
-Workers’ Compensation coverage as required by law.
-AUTOMOBILE LIABILITY:
-Option I: Covering owned, non-owned, and hired vehicles with Minimum Limits of:
-$1,000,000 Each Occurrence – Combined Single Limits
-COI will have owned, non-owned, and hired checked or “ANY” checked. City of
-Memphis named as Additional Insured.
-Option II: Covering non-owned, and hired vehicles with Minimum Limits of:
-$1,000,000 Each Occurrence – Combined Single Limits
-COI will have non-owned and hired checked. City of Memphis named as Additional
-Insured.
-COMMERCIAL GENERAL LIABILITY:
-Commercial General Liability Insurance, including Premises and Operations, Contractual
-Liability, Independent Contractor’s Liability, and Broad Form Property Damage Liability
-Coverage with Minimum Limits of:
-$2,000,000 General Aggregate
-$2,000,000 Products-Completed Operations
-$1,000,000 Personal and Advertising Injury
-$1,000,000 Each Occurrence (Bodily Injury & Property Damage)
-
--- 45 of 56 --
-
-Page | 46
-$ 50,000 Fire Damage any One Fire
-$ 5,000 Medical Expense any One Person
-UMBRELLA / EXCESS LIABILITY with Minimum Limits of:
-$2,000,000 Each Occurrence / $2,000,000 Aggregate
-ENVIRONMENTAL / POLLUTION LIABILITY with Minimum Limits of:
-$1,000,000 Each Claim / $2,000,000 Aggregate
-PROPERTY INSURANCE:
-The Company shall be responsible for maintaining any and all property insurance on their
-own equipment and shall require all subcontractors to do likewise. The Company shall
-require all sub-contractors to carry insurance as outlined above, in case they are not
-protected by the policies carried by the Company.
-The Company is required to provide copies of the insurance policies upon request.
-
--- 46 of 56 --
-
-Page | 47
-8.3 EXHIBIT C – CRIMINAL AND CIVIL PROCEEDINGS DISCLOSURE
-PROPOSING FIRM’S DISCLOSURE OF CRIMINAL AND CIVIL PROCEEDINGS
-Describe all ongoing and past civil and criminal proceedings and investigations within
-the last 10 years. Indicate the status of current proceeding/investigations and the
-outcome of closed or completed actions. Also, describe, if any, how the outcome of
-actions impacted company business operations. Attach additional pages if necessary.
-Additionally, please provide detailed information on any situation, event or ongoing
-activity involving your company that could impact the City’s award decision for this RFQ.
-The City reserves the right to disqualify any vendor who does not disclose information
-that is discovered by the City after the vendor’s submission.
-Note: If no civil and criminal proceedings within the last 10 years, indicate here and
-return this attachment with your proposal.
-
--- 47 of 56 --
-
-Page | 48
-8.4 EXHIBIT D – NON-COLLUSION AFFIDAVIT (Notary Seal is Required)
-The Proposer, by its officers and its agents or representatives present at the time of
-filing this Proposal, being duly sworn on their oaths say, that neither they nor any of
-them have in any way, directly or indirectly, entered into any arrangement or
-agreement with any other Proposer, or with any officer of the Owner or Owner’s
-representative whereby such affiant or affiants or either of them has paid or is to pay
-such other Proposer or officer any sum of money, or has given or is to give to such
-other Proposer or officer anything of value whatever, or such affiant or affiants or
-either of them has not directly or indirectly, entered into any arrangement or
-agreement with any other free competition into the letting of the contract sought for
-by the attached prices that no inducement of any form or character other than that
-which appears on the face of the Proposal will be suggested, offered, paid or delivered
-to any person whomsoever to influence the acceptance of the Proposal or awarding of
-the Contract, nor has this Proposer any agreement or understanding of any kind
-whatsoever, with any person whomsoever to pay, deliver to, or share with any other
-person in any way or manner, any of the proceeds of the Contractor sought by this
-Proposal. Please print and sign your name and date in the appropriate place.
-Submitted By:
-Firm
-Name___________________________________________________________________
-_
-Authorized
-Signature____________________________________________________________
-Date____________
-SIGNATURES
-If PROPOSER is:
-A. An Individual
-By
-________________________________________________________________________
-_____ (SEAL)
-(Individual's Name)
-
--- 48 of 56 --
-
-Page | 49
-Doing business as
-_______________________________________________________________________
-Business Address:
-________________________________________________________________________
-________________________________________________________________________
-____________
-Phone Number: ____________________
-B. A Partnership
-By
-________________________________________________________________________
-_____ (SEAL)
-(Firm Name)
-________________________________________________________________________
-______
-________________________________________________________________________
-______
-(General Partner)
-Business Address:
-________________________________________________________________________
-________________________________________________________________________
-________________________________________________________________________
-__________________
-Phone Number: ____________________
-C. A Corporation
-By
-________________________________________________________________________
-_____ (SEAL)
-(Corporation Name)
-
--- 49 of 56 --
-
-Page | 50
-________________________________________________________________________
-______
-(State of Incorporation)
-By
-________________________________________________________________________
-______
-(Name of Person Authorized to Sign)
-Title
-________________________________________________________________________
-______
-Attest
-________________________________________________________________________
-______
-(Secretary)
-
--- 50 of 56 --
-
-Page | 51
-STATE OF TENNESSEE NOTARY SEAL – Must be Notarized
-COUNTY OF
-{County where notarization occurred)
-On this day of _, 20 , before me personally
-appeared
-(name(s) of signer(s)}, to me known
-to be the person (or persons} described in and who executed the foregoing
-instrument and acknowledged that such person (or persons} executed the same as
-such person's (persons') free act and deed.
-{Signature of notary public)
-_____________________________________,
-NotaryPublic
-Printed Name
-My commission expires: _______________
-Official Seal
-Personally known OR
-Produced identification Type of identification produced:
-
--- 51 of 56 --
-
-Page | 52
-8.5 EXHIBIT E – CONTRACTOR’S COVER SHEET
-COVER SHEET (Print Legibly)
-Contractor’s Name & RFQ Number
-Contractor’s Address
-Contractor’s Telephone Number and Email Address
-Authorized Representative(s)
-
--- 52 of 56 --
-
-Page | 53
-8.6 EXHIBIT F – PRICING SCHEDULE (Use to submit your price/s)
-Price and Quote Sheet
-City of Memphis Company Name:
-125 N. Main Address:
-Memphis TN 38103 City, State & Zip:
-Phone:
-Point of Contact:
-Email:
-Line
-# Description Unit of
-Issue Quantity Unit Price Extended
-Price
-1 POLO SHIRTS, Unisex, Silk Touch EA 1
-2 T-SHIRTS, COTTON, Unisex EA 1
-3 T-SHIRTS, COTTON, Unisex Sport-TEK Dri-FIT EA 1
-4 SHORT SLEEVE EA 1
-5 MEN SHORT SLEEVE TACTICAL POLOS EA 1
-6 WOMEN SHORT SLEEVE SHORT SLEEVE
-TACTICAL POLOS EA 1
-7 HOODIES, PULL OVER, Unisex, Athletic EA 1
-8 Pullovers - Unisex Custom 1/4 Zip Pullover
-Sport -Tek Wick Stretch 1/4 Pullover EA 1
-9 BUTTON DOWN SHIRTS (VARIOUS STYLES,
-Short Sleeve EA 1
-10 BUTTON DOWN SHIRTS (VARIOUS STYLES,
-Short Sleeve EA 1
-11 SHORT SLEEVE POCKET WORK SHIRTS EA 1
-12 LONG SLEEVE POCKET WORK SHIRTS EA 1
-13 NAVY TACTICAL PANTS EA 1
-14 COTTON BLEND CARGO PANTS EA 1
-15 Men's Pants EA 1
-16 Women's Pants EA 1
-17 CARDIGANS EA 1
-18 MEN SOFT SHELL JACKETS EA 1
-19 WOMEN SOFT SHELL JACKETS EA 1
-20 JACKETS for Men EA 1
-21 FLEECE JACKETS FOR WOMEN EA 1
-22 FLEECE JACKETS FOR MEN EA 1
-23 COATS for Men EA 1
-
--- 53 of 56 --
-
-Page | 54
-24 JACKETS for Women EA 1
-25 COATS for Women EA 1
-26 HI VISIBILITY VESTS EA 1
-27 HARD HATS EA 1
-28 COTTON TWILL HATS EA 1
-29 NAVY COTTON TWILL HATS EA 1
-30 NAVY SKULL CAP W/CUFF EA 1
-31 SKULL CAP W/CUFF EA 1
-32 SAFTEY EQUIPMENT EA 1
-33 GOGGLES EA 1
-34 SAFETY GLASSES EA 1
-35 SAFETY SUNGLASSES EA 1
-36 SAFETY GLOVES EA 1
-37 SAFETY BOOTS EA 1
-38 HI VISIBILITY RAIN GEAR EA 1
-Promotional Items Included But Not Limited To The
-Below items
-39 AWARDS EA 1
-40 PLAQUES EA 1
-41 MEDALS EA 1
-42 TROPHIES EA 1
-43 DRINKWARE EA 1
-44 MUGS EA 1
-45 BAGS, CLEAR WAIST PACKS ETC EA 1
-46 BACKPACKS EA 1
-47 HEALTH AND WELLNESS ITEMS EA 1
-48 PENS DZ 1
-49 LAPEL PINS EA 1
-50 WRITING PADS EA 1
-51 COASTERS EA 1
-52 PORTFOLIOS EA 1
-53 JOURNALS EA 1
-54 NOTEBOOKS EA 1
-55 LANYARDS EA/DZ/PK 1
-56 BASEBALL CAPS/HATS EA 1
-57 DESK ACCESSORIES N/A 0
-58 OTHER OFFICE ITEMS N/A 0
-
--- 54 of 56 --
-
-Page | 55
-Unit of Issue i.e., Ea = Each, QT = Quart, Lt
-= Lot, Cntr = Container, Ton = TN, etc. Overall Total Price
-Note (Unit of Issue) for example Each = Ea, Lot, Month = Mth, Year = YR, Day, Gallon = GL, Yard
-= YD, Feet = FT, etc.
-Vendor or Authorized Representative Signature:
-________________________________________
-Date: __________________
-
--- 55 of 56 --
-
-Page | 56
-8.7 EXHIBIT H – QUESTION AND ANSWER
-RF SECTION QUESTION
-
--- 56 of 56 --
+-- 26 of 26 --
 
 
 
