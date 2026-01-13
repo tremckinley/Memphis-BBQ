@@ -1,6 +1,6 @@
 import system_prompt from '../system_prompt.js';
 import { OpenAI } from 'openai';
-import { PDFParse } from 'pdf-parse';
+import { extractText } from 'unpdf';
 import { IncomingForm } from 'formidable';
 import fs from 'fs';
 
@@ -26,11 +26,10 @@ function parseForm(req) {
     });
 }
 
-// Extract text from PDF using pdf-parse v2.x
+// Extract text from PDF using unpdf (serverless-compatible)
 async function parsePDF(buffer) {
-    const parser = new PDFParse({ data: buffer });
-    const result = await parser.getText();
-    return result.text;
+    const { text } = await extractText(buffer);
+    return text;
 }
 
 export default async function handler(req, res) {
