@@ -8,7 +8,7 @@ Memphis BBQ helps small business owners decode complex government procurement do
 
 Save time. Reduce errors. Increase your chances of winning contracts. Try Memphis B.B.Q. today!
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![License](https://img.shields.io/badge/license-Proprietary-red.svg)
 ![React](https://img.shields.io/badge/React-19-61dafb.svg)
 ![Vite](https://img.shields.io/badge/Vite-7-646cff.svg)
 
@@ -32,16 +32,11 @@ This app was created as a solo entry for the [Hack Memphis 2025 Hackathon](https
 
 ## Quick Start
 
-### Prerequisites for self-testing
-
-- **Node.js 18+**
-- **Web-based AI model using provided system prompt** (ex. Gemini Gem) 
-
 ### Local Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/memphis-bbq.git
+git clone https://github.com/tremckinley/memphis-bbq.git
 cd memphis-bbq
 
 # Install dependencies
@@ -139,7 +134,15 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+This project is **proprietary source-available** software. You may view and study the code, but commercial use requires a license. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For commercial licensing, partnership inquiries, or questions:
+
+- **Email**: [tremckinley901@gmail.com]
+- **LinkedIn**: [Tremaine McKinley](https://www.linkedin.com/in/tremaine-mckinley/)
+- **GitHub**: [@tremckinley](https://github.com/tremckinley)
 
 ---
 
