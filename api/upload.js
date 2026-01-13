@@ -28,7 +28,9 @@ function parseForm(req) {
 
 // Extract text from PDF using unpdf (serverless-compatible)
 async function parsePDF(buffer) {
-    const { text } = await extractText(buffer);
+    // unpdf requires Uint8Array, not Buffer
+    const uint8Array = new Uint8Array(buffer);
+    const { text } = await extractText(uint8Array);
     return text;
 }
 
