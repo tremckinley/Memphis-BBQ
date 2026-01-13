@@ -1,71 +1,72 @@
 import system_prompt from '../system_prompt.js';
 import { OpenAI } from 'openai';
-
-// Vercel Serverless Function config
-export const config = {
-    api: {
-        bodyParser: false, // We need to parse multipart form data manually
-    },
-};
+import { PDFParse } from 'pdf-parse';
+import { IncomingForm } from 'formidable';
+import fs from 'fs';
 
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY || "",
 });
 
-// Simple multipart form parser for Vercel
-async function parseMultipartForm(request) {
-    const contentType = request.headers.get('content-type') || '';
+// Disable body parsing - we'll handle multipart form data ourselves
+export const config = {
+    api: {
+        bodyParser: false,
+    },
+};
 
-    if (!contentType.includes('multipart/form-data')) {
-        throw new Error('Expected multipart/form-data');
-    }
-
-    const formData = await request.formData();
-    const file = formData.get('file');
-
-    if (!file || typeof file === 'string') {
-        throw new Error('No file uploaded');
-    }
-
-    const arrayBuffer = await file.arrayBuffer();
-    return Buffer.from(arrayBuffer);
+// Parse multipart form data using formidable
+function parseForm(req) {
+    return new Promise((resolve, reject) => {
+        const form = new IncomingForm();
+        form.parse(req, (err, fields, files) => {
+            if (err) reject(err);
+            else resolve({ fields, files });
+        });
+    });
 }
 
 // Extract text from PDF using pdf-parse v2.x
 async function parsePDF(buffer) {
-    // Dynamic import for pdf-parse - using named import for v2.x class-based API
-    const { PDFParse } = await import('pdf-parse');
     const parser = new PDFParse({ data: buffer });
     const result = await parser.getText();
-    return result.text;  // getText() returns a TextResult object with a .text property
+    return result.text;
 }
 
-export default async function handler(request) {
-    // Handle CORS preflight
-    if (request.method === 'OPTIONS') {
-        return new Response(null, {
-            status: 200,
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'POST, OPTIONS',
-                'Access-Control-Allow-Headers': 'Content-Type',
-            },
-        });
+export default async function handler(req, res) {
+    // Set CORS headers
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+    // Handle preflight request
+    if (req.method === 'OPTIONS') {
+        return res.status(200).end();
     }
 
-    if (request.method !== 'POST') {
-        return new Response(JSON.stringify({ error: 'Method not allowed' }), {
-            status: 405,
-            headers: { 'Content-Type': 'application/json' },
-        });
+    if (req.method !== 'POST') {
+        return res.status(405).json({ error: 'Method not allowed' });
     }
 
     try {
-        // Parse the uploaded file
-        const buffer = await parseMultipartForm(request);
+        // Parse the form data
+        const { files } = await parseForm(req);
+
+        // Get the uploaded file - formidable v3 returns files as arrays
+        const uploadedFile = files.file?.[0] || files.file;
+
+        if (!uploadedFile) {
+            return res.status(400).json({ error: 'No file uploaded' });
+        }
+
+        // Read the file buffer
+        const buffer = fs.readFileSync(uploadedFile.filepath);
 
         // Extract text from PDF
         const pdfText = await parsePDF(buffer);
+
+        // Clean up temp file
+        fs.unlinkSync(uploadedFile.filepath);
 
         // Build the prompt
         let final_prompt = '';
@@ -80,13 +81,7 @@ export default async function handler(request) {
 
         // Check for OpenAI API key
         if (!process.env.OPENAI_API_KEY) {
-            return new Response(JSON.stringify({ response: 'OpenAI API key not found' }), {
-                status: 500,
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': '*',
-                },
-            });
+            return res.status(500).json({ response: 'OpenAI API key not found' });
         }
 
         // Call OpenAI
@@ -98,25 +93,13 @@ export default async function handler(request) {
         const response = completion.choices[0].message.content;
         console.log('OpenAI response received');
 
-        return new Response(JSON.stringify({ response }), {
-            status: 200,
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-            },
-        });
+        return res.status(200).json({ response });
 
     } catch (error) {
         console.error('Error processing request:', error);
-        return new Response(JSON.stringify({
+        return res.status(500).json({
             response: 'Failed to generate response',
             error: error.message
-        }), {
-            status: 500,
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-            },
         });
     }
 }
