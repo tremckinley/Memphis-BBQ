@@ -120,7 +120,7 @@ const RFPDashboard = () => {
         try {
             const formData = new FormData();
             formData.append('file', selectedFile);
-            const response = await fetch('http://localhost:3001/upload', {
+            const response = await fetch('/api/upload', {
                 method: 'POST',
                 body: formData,
             });
@@ -725,7 +725,7 @@ const RFPDashboard = () => {
                                 </div>
 
                             </div>
-                            
+
                             <input
                                 type="file"
                                 accept="application/pdf"
