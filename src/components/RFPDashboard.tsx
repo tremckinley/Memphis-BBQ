@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { CheckCircle, Circle, Upload, AlertCircle, Clock, DollarSign, MapPin, FileText, ChevronDown, ChevronUp, Info, X, Inbox, Loader2, InfoIcon, File, ArrowLeft } from 'lucide-react';
 import { refresh } from 'less';
 import Header from './Header';
+import AboutSection from './AboutSection';
 import test_rfpdata from '../../rfp_data.js';
 
 interface Subtask {
@@ -97,7 +98,7 @@ const RFPDashboard = () => {
         setTasks(test_rfpdata?.tasks || []);
         setDocuments(test_rfpdata?.requiredDocuments || []);
         // Simulate file upload/processing delay
-        await new Promise(resolve => setTimeout(resolve, 5000));
+        await new Promise(resolve => setTimeout(resolve, 1000));
         setSubmitted(true);
         setIsLoading(false);
     }
@@ -273,7 +274,18 @@ const RFPDashboard = () => {
                 daysLeft={daysLeft}
                 dueDate={bidDueDateInfo?.date}
                 dueTime={bidDueDateInfo?.time}
-                onBackClick={() => setSubmitted(false)}
+                onBackClick={() => {
+                    setSubmitted(false);
+                    // Scroll to upload form after state update
+                    setTimeout(() => {
+                        const uploadForm = document.getElementById('upload-form');
+                        if (uploadForm) {
+                            const headerOffset = 100;
+                            const top = uploadForm.getBoundingClientRect().top + window.scrollY - headerOffset;
+                            window.scrollTo({ top });
+                        }
+                    }, 50);
+                }}
                 onLogoClick={() => window.location.reload(true)}
                 rfpData={rfpData}
             />
@@ -684,7 +696,7 @@ const RFPDashboard = () => {
         <div className="bg-gradient-to-br from-[#E8F4F8] via-[#F0F9FC] to-[#E8F4F8fa]">
             <Header mode="landing" />
             <div className="min-h-screen flex items-center justify-center p-6 pt-24">
-                <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-2xl shadow-[#4A6785]/30 border border-[#4A6785]/20 p-8 max-w-2xl w-full">
+                <div className="p-8 max-w-6xl w-full">
 
                     {isLoading ? (
                         <div className="flex flex-col items-center justify-center gap-6 py-12">
@@ -692,60 +704,63 @@ const RFPDashboard = () => {
                                 <Loader2 className="w-16 h-16 text-[#4A6785] animate-spin" />
                             </div>
                             <div className="text-center">
-                                <h2 className="text-2xl font-bold text-[#1E3A5F] mb-2">Submitting Your Proposal...</h2>
+                                <h2 className="text-2xl font-bold text-[#1E3A5F] mb-2">Processing Document...</h2>
                                 <p className="text-[#4A6785]">Please wait while we process your submission</p>
                             </div>
                         </div>
                     ) : (
-                        <div className="flex flex-col items-center justify-center gap-6">
-                            <div className="p-4 bg-[#D4F5E9] rounded-full">
-                                <Upload className="w-8 h-8 text-[#4A6785]" />
-                            </div>
-                            <div className="text-center">
-                                <h2 className="text-2xl font-bold text-[#1E3A5F] mb-2">Upload a Proposal/Quote</h2>
-                                <p className="text-[#4A6785] mb-2">Upload an RFP or RFQ in its entirety</p>
-                            </div>
-
-                            <div className="text-center border-2 border-[#4A6785]/30 p-4 rounded-xl text-[#1E3A5F] bg-[#D4F5E9]">
-                                <p>This application is currently linked to a lost-cost tier of OpenAI's API. </p>
-                                <p>In order to reduce costs for this MVP, API calls are being limited.</p>
-                                <p className="mt-2">As a result, your attempt may fail if too many API calls have been made.</p>
-                                <br></br>
-                                <p className="font-semibold">Please click "View Demo Analysis" below to see the results of the AI analysis completed during HackMemphis 2025.</p>
-                                <div className="flex items-center justify-center gap-2 mt-2">
-                                    <FileText className="w-4 h-4 text-[#4A6785]" />
-                                    <a
-                                        href="/demo_rfp.pdf"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-[#4A6785] font-semibold hover:underline text-sm"
-                                    >
-                                        View PDF from Demo Analysis
-                                    </a>
+                        <div className="flex flex-col items-center justify-center gap-6 ">
+                            <AboutSection />
+                            <section id="upload-form" className="flex flex-col items-center justify-center gap-6 bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl shadow-[#4A6785]/30 border border-[#4A6785]/20 p-10 max-w-2xl w-full transition-all hover:shadow-3xl">
+                                <div className="p-4 bg-[#D4F5E9] rounded-full">
+                                    <Upload className="w-8 h-8 text-[#4A6785]" />
+                                </div>
+                                <div className="text-center">
+                                    <h2 className="text-2xl font-bold text-[#1E3A5F] mb-2">Upload a Proposal/Quote</h2>
+                                    <p className="text-[#4A6785] mb-2">Upload an RFP or RFQ in its entirety</p>
                                 </div>
 
-                            </div>
+                                <div className="text-center border-2 border-[#4A6785]/30 p-4 rounded-xl text-[#1E3A5F] bg-[#D4F5E9]">
+                                    <p>This application is currently linked to a lost-cost tier of OpenAI's API. </p>
+                                    <p>In order to reduce costs for this MVP, API calls are being limited.</p>
+                                    <p className="mt-2">As a result, your attempt may fail if too many API calls have been made.</p>
+                                    <br></br>
+                                    <p className="font-semibold">Please click "View Demo Analysis" below to see the results of the AI analysis completed during HackMemphis 2025.</p>
+                                    <div className="flex items-center justify-center gap-2 mt-2">
+                                        <FileText className="w-4 h-4 text-[#4A6785]" />
+                                        <a
+                                            href="/demo_rfp.pdf"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-[#4A6785] font-semibold hover:underline text-sm"
+                                        >
+                                            View PDF from Demo Analysis
+                                        </a>
+                                    </div>
 
-                            <input
-                                type="file"
-                                accept="application/pdf"
-                                onChange={handleFileChange}
-                                className="w-xs md:w-sm text-sm text-[#4A6785] file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-[#4A6785] file:text-white hover:file:bg-[#1E3A5F] border-2 border-dashed border-[#4A6785]/30 rounded-xl p-4 bg-[#F0F9FC]/50 cursor-pointer transition-all"
-                            />
-                            <button
-                                onClick={processFile}
-                                className="w-full md:w-sm border-2 border-[#4A6785] bg-[#4A6785] hover:bg-[#1E3A5F] text-white font-semibold py-4 px-8 rounded-xl transition-colors text-lg shadow-lg hover:shadow-xl"
-                            >
-                                Analyze your own RFP/RFQ!
-                            </button>
-                            <p className="text-center text-[#4A6785] mt-2 italic">subject to API availability</p>
-                            <hr className="my-4 border-[#4A6785] border w-1/8 " />
-                            <button
-                                onClick={fakeSubmit}
-                                className="w-full border-2 border-[#4A6785] bg-[#D4F5E9] hover:bg-[#1E3A5F] text-[#4A6785] font-semibold py-4 px-8 rounded-xl transition-colors text-lg shadow-lg hover:text-white hover:shadow-xl"
-                            >
-                                View Demo Analysis
-                            </button>
+                                </div>
+
+                                <input
+                                    type="file"
+                                    accept="application/pdf"
+                                    onChange={handleFileChange}
+                                    className="w-xs md:w-sm text-sm text-[#4A6785] file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-[#4A6785] file:text-white hover:file:bg-[#1E3A5F] border-2 border-dashed border-[#4A6785]/30 rounded-xl p-4 bg-[#F0F9FC]/50 cursor-pointer transition-all"
+                                />
+                                <button
+                                    onClick={processFile}
+                                    className="w-full md:w-sm border-2 border-[#4A6785] bg-[#4A6785] hover:bg-[#1E3A5F] text-white font-semibold py-4 px-8 rounded-xl transition-colors text-lg shadow-lg hover:shadow-xl"
+                                >
+                                    Analyze your own RFP/RFQ!
+                                </button>
+                                <p className="text-center text-[#4A6785] mt-2 italic">subject to API availability</p>
+                                <hr className="my-4 border-[#4A6785] border w-1/8 " />
+                                <button
+                                    onClick={fakeSubmit}
+                                    className="w-full border-2 border-[#4A6785] bg-[#D4F5E9] hover:bg-[#1E3A5F] text-[#4A6785] font-semibold py-4 px-8 rounded-xl transition-colors text-lg shadow-lg hover:text-white hover:shadow-xl"
+                                >
+                                    View Demo Analysis
+                                </button>
+                            </section>
                         </div>
                     )}
                 </div>
